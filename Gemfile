@@ -5,5 +5,6 @@ group :development do
   gem 'simplecov'
 end
 
-gem 'api_client', '=0.5.12'
 gem 'rake'
+
+gem 'httparty'
