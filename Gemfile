@@ -7,4 +7,6 @@ end
 
 gem 'rake'
 
-gem 'httparty'
+gem 'faraday'
+gem 'hashie'
+gem 'net-http-persistent'
