@@ -1,49 +1,75 @@
 require 'faraday'
 require 'hashie/mash'
 require 'net/http/persistent'
+require 'json'
 
 require 'pp'
+
+require 'mio/requests'
 
 class Mio
   class Client
 
     def initialize base_uri, username, password
       @base_uri = base_uri
-      @content_type = 'application/vnd.nativ.mio.v1+json'
-
-      pp username
-      pp password
-
       @agent = Faraday.new(url: base_uri) do |f|
         f.adapter :net_http_persistent
-        f.request :basic_auth, username, password
-        #f.request :authorization, 'basic', 'bWFzdGVydXNlcjptYXN0ZXJ1c2Vy'
       end
+      @agent.basic_auth(username, password)
     end
 
-    def find_all uri, opts={}
-      response = @agent.get do |req|
-        req.url path(uri)
-        req.headers = options(opts)
-      end
+    def find_all resource, opts={}
+      url = path(resource)
+      response = get url, opts
+
+      pp response
 
       unless response.success?
-        pp response
-        p response.headers
-        raise Mio::Client::LoadOfBollocks, "#{response.method.to_s.upcase} on #{path(uri)} returned #{response.status}"
+        raise Mio::Client::LoadOfBollocks, "GET on #{url} returned #{response.status}"
       end
 
-      Hashie::Mash.new response.body
+      make_objects response.body, resource
+    end
+
+    def find resource, id, opts={}
+      obj = find_all(resource, opts).find{|f| f.id == id}
+    end
+
+    def create resource, payload, opts={}
+      url = path(resource)
+      response = post url, payload, opts
+      unless response.success?
+        raise Mio::Client::LoadOfBollocks, "POST on #{url}, with #{payload.inspect} returned #{response.status}"
+      end
+
+      make_object response.body
+    end
+
+    def update resource, id, payload, opts={}
+
     end
 
     private
-    def options o
-      o.merge!({content_type: @content_type})
-      o
+    def get url, opts
+      Mio::Requests.get @agent, url, opts
     end
 
-    def path endpoint
-      "#{@base_uri}/#{endpoint.sub(/^\//, '')}"
+    def post url, payload, opts
+      Mio::Requests.post @agent, url, opts, payload
+    end
+
+    def make_objects response, resource
+      JSON.parse(response)[resource].map do |obj|
+        Hashie::Mash.new obj
+      end
+    end
+
+    def make_object response
+      Hashie::Mash.new JSON.parse(response)
+    end
+
+    def path resource
+      "#{@base_uri}/#{resource.sub(/^\//, '')}"
     end
 
   end
