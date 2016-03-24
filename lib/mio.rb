@@ -1,8 +1,8 @@
 require 'mio/client'
 require 'mio/errors'
 
-require 'mio/models'
-require 'mio/models/resources'
+require 'mio/model'
+require 'mio/model/resource'
 
 class Mio
 

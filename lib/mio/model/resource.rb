@@ -1,6 +1,6 @@
 class Mio
-  class Models
-    class Resources < Base
+  class Model
+    class Resource < Model
       resource :resources
 
       field :name, String, /^(?!\s*$).+/

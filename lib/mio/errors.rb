@@ -3,7 +3,7 @@ class Mio
     class LoadOfBollocks < ArgumentError ; end
   end
 
-  class Models
+  class Model
     class NoSuchField < ArgumentError ; end
     class MissingField < ArgumentError ; end
     class DataTypeError < ArgumentError ; end
