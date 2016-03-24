@@ -1,7 +1,7 @@
 class Mio
   class Models
     class Resources < Base
-      @@resource = 'resources'
+      resource :resources
 
       field :name, String, /^(?!\s*$).+/
       field :visibility, Array

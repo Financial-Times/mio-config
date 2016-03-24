@@ -7,7 +7,7 @@ class Mio
       end
 
       def create
-        @client.create @@resource, @args
+        @client.create @@resource.to_s, @args
       end
 
       def validate
@@ -31,6 +31,11 @@ class Mio
         testable.keys.each do |k|
           raise Mio::Models::NoSuchField, "#{k} for #{self}"
         end
+      end
+
+
+      def self.resource resource
+        @@resource = resource
       end
 
       def self.field key, type, matcher=nil
