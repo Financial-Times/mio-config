@@ -1,6 +1,9 @@
 require 'mio/client'
 require 'mio/errors'
 
+require 'mio/models'
+require 'mio/models/resources'
+
 class Mio
 
   attr_accessor :base_uri, :username, :password
