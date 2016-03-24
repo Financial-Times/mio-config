@@ -22,13 +22,11 @@ class Mio
       url = path(resource)
       response = get url, opts
 
-      pp response
-
       unless response.success?
         raise Mio::Client::LoadOfBollocks, "GET on #{url} returned #{response.status}"
       end
 
-      make_objects response.body, resource
+      make_object response.body
     end
 
     def find resource, id, opts={}
@@ -56,12 +54,6 @@ class Mio
 
     def post url, payload, opts
       Mio::Requests.post @agent, url, opts, payload
-    end
-
-    def make_objects response, resource
-      JSON.parse(response)[resource].map do |obj|
-        Hashie::Mash.new obj
-      end
     end
 
     def make_object response
