@@ -2,7 +2,7 @@ require 'mio/client'
 require 'mio/errors'
 
 require 'mio/model'
-require 'mio/model/resource'
+require 'mio/model/s3'
 
 class Mio
 
