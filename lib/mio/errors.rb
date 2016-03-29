@@ -8,5 +8,6 @@ class Mio
     class MissingField < ArgumentError ; end
     class DataTypeError < ArgumentError ; end
     class DataValueError < ArgumentError ; end
+    class NoSuchResource < ArgumentError ; end
   end
 end
