@@ -27,13 +27,12 @@ class Mio
         end
         true
       end
-      alias_mathod :valid?, :validate
 
       testable.keys.each do |k|
         raise Mio::Model::NoSuchField, "#{k} for #{self}"
       end
     end
-
+    alias_method :valid?, :validate
 
     def self.resource resource
       @@resource = resource
