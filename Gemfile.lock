@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    colorize (0.7.7)
     diff-lcs (1.2.5)
     docile (1.1.5)
     faraday (0.9.2)
@@ -33,6 +34,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  colorize
   faraday
   hashie
   net-http-persistent
