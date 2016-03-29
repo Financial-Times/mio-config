@@ -34,7 +34,8 @@ class Mio
                           object.id,
                           configure_payload
 
-        if @args[:enable] == :true
+        # Can't start if disabled
+        if @args[:enable] == :true or @args[:start] == :true
           @client.action 'resources',
                          object.id,
                          {action: 'enable'}
