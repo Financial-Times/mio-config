@@ -43,25 +43,48 @@ class Mio
       make_object response.body
     end
 
-    def update resource, id, payload, opts={}
+    def configure resource, id, payload, opts={}
+      url = path(resource, id, :configuration)
+      response = put url, payload, opts
+      unless response.success?
+        raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
+      end
 
+      make_object response.body
+    end
+
+    def action resource, id, payload, opts={}
+      url = path(resource, id, :actions)
+      response = post url, payload, opts
+      unless response.success?
+        raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
+      end
+
+      make_object response.body
     end
 
     private
     def get url, opts
-      Mio::Requests.get @agent, url, opts
+      Mio::Requests.make_request :get, @agent, url, opts
     end
 
     def post url, payload, opts
-      Mio::Requests.post @agent, url, opts, payload
+      Mio::Requests.make_request :post, @agent, url, opts, payload
+    end
+
+    def put url, payload, opts
+      Mio::Requests.make_request :put, @agent, url, opts, payload
     end
 
     def make_object response
       Hashie::Mash.new JSON.parse(response)
     end
 
-    def path resource
-      "#{@base_uri}/#{resource.sub(/^\//, '')}"
+    def path resource, id=nil, endpoint=nil
+      path_string = "#{@base_uri}/#{resource.sub(/^\//, '')}"
+      path_string += "/#{id}" if id
+      path_string += "/#{endpoint.to_s}" if endpoint
+      path_string
     end
 
   end
