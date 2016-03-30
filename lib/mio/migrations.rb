@@ -71,7 +71,7 @@ class Mio
                                          start: conf.fetch(:start, :false) )
 
       if thing.valid?
-        obj = thing.create
+        obj = thing.go
       end
       puts "Created '#{obj.name}' with id '#{obj.id}'"
     end
