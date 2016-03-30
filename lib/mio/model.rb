@@ -20,16 +20,15 @@ class Mio
     end
 
     def go
-      r = self.class.resource_name
-      lookup = @client.find_all(r)[r].find{|o| o.name == @args.name}
-      if lookup.empty?
+      unless look_up
         create
       else
-        @object = lookup
+        @object = look_up
 
         # We can't edit a running resource
         set_start :stop
       end
+      @object = look_up
 
       configure
       set_enable
@@ -39,7 +38,7 @@ class Mio
     end
 
     def create
-      @object = @client.create self.class.resource_name, create_array
+      @client.create self.class.resource_name, create_array
     end
 
     def configure
@@ -49,19 +48,27 @@ class Mio
     end
 
     def set_enable a=nil
-      action = a.nil? ? @args.enable : a
+      if a.nil?
+        action = @args.enable == :true ? 'enable' : 'disable'
+      else
+        action = a.to_s
+      end
       @client.action self.class.resource_name,
                      @object.id,
-                     {action: action.to_s}
+                     {action: action}
     end
     alias_method :disable!, :set_enable
     alias_method :enable!, :set_enable
 
     def set_start a=nil
-      action = a.nil? ? @args.start : a
+      if a.nil?
+        action = @args.start == :true ? 'start' : 'stop'
+      else
+        action = a.to_s
+      end
       @client.action self.class.resource_name,
                      @object.id,
-                     {action: action.to_s}
+                     {action: action}
     end
     alias_method :stop!, :set_start
     alias_method :start!, :set_start
@@ -91,5 +98,11 @@ class Mio
     end
     alias_method :valid?, :validate
 
+    private
+    def look_up
+      r = self.class.resource_name
+      @client.find_all(r)[r].find{|o| o.name == @args.name}
+    end
   end
+
 end

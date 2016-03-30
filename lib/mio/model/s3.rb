@@ -26,7 +26,7 @@ class Mio
             protocol: "S3",
             path: "/",
             key: @args.fetch('key'),
-            secret: @args.secret_key,
+            secret: @args.secret,
             bucket: @args.bucket
           }
         }

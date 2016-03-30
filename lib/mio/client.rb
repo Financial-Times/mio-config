@@ -56,7 +56,6 @@ class Mio
     def action resource, id, payload, opts={}
       url = path(resource, id, :actions)
       statuses = get url, opts
-
       if JSON.parse(statuses.body).find{|h| h['action'] == payload[:action]}
         response = post url, payload, opts
 
