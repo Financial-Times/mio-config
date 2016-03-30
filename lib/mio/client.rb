@@ -1,5 +1,4 @@
 require 'faraday'
-require 'faraday_middleware'
 require 'hashie/mash'
 require 'net/http/persistent'
 require 'json'

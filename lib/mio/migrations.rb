@@ -41,35 +41,33 @@ class Mio
       conf = Hashie::Mash.new
       yield conf
 
-      s3_thing = Mio::Model::S3.new( @mio.client,
-                                     name: conf.name,
-                                     visibility: conf.visibility,
-                                     # The below must be a fetch; #key is an instance method; can't call as above
-                                     key: conf.fetch(:key),
-                                     secret_key: conf.secret,
-                                     bucket: conf.bucket,
-                                     enable: conf.fetch(:enable, :false),
-                                     start: conf.fetch(:start, :false) )
-
-      if s3_thing.valid?
-        obj = s3_thing.create
-      end
-      puts "Created '#{obj.name}' with id '#{obj.id}'"
+      do_it Mio::Model::S3.new( @mio.client,
+                                name: conf.name,
+                                visibility: conf.visibility,
+                                # The below must be a fetch; #key is an instance method; can't call as above
+                                key: conf.fetch(:key),
+                                secret_key: conf.secret,
+                                bucket: conf.bucket,
+                                enable: conf.fetch(:enable, :false),
+                                start: conf.fetch(:start, :false) )
     end
 
     def hotfolder
       conf = Hashie::Mash.new
       yield conf
 
-      thing = Mio::Model::Hotfolder.new( @mio.client,
-                                         name: conf.name,
-                                         visibility: conf.visibility,
-                                         storage_resource_name: conf.storage_resource_name,
-                                         workflow_name: conf.workflow_name,
-                                         owner: conf.owner,
-                                         enable: conf.fetch(:enable, :false),
-                                         start: conf.fetch(:start, :false) )
+      do_it Mio::Model::Hotfolder.new( @mio.client,
+                                       name: conf.name,
+                                       visibility: conf.visibility,
+                                       storage_resource_name: conf.storage_resource_name,
+                                       workflow_name: conf.workflow_name,
+                                       owner: conf.owner,
+                                       enable: conf.fetch(:enable, :false),
+                                       start: conf.fetch(:start, :false) )
+    end
 
+    private
+    def do_it thing
       if thing.valid?
         obj = thing.go
       end
