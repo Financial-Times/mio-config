@@ -1,4 +1,5 @@
 require 'mio/client'
+require 'mio/search'
 require 'mio/errors'
 
 require 'mio/model'
