@@ -6,7 +6,7 @@ class Mio
       field :name, String, /^(?!\s*$).+/
       field :visibility, Array
       field :key, String
-      field :secret_key, String
+      field :secret, String
       field :bucket, String
 
       field :enable, Symbol
@@ -15,9 +15,9 @@ class Mio
       def create_array
         plugin = 'tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource'
 
-        {name: @args[:name],
+        {name: @args.name,
         pluginClass: plugin,
-        visibilityIds: @args[:visibility]}
+        visibilityIds: @args.visibility}
       end
 
       def config_array
@@ -25,9 +25,9 @@ class Mio
           'vfs-location' => {
             protocol: "S3",
             path: "/",
-            key: @args[:key],
-            secret: @args[:secret_key],
-            bucket: @args[:bucket]
+            key: @args.fetch('key'),
+            secret: @args.secret_key,
+            bucket: @args.bucket
           }
         }
       end

@@ -14,14 +14,14 @@ class Mio
       end
     end
 
-    def initialize client, args={}
+    def initialize client, args
       @client = client
       @args = args
     end
 
     def go
       r = self.class.resource_name
-      lookup = @client.find_all(r)[r].find{|o| o.name == @args[:name]}
+      lookup = @client.find_all(r)[r].find{|o| o.name == @args.name}
       if lookup.empty?
         create
       else
@@ -49,7 +49,7 @@ class Mio
     end
 
     def set_enable a=nil
-      action = a.nil? ? @args[:enable] : a
+      action = a.nil? ? @args.enable : a
       @client.action self.class.resource_name,
                      @object.id,
                      {action: action.to_s}
@@ -58,7 +58,7 @@ class Mio
     alias_method :enable!, :set_enable
 
     def set_start a=nil
-      action = a.nil? ? @args[:start] : a
+      action = a.nil? ? @args.start : a
       @client.action self.class.resource_name,
                      @object.id,
                      {action: action.to_s}
@@ -67,27 +67,27 @@ class Mio
     alias_method :start!, :set_start
 
     def validate
-      testable = @args.dup
+      testable = @args.dup.to_h
 
       self.class.fields.each do |f|
-        unless testable.key? f[:name]
+        unless testable.key? f[:name].to_s
           raise Mio::Model::MissingField, "Missing field #{f[:name]} to #{self}"
         end
 
-        extracted_field = testable.delete f[:name]
+        extracted_field = testable.delete f[:name].to_s
         unless extracted_field.is_a? f[:type]
           raise Mio::Model::DataTyoeError, "#{f[:name]} should be of type #{f[:type]} for #{self}"
         end
 
-        unless f[:matcher].nil? or extracted_field.to_s.match(f[:matcher])
+        unless f['matcher'].nil? or extracted_field.to_s.match(f[:matcher])
           raise Mio::Model::DataValueError, "#{self} #{f[:name]} value '#{extracted_field}' does not match #{f[:matcher]}"
         end
-        true
       end
 
       testable.keys.each do |k|
         raise Mio::Model::NoSuchField, "#{k} for #{self}"
       end
+      true
     end
     alias_method :valid?, :validate
 
