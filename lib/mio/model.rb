@@ -1,18 +1,32 @@
 class Mio
   class Model
+    class << self
+      attr_accessor :fields
+      def resource resource
+        @resource = resource
+      end
+
+      def field key, type, matcher=nil
+        @fields ||= []
+        @fields << {name: key,
+                    type: type,
+                    matcher: matcher}
+      end
+    end
+
     def initialize client, args={}
       @client = client
       @args = args
     end
 
     def create
-      @client.create @@resource.to_s, @args
+      @client.create self.class.resource.to_s, @args
     end
 
     def validate
       testable = @args.dup
 
-      @@fields.each do |f|
+      self.class.fields.each do |f|
         unless testable.key? f[:name]
           raise Mio::Model::MissingField, "Missing field #{f[:name]} to #{self}"
         end
@@ -33,17 +47,6 @@ class Mio
       end
     end
     alias_method :valid?, :validate
-
-    def self.resource resource
-      @@resource = resource
-    end
-
-    def self.field key, type, matcher=nil
-      @@fields ||= []
-      @@fields << {name: key,
-                   type: type,
-                   matcher: matcher}
-    end
 
   end
 end
