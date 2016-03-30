@@ -76,7 +76,7 @@ class Mio
 
         extracted_field = testable.delete f[:name].to_s
         unless extracted_field.is_a? f[:type]
-          raise Mio::Model::DataTyoeError, "#{f[:name]} should be of type #{f[:type]} for #{self}"
+          raise Mio::Model::DataTypeError, "#{f[:name]} should be of type #{f[:type]} for #{self}"
         end
 
         unless f['matcher'].nil? or extracted_field.to_s.match(f[:matcher])
