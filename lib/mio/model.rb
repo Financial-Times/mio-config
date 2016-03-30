@@ -21,14 +21,13 @@ class Mio
 
     def go
       unless look_up
-        create
+        @object = create
       else
         @object = look_up
 
         # We can't edit a running resource
         set_start :stop
       end
-      @object = look_up
 
       configure
       set_enable
