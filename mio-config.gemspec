@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "mio-config"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
     s.authors = ["jspc","jemrayfield"]
@@ -13,9 +13,8 @@ Gem::Specification.new do |s|
     "README.md"
 
   ]
-  s.files = [
+  s.files = Dir.glob('./**/*')
 
-  ]
   s.add_dependency('rake')
   s.add_dependency('faraday')
   s.add_dependency('net-http-persistent')
