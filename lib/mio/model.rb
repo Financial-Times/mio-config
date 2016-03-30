@@ -16,7 +16,8 @@ class Mio
 
     def initialize client, args
       @client = client
-      @args = args
+      @args   = args
+      @search = Mio::Search.new @client
     end
 
     def go
