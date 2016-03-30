@@ -37,41 +37,24 @@ class Mio
       msg desc, 'completed'
     end
 
-    def s3
+    def type_migration
       conf = Hashie::Mash.new
       yield conf
 
-      s3_thing = Mio::Model::S3.new( @mio.client,
-                                     name: conf.name,
-                                     visibility: conf.visibility,
-                                     # The below must be a fetch; #key is an instance method; can't call as above
-                                     key: conf.fetch(:key),
-                                     secret_key: conf.secret,
-                                     bucket: conf.bucket,
-                                     enable: conf.fetch(:enable, :false),
-                                     start: conf.fetch(:start, :false) )
+      mods = {
+        's3' => Mio::Model::S3,
+        'hotfolder' => Mio::Model::Hotfolder,
+      }
 
-      if s3_thing.valid?
-        obj = s3_thing.create
-      end
-      puts "Created '#{obj.name}' with id '#{obj.id}'"
+      do_it mods[__callee__.to_s].new(@mio.client, conf)
     end
+    alias_method :s3, :type_migration
+    alias_method :hotfolder, :type_migration
 
-    def hotfolder
-      conf = Hashie::Mash.new
-      yield conf
-
-      thing = Mio::Model::Hotfolder.new( @mio.client,
-                                         name: conf.name,
-                                         visibility: conf.visibility,
-                                         storage_resource_name: conf.storage_resource_name,
-                                         workflow_name: conf.workflow_name,
-                                         owner: conf.owner,
-                                         enable: conf.fetch(:enable, :false),
-                                         start: conf.fetch(:start, :false) )
-
+    private
+    def do_it thing
       if thing.valid?
-        obj = thing.create
+        obj = thing.go
       end
       puts "Created '#{obj.name}' with id '#{obj.id}'"
     end
