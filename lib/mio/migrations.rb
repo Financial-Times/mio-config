@@ -56,6 +56,26 @@ class Mio
       puts "Created '#{obj.name}' with id '#{obj.id}'"
     end
 
+    def hotfolder
+      conf = Hashie::Mash.new
+      yield conf
+
+      thing = Mio::Model::Hotfolder.new( @mio.client,
+                                         name: conf.name,
+                                         visibility: conf.visibility,
+                                         storage_resource_name: conf.storage_resource_name,
+                                         workflow_name: conf.workflow_name,
+                                         owner: conf.owner,
+                                         enable: conf.fetch(:enable, :false),
+                                         start: conf.fetch(:start, :false) )
+
+      if thing.valid?
+        obj = thing.create
+      end
+      puts "Created '#{obj.name}' with id '#{obj.id}'"
+    end
+
+
     def msg desc, state
       print '======> '.magenta
       print "#{desc}:\t".cyan

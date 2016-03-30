@@ -3,6 +3,7 @@ require 'mio/errors'
 
 require 'mio/model'
 require 'mio/model/s3'
+require 'mio/model/hotfolder'
 
 class Mio
 
