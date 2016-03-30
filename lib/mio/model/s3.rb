@@ -1,7 +1,7 @@
 class Mio
   class Model
     class S3 < Model
-      resource :resources
+      set_resource :resources
 
       field :name, String, /^(?!\s*$).+/
       field :visibility, Array
@@ -12,15 +12,16 @@ class Mio
       field :enable, Symbol
       field :start, Symbol
 
-      def create
-        # Override create from Mio::Models::Base
+      def create_array
         plugin = 'tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource'
 
-        object = @client.create 'resources',
-                                {name: @args[:name],
-                                 pluginClass: plugin,
-                                 visibilityIds: @args[:visibility]}
-        configure_payload = {
+        {name: @args[:name],
+        pluginClass: plugin,
+        visibilityIds: @args[:visibility]}
+      end
+
+      def config_array
+        {
           'vfs-location' => {
             protocol: "S3",
             path: "/",
@@ -29,24 +30,6 @@ class Mio
             bucket: @args[:bucket]
           }
         }
-
-        @client.configure 'resources',
-                          object.id,
-                          configure_payload
-
-        # Can't start if disabled
-        if @args[:enable] == :true or @args[:start] == :true
-          @client.action 'resources',
-                         object.id,
-                         {action: 'enable'}
-        end
-
-        if @args[:start] == :true
-          @client.action 'resources',
-                         object.id,
-                         {action: 'start'} if @args[:start]
-        end
-        object
       end
 
     end
