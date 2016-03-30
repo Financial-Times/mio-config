@@ -1,10 +1,10 @@
 class Mio
   class Model
     class << self
-      attr_accessor :fields
-      def resource resource
-        @resource = resource
-      end
+      attr_accessor :fields, :resource_name
+      def set_resource r
+         @resource_name = r.to_s
+       end
 
       def field key, type, matcher=nil
         @fields ||= []
@@ -19,9 +19,52 @@ class Mio
       @args = args
     end
 
-    def create
-      @client.create self.class.resource.to_s, @args
+    def go
+      r = self.class.resource_name
+      lookup = @client.find_all(r)[r].find{|o| o.name == @args[:name]}
+      if lookup.empty?
+        create
+      else
+        @object = lookup
+
+        # We can't edit a running resource
+        set_start :stop
+      end
+
+      configure
+      set_enable
+      set_start
+
+      return @object
     end
+
+    def create
+      @object = @client.create self.class.resource_name, create_array
+    end
+
+    def configure
+      @client.configure self.class.resource_name,
+                        @object.id,
+                        config_array
+    end
+
+    def set_enable a=nil
+      action = a.nil? ? @args[:enable] : a
+      @client.action self.class.resource_name,
+                     @object.id,
+                     {action: action.to_s}
+    end
+    alias_method :disable!, :set_enable
+    alias_method :enable!, :set_enable
+
+    def set_start a=nil
+      action = a.nil? ? @args[:start] : a
+      @client.action self.class.resource_name,
+                     @object.id,
+                     {action: action.to_s}
+    end
+    alias_method :stop!, :set_start
+    alias_method :start!, :set_start
 
     def validate
       testable = @args.dup
