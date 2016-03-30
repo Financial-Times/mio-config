@@ -37,34 +37,19 @@ class Mio
       msg desc, 'completed'
     end
 
-    def s3
+    def type_migration
       conf = Hashie::Mash.new
       yield conf
 
-      do_it Mio::Model::S3.new( @mio.client,
-                                name: conf.name,
-                                visibility: conf.visibility,
-                                # The below must be a fetch; #key is an instance method; can't call as above
-                                key: conf.fetch(:key),
-                                secret_key: conf.secret,
-                                bucket: conf.bucket,
-                                enable: conf.fetch(:enable, :false),
-                                start: conf.fetch(:start, :false) )
-    end
+      mods = {
+        's3' => Mio::Model::S3,
+        'hotfolder' => Mio::Model::Hotfolder,
+      }
 
-    def hotfolder
-      conf = Hashie::Mash.new
-      yield conf
-
-      do_it Mio::Model::Hotfolder.new( @mio.client,
-                                       name: conf.name,
-                                       visibility: conf.visibility,
-                                       storage_resource_name: conf.storage_resource_name,
-                                       workflow_name: conf.workflow_name,
-                                       owner: conf.owner,
-                                       enable: conf.fetch(:enable, :false),
-                                       start: conf.fetch(:start, :false) )
+      do_it mods[__callee__.to_s].new(@mio.client, conf)
     end
+    alias_method :s3, :type_migration
+    alias_method :hotfolder, :type_migration
 
     private
     def do_it thing
