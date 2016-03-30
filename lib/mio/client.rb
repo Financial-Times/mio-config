@@ -1,4 +1,5 @@
 require 'faraday'
+require 'faraday_middleware'
 require 'hashie/mash'
 require 'net/http/persistent'
 require 'json'
@@ -55,12 +56,17 @@ class Mio
 
     def action resource, id, payload, opts={}
       url = path(resource, id, :actions)
-      response = post url, payload, opts
-      unless response.success?
-        raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
-      end
+      statuses = get url, opts
 
-      make_object response.body
+      if JSON.parse(statuses.body).find{|h| h['action'] == payload[:action]}
+        response = post url, payload, opts
+
+        unless response.success?
+          raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
+        end
+
+        make_object response.body
+      end
     end
 
     private
