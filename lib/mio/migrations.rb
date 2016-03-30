@@ -1,5 +1,6 @@
 require 'mio'
 require 'colorize'
+require 'mio/config'
 
 class Mio
   class Migrations
@@ -93,9 +94,10 @@ namespace :mio do
   namespace :migrate do
     desc 'Run migrations'
     task :up do
-      migrater = Mio::Migrations.new(ENV.fetch('MIO_URI'),
-                                     ENV.fetch('MIO_USERNAME'),
-                                     ENV.fetch('MIO_PASSWORD'))
+      config = Mio::Config.read File.expand_path './config/mio.yml'
+      migrater = Mio::Migrations.new(config.base_url,
+                                     config.username,
+                                     config.password )
       migrater.run_migrations
     end
   end
