@@ -3,8 +3,7 @@ require 'mio/search'
 require 'mio/errors'
 
 require 'mio/model'
-require 'mio/model/s3'
-require 'mio/model/hotfolder'
+require 'mio/model/autoload'
 
 class Mio
 
