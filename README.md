@@ -44,13 +44,13 @@ rake mio:migrate:up                  # Run migrations
 
 ### Create migrations
 
-You're more than welcome to handcraft these- they're pretty cimple. You may, though, use the skeleton we create:
+You're more than welcome to handcraft these- they're pretty simple. You may, though, use the skeleton we create:
 
 ```bash
-$ please rake mio:migrate:create[s3,'create an s3 bucket for ingestion']
+$ bundle exec rake mio:migrate:create[s3,'create an s3 bucket for ingestion']
 ```
 
-**NOTE:** There is a lack of spaxes around stuff on purpose. Rake gets a bit funny with them in.
+**NOTE:** There is a lack of spaces around stuff on purpose. Rake gets a bit funny with them in.
 
 This rake taks will look at the model and pre-populate the necessary arguments. From there any *Plain Ol' Ruby* will work. Probably.
 
