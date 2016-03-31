@@ -5,13 +5,14 @@ namespace :mio do
       config = Mio::Config.read File.expand_path './config/mio.yml'
       migrater = Mio::Migrations.new(config.base_url,
                                      config.username,
-                                     config.password )
+                                     config.password)
 
       model = args.model
       raise Mio::Model::NoSuchResource, "#{model} is an invalid mode" if model.nil?
 
-      File.open(migrater.create_migration_file(args.desc), 'w') do |mig|
-        mig.puts "migration '#{args.desc}' do"
+      f = migrater.create_migration_file args.desc
+      File.open(f, 'w') do |mig|
+        mig.puts "migrate '#{args.desc}' do"
         mig.puts "  #{model.to_s} do |m|"
 
         Mio::Model.mappings[model.to_s].fields.each do |f|
@@ -20,6 +21,8 @@ namespace :mio do
         mig.puts "  end"
         mig.puts "end"
       end
+
+      puts f
     end
   end
 end
