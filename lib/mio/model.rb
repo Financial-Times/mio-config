@@ -12,6 +12,16 @@ class Mio
                     type: type,
                     matcher: matcher}
       end
+
+      def mappings
+        m = {}
+        ObjectSpace.each_object(Class).each do |k|
+          if k < Mio::Model
+            m[ k.to_s.split('::').last.downcase ] = k
+          end
+        end
+        m
+      end
     end
 
     def initialize client, args
