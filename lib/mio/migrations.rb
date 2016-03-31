@@ -37,21 +37,41 @@ class Mio
       msg desc, 'completed'
     end
 
-    def type_migration
-      conf = Hashie::Mash.new
-      yield conf
-
-      mods = {
-        's3' => Mio::Model::S3,
-        'hotfolder' => Mio::Model::Hotfolder,
-      }
-
-      do_it mods[__callee__.to_s].new(@mio.client, conf)
+    def type_migration klass, conf
+      do_it klass.new(@mio.client, conf)
     end
-    alias_method :s3, :type_migration
-    alias_method :hotfolder, :type_migration
+
+    def method_missing method_sym, *arguments, &block
+      mapped = model_mappings[method_sym.to_s]
+
+      if mapped.nil?
+        super
+      else
+        conf = Hashie::Mash.new
+        yield conf
+        type_migration mapped, conf
+      end
+    end
+
+    def respond_to? method_sym, include_private=false
+      if model_mappings[method_sym.to_s].nil?
+        super
+      else
+        true
+      end
+    end
 
     private
+    def model_mappings
+      m = {}
+      ObjectSpace.each_object(Class).each do |k|
+        if k < Mio::Model
+          m[ k.to_s.split('::').last.downcase ] = k
+        end
+      end
+      m
+    end
+
     def do_it thing
       if thing.valid?
         obj = thing.go
