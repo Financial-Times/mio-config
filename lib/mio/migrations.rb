@@ -10,7 +10,13 @@ class Mio
         m.username = username
         m.password = password
       end
-      @migrations = Dir.glob( File.join( File.expand_path(base_dir), '*.rb') )
+      @base = File.expand_path(base_dir)
+      @migrations = Dir.glob( File.join(@base, '*.rb') )
+    end
+
+    def create_migration_file desc
+      File.join(@base,
+                "#{Time.now.strftime('%Y%m%d%H%M%S')}_#{desc.gsub(/\W/, '-')}.rb")
     end
 
     def run_migrations
@@ -42,7 +48,7 @@ class Mio
     end
 
     def method_missing method_sym, *arguments, &block
-      mapped = model_mappings[method_sym.to_s]
+      mapped = Mio::Model.mappings[method_sym.to_s]
 
       if mapped.nil?
         super
@@ -54,7 +60,7 @@ class Mio
     end
 
     def respond_to? method_sym, include_private=false
-      if model_mappings[method_sym.to_s].nil?
+      if Mio::Model.mappings[method_sym.to_s].nil?
         super
       else
         true
@@ -62,16 +68,6 @@ class Mio
     end
 
     private
-    def model_mappings
-      m = {}
-      ObjectSpace.each_object(Class).each do |k|
-        if k < Mio::Model
-          m[ k.to_s.split('::').last.downcase ] = k
-        end
-      end
-      m
-    end
-
     def do_it thing
       if thing.valid?
         obj = thing.go
@@ -84,24 +80,6 @@ class Mio
       print '======> '.magenta
       print "#{desc}:\t".cyan
       puts "#{state.upcase}".magenta
-    end
-  end
-end
-
-namespace :mio do
-  desc 'Handle migrations (via mio:migrate:up)'
-  task :migrate do
-    Rake::Task['mio:migrate:up'].invoke
-  end
-
-  namespace :migrate do
-    desc 'Run migrations'
-    task :up do
-      config = Mio::Config.read File.expand_path './config/mio.yml'
-      migrater = Mio::Migrations.new(config.base_url,
-                                     config.username,
-                                     config.password )
-      migrater.run_migrations
     end
   end
 end
