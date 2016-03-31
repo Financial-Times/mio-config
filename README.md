@@ -9,7 +9,7 @@ The builders are largely based on [rails migrations](http://edgeguides.rubyonrai
 In your Gemfile:
 
 ```ruby
-gem 'mio-config', git: 'ssh://git@git.svc.ft.com:7999/video/dios-mio.git'
+gem 'mio-config', git: 'ssh://git@git.svc.ft.com:7999/video/mio-config.git'
 ```
 ### Configuration
 
