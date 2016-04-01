@@ -11,7 +11,7 @@ class Mio
         m.password = password
       end
       @base = File.expand_path(base_dir)
-      @migrations = Dir.glob( File.join(@base, '*.rb') )
+      @migrations = Dir.glob( File.join(@base, '*.rb') ).sort
     end
 
     def create_migration_file desc
