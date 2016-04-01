@@ -6,12 +6,14 @@ class Mio
         @resource_name = r.to_s
       end
 
-      def field key, type, default=nil, matcher=nil
+      def field key, type, desc, default=nil, matcher=nil
         @fields ||= []
         @fields << {name: key,
                     type: type,
                     default: default,
-                    matcher: matcher}
+                    matcher: matcher,
+                    desc: desc,}
+
       end
 
       def mappings
