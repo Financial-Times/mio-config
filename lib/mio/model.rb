@@ -3,14 +3,17 @@ class Mio
     class << self
       attr_accessor :fields, :resource_name
       def set_resource r
-         @resource_name = r.to_s
-       end
+        @resource_name = r.to_s
+      end
 
-      def field key, type, matcher=nil
+      def field key, type, desc, default=nil, matcher=nil
         @fields ||= []
         @fields << {name: key,
                     type: type,
-                    matcher: matcher}
+                    default: default,
+                    matcher: matcher,
+                    desc: desc,}
+
       end
 
       def mappings

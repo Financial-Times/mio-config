@@ -3,15 +3,15 @@ class Mio
     class Hotfolder < Model
       set_resource :resources
 
-      field :storage_resource_name, String
-      field :workflow_name, String
-      field :owner, String
+      field :storage_name, String, 'The name of the resource to be watched'
+      field :workflow_name, String, 'The workflow this hotfolder kicks off'
+      field :owner, String, 'The owner of the hotfolder', 'masteruser masteruser'
 
-      field :name, String, /^(?!\s*$).+/
-      field :visibility, Array
+      field :name, String, 'Name of the hotfolder'
+      field :visibility, Array, 'IDs of accounts that may see this', [4]
 
-      field :enable, Symbol
-      field :start, Symbol
+      field :enable, Symbol, ':true or :false', :true
+      field :start, Symbol, ':true or :false - :enable must be :true', :false
 
       def create_array
         plugin = 'tv.nativ.mio.enterprise.resources.impl.capacity.folder.hotfolder.MioHotFolderResource'
