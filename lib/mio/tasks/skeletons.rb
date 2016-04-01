@@ -26,7 +26,7 @@ namespace :mio do
               value = f[:default]
             end
           end
-          mig.puts "    m.#{f[:name]} = #{value.inspect}"
+          mig.puts "    m.#{f[:name]} = #{value.inspect} \t\t\t\t# #{f[:desc]}"
         end
         mig.puts "  end"
         mig.puts "end"
