@@ -16,7 +16,17 @@ namespace :mio do
         mig.puts "  #{model.to_s} do |m|"
 
         Mio::Model.mappings[model.to_s].fields.each do |f|
-          mig.puts "    m.#{f[:name]} = #{f[:type]}"
+          if f[:default].nil?
+            value = f[:type]
+          else
+            case f[:type]
+            when String
+              value = "'#{f[:default]}'"
+            else
+              value = f[:default]
+            end
+          end
+          mig.puts "    m.#{f[:name]} = #{value.inspect}"
         end
         mig.puts "  end"
         mig.puts "end"
