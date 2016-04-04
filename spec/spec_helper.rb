@@ -4,8 +4,12 @@ SimpleCov.start do
   add_filter 'spec'
 end
 
+require 'factory_girl'
+require 'faker'
 require 'rspec'
-require 'mio/config'
+require 'vcr'
+
+require 'mio'
 
 %w{support factories}.each do |d|
   Dir["./spec/#{d}/**/*.rb"].sort.each { |f| require f}

@@ -12,7 +12,7 @@ class Mio
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
 
-      def create_array
+      def create_hash
         plugin = 'tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource'
 
         {name: @args.name,
@@ -20,7 +20,7 @@ class Mio
         visibilityIds: @args.visibility}
       end
 
-      def config_array
+      def config_hash
         {
           'vfs-location' => {
             protocol: "S3",
