@@ -51,13 +51,13 @@ class Mio
     end
 
     def create
-      @client.create self.class.resource_name, create_array
+      @client.create self.class.resource_name, create_hash
     end
 
     def configure
       @client.configure self.class.resource_name,
                         @object.id,
-                        config_array
+                        config_hash
     end
 
     def set_enable a=nil
