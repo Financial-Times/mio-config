@@ -1,3 +1,4 @@
 migrations/*
 !migrations/.gitkeep
 .gem
+coverage/
