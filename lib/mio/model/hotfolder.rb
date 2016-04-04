@@ -13,7 +13,7 @@ class Mio
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false - :enable must be :true', :false
 
-      def create_array
+      def create_hash
         plugin = 'tv.nativ.mio.enterprise.resources.impl.capacity.folder.hotfolder.MioHotFolderResource'
 
         {name: @args.name,
@@ -21,10 +21,10 @@ class Mio
          visibilityIds: @args.visibility}
       end
 
-      def config_array
+      def config_hash
         # Get the s3 resource id
-        storage = @search.find_resources_by_name(@args.storage_resource_name).first
-        raise Mio::Model::NoSuchResource, "Could not find #{@args.storage_resource_name}" unless storage
+        storage = @search.find_resources_by_name(@args.storage_name).first
+        raise Mio::Model::NoSuchResource, "Could not find #{@args.storage_name}" unless storage
 
         # Get the workflow name
         workflow = @search.find_workflows_by_name(@args.workflow_name).first
