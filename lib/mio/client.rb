@@ -29,10 +29,6 @@ class Mio
       make_object response.body
     end
 
-    def find resource, id, opts={}
-      obj = find_all(resource, opts).find{|f| f.id == id}
-    end
-
     def create resource, payload, opts={}
       url = path(resource)
       response = post url, payload, opts
@@ -56,6 +52,10 @@ class Mio
     def action resource, id, payload, opts={}
       url = path(resource, id, :actions)
       statuses = get url, opts
+      unless statuses.success?
+        raise Mio::Client::LoadOfBollocks, "GET on #{url} returned #{statuses.status}"
+      end
+
       if JSON.parse(statuses.body).find{|h| h['action'] == payload[:action]}
         response = post url, payload, opts
 
@@ -63,7 +63,9 @@ class Mio
           raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
         end
 
-        make_object response.body
+        return make_object response.body
+      else
+        raise Mio::Client::LoadOfBollocks, "#{payload[:action]} is invalid"
       end
     end
 
