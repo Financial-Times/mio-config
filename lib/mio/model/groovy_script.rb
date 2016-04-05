@@ -8,8 +8,8 @@ class Mio
       field :key, String, 'AWS API Key with access to S3'
       field :secret, String, 'AWS secret'
       field :visibility, Array, 'Ids of the accounts which may see the import action' 
-      field :script, String, 'Path to script (locally)'
-      field :jar, String, 'JAR to load on remote, emptyfor none' 
+      field :script, String, 'The groovy script (locally)'
+      field :jar, String, 'JAR to load on remote, empty for none' 
       field :imports, Array, 'Imports to reference within groovy script, empty for none', []
 
       field :enable, Symbol, ':true or :false', :true
