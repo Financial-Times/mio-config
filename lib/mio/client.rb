@@ -64,8 +64,6 @@ class Mio
         end
 
         return make_object response.body
-      else
-        raise Mio::Client::LoadOfBollocks, "#{payload[:action]} is invalid"
       end
     end
 

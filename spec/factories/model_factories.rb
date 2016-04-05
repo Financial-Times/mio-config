@@ -32,5 +32,14 @@ FactoryGirl.define do
       factory :hotfolder_extra_data,   traits: [:invalid_field]
     end
 
+    factory :import_action do
+      name 'A Test Import Action'
+      key 'some_s3_key'
+      secret 'some_s3_secret'
+      bucket 'some_faked_s3_bucket'
+
+      factory :import_action_invalid_data, traits: [:invalid_name]
+      factory :import_action_extra_data,   traits: [:invalid_field]
+    end
   end
 end

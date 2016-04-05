@@ -1,4 +1,4 @@
 ---
-base_url: <%= ENV.fetch('MIO_URI', 'https://master.dev.nativ-systems.com') %>
+base_url: <%= ENV.fetch('MIO_URI', 'https://master.dev.nativ-systems.com/api') %>
 username: <%= ENV.fetch('MIO_USERNAME', 'masteruser') %>
 password: <%= ENV.fetch('MIO_PASSWORD', 'masteruser') %>

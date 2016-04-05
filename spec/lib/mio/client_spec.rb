@@ -47,11 +47,6 @@ describe 'Mio::Client' do
         expect(client.action(resource, 10943, action_payload)).to be_a(Hashie::Mash)
       end
 
-      context 'when setting a garbage action' do
-        it 'throws an error' do
-          expect{client.action(resource, 10943, {action: 'poop'}) }.to raise_error(Mio::Client::LoadOfBollocks)
-        end
-       end
     end
 
     context 'when creating an invalid resource' do
