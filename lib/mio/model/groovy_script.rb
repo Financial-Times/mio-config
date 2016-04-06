@@ -25,22 +25,13 @@ class Mio
         }
       end
 
-      def get_values values
-        result = Array.new
-        values.each{|value| result.insert(-1, { "value": value, "isExpression": false })}
-        result
-      end
-
       def config_hash
-        imports_array = get_values @args.imports
-        jars_array = get_values @args.jars
         {'script-contents': {
           script: @args.script
-
         },
         imports: {
-          'jar-url': jars_array,
-          import: imports_array
+          'jar-url': @args.jars.map{|jar| {value: jar, isExpression: false}},
+          import: @args.imports.map{|import| {value: import, isExpression: false}}
         }
         } 
       end
