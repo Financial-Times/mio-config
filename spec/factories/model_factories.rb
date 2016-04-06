@@ -41,5 +41,20 @@ FactoryGirl.define do
       factory :import_action_invalid_data, traits: [:invalid_name]
       factory :import_action_extra_data,   traits: [:invalid_field]
     end
+
+    factory :groovy_script_wait do
+      name 'A Test Groovy Wait Script'
+      displayName 'A Test Groovy Wait Script'
+      key 'some_s3_key'
+      secret 'some_s3_secret'
+      script 'test script'
+      jars ['file:///test/test/jar','file:///test/test/test.jar']
+      imports ['com.test.test.test','com.testing.testing.test']
+      timeout 0
+      pollingTime 10
+
+      factory :groovy_script_wait_invalid_data, traits: [:invalid_name]
+      factory :groovy_script_wait_extra_data,   traits: [:invalid_field]
+    end
   end
 end
