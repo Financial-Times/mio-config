@@ -48,7 +48,7 @@ FactoryGirl.define do
       key 'some_s3_key'
       secret 'some_s3_secret'
       script 'test script'
-      jar 'file:///test/test/jar'
+      jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
 
       factory :groovy_script_invalid_data, traits: [:invalid_name]

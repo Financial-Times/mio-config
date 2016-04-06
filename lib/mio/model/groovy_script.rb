@@ -9,7 +9,7 @@ class Mio
       field :secret, String, 'AWS secret'
       field :visibility, Array, 'Ids of the accounts which may see the import action' 
       field :script, String, 'The groovy script (inline) ', '"File.read(/path/to/script.groovy)"'
-      field :jar, String, 'JAR to load on remote, empty for none' 
+      field :jars, Array, 'JARs to load on remote, empty for none', [] 
       field :imports, Array, 'Imports to reference within groovy script, empty for none', []
 
       field :enable, Symbol, ':true or :false', :true
@@ -25,25 +25,21 @@ class Mio
         }
       end
 
-      def import_array 
+      def get_values values
         result = Array.new
-        @args.imports.each{|import| result.insert(-1, { "value": import, "isExpression": false })}
+        values.each{|value| result.insert(-1, { "value": value, "isExpression": false })}
         result
       end
 
       def config_hash
-        imports_array = import_array
+        imports_array = get_values @args.imports
+        jars_array = get_values @args.jars
         {'script-contents': {
           script: @args.script
 
         },
         imports: {
-          'jar-url': [
-            {
-              value: @args.jar,
-              isExpression: false
-            }
-          ],
+          'jar-url': jars_array,
           import: imports_array
         }
         } 
