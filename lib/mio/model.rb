@@ -16,6 +16,15 @@ class Mio
 
       end
 
+      def nested val=nil
+        if val.nil?
+          @nested_value || false
+        else
+          @nested_value = val
+        end
+      end
+      alias_method :nested?, :nested
+
       def mappings
         m = {}
         ObjectSpace.each_object(Class).each do |k|
