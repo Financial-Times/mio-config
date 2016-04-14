@@ -25,7 +25,7 @@ class Mio
           'vfs-location' => {
             protocol: "S3",
             path: "/",
-            key: @args.fetch('key'),
+            key: @args['key'],
             secret: @args.secret,
             bucket: @args.bucket
           }

@@ -44,7 +44,11 @@ class Mio
     end
 
     def type_migration klass, conf
-      do_it klass.new(@mio.client, conf)
+      if klass.nested?
+        get_it klass.new(@mio.client, conf)
+      else
+        do_it klass.new(@mio.client, conf)
+      end
     end
 
     def method_missing method_sym, *arguments, &block
@@ -53,7 +57,7 @@ class Mio
       if mapped.nil?
         super
       else
-        conf = Hashie::Mash.new
+        conf = OpenStruct.new
         yield conf
         type_migration mapped, conf
       end
@@ -72,7 +76,14 @@ class Mio
       if thing.valid?
         obj = thing.go
       end
-      puts "Created '#{obj.name}' with id '#{obj.id}'"
+      puts "Created '#{obj['name']}' with id '#{obj['id']}'"
+    end
+
+    def get_it thing
+      if thing.valid?
+        return thing.create_hash
+      end
+      return nil
     end
 
 

@@ -19,7 +19,7 @@ describe 'Mio::Client' do
         let(:resource){'resources'}
 
         it '#find_all returns a Hashie::Mash' do
-          expect(client.find_all(resource)).to be_a(Hashie::Mash)
+          expect(client.find_all(resource)).to be_a(Hash)
         end
       end
 
@@ -35,16 +35,16 @@ describe 'Mio::Client' do
     context 'when creating a valid resource' do
       let(:resource){'resources'}
 
-      it 'successfully creates a new resource' do
-        expect(client.create(resource, create_payload)).to be_a(Hashie::Mash)
+      xit 'successfully creates a new resource' do
+        expect(client.create(resource, create_payload)).to be_a(Hash)
       end
 
       it 'successfully configures a new resource' do
-        expect(client.configure(resource, 10943, configure_payload)).to be_a(Hashie::Mash)
+        expect(client.configure(resource, 10943, configure_payload)).to be_an(Hash)
       end
 
       it 'successfully enables a new resource' do
-        expect(client.action(resource, 10943, action_payload)).to be_a(Hashie::Mash)
+        expect(client.action(resource, 10943, action_payload)).to be_an(Hash)
       end
 
     end

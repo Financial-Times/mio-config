@@ -10,6 +10,7 @@ end
 
 gem 'colorize'
 gem 'faraday'
+gem "faraday-detailed_logger"
 gem 'hashie'
 gem 'net-http-persistent'
 gem 'rake'

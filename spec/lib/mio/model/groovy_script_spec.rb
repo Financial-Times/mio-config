@@ -7,5 +7,7 @@ describe 'Mio::Model::GroovyScript' do
   let(:extra_model_args){build(:groovy_script_extra_data)}
 
   it_behaves_like 'generic_model'
+  it_behaves_like 'model_with_config_hash'
+  it_behaves_like 'non_nested_model'
 
 end

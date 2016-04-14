@@ -7,5 +7,7 @@ describe 'Mio::Model::S3' do
   let(:extra_model_args){build(:s3_extra_data)}
 
   it_behaves_like 'generic_model'
+  it_behaves_like 'model_with_config_hash'
+  it_behaves_like 'non_nested_model'
 
 end

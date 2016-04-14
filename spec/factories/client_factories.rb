@@ -21,7 +21,7 @@ FactoryGirl.define do
   end
 
   factory :create_json, class: OpenStruct do
-    name 'vcr resource'
+    name 'vcr resource storage'
     visibilityIds [4]
     pluginClass "tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource"
   end

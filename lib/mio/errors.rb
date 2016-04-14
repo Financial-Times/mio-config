@@ -9,6 +9,7 @@ class Mio
     class DataTypeError < ArgumentError ; end
     class DataValueError < ArgumentError ; end
     class NoSuchResource < ArgumentError ; end
+    class EmptyField < ArgumentError ; end
   end
 
   class Config
