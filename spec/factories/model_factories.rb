@@ -19,6 +19,12 @@ FactoryGirl.define do
       name 'end 1'
       type 'end'
     end
+
+    factory :action_node do
+      name 'lauch 1'
+      action 'Launch and Wait'
+      type 'ACTION'
+    end
   end
 
   factory :transition, class: OpenStruct do

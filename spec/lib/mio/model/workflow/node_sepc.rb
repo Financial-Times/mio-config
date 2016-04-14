@@ -9,4 +9,11 @@ describe 'Mio::Model::Workflow::Node' do
   it_behaves_like 'generic_model'
   it_behaves_like 'nested_model'
 
+  let(:client){build(:valid_client)}
+  let(:node){build(subject.new(client, model_args))}
+
+  it 'responds to #normalize_action' do
+    expect(node).to respond_to(normalize_action)
+  end
+
 end

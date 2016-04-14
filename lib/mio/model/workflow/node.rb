@@ -24,12 +24,9 @@ class Mio
         end
 
         def normalize_action a
-          {
-            id: a['id'],
-            name: a['name'],
-            pluginClass: a['pluginClass']
-          }
-
+          {id: a['id'],
+           name: a['name'],
+           pluginClass: a['pluginClass']}
         end
 
       end
