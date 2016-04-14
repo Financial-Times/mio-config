@@ -57,7 +57,7 @@ class Mio
       if mapped.nil?
         super
       else
-        conf = Hashie::Mash.new
+        conf = OpenStruct.new
         yield conf
         type_migration mapped, conf
       end
@@ -76,7 +76,7 @@ class Mio
       if thing.valid?
         obj = thing.go
       end
-      puts "Created '#{obj.name}' with id '#{obj.id}'"
+      puts "Created '#{obj['name']}' with id '#{obj['id']}'"
     end
 
     def get_it thing

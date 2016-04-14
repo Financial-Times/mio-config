@@ -5,7 +5,7 @@ class Mio
     end
 
     def all resource, key, value
-      @client.find_all(resource)[resource].select{|o| o.method(key).call == value}
+      @client.find_all(resource)[resource].select{|o| o[key] == value}
     end
 
     def method_missing method_sym, *arguments, &block

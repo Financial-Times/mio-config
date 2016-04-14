@@ -38,15 +38,15 @@ class Mio
           'inactivity-timeout' => 30000000,
           'storage-resources' => {
             'Storage Resource' => [
-              {'id' =>  storage.id }
+              {'id' =>  storage['id'] }
             ]
           },
           'use-md5' => false,
           'workflow-definition' => {
-            'id' =>  workflow.id
+            'id' =>  workflow['id']
           },
           'owner' => {
-            'id' =>  owner.id
+            'id' =>  owner['id']
           }
         }
       end

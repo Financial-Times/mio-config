@@ -35,7 +35,7 @@ class Mio
                   "isExpression": false
                 },
                 "key": {
-                  "value": @args.fetch('key'),
+                  "value": @args['key'],
                   "isExpression": false
                 },
                 "secret": {

@@ -52,7 +52,7 @@ class Mio
         set_start :stop
       end
 
-      configure
+      configure if self.respond_to? :config_hash
       set_enable
       set_start
 
@@ -65,7 +65,7 @@ class Mio
 
     def configure
       @client.configure self.class.resource_name,
-                        @object.id,
+                        @object['id'],
                         config_hash
     end
 
@@ -76,7 +76,7 @@ class Mio
         action = a.to_s
       end
       @client.action self.class.resource_name,
-                     @object.id,
+                     @object['id'],
                      {action: action}
     end
     alias_method :disable!, :set_enable
@@ -89,7 +89,7 @@ class Mio
         action = a.to_s
       end
       @client.action self.class.resource_name,
-                     @object.id,
+                     @object['id'],
                      {action: action}
     end
     alias_method :stop!, :set_start
@@ -99,11 +99,11 @@ class Mio
       testable = @args.dup.to_h
 
       self.class.fields.each do |f|
-        unless testable.key? f[:name].to_s
+        unless testable.key? f[:name]
           raise Mio::Model::MissingField, "Missing field #{f[:name]} to #{self}"
         end
 
-        extracted_field = testable.delete f[:name].to_s
+        extracted_field = testable.delete f[:name]
         unless extracted_field.is_a? f[:type]
           raise Mio::Model::DataTypeError, "#{f[:name]} should be of type #{f[:type]} for #{self}"
         end
@@ -123,7 +123,7 @@ class Mio
     private
     def look_up
       r = self.class.resource_name
-      @client.find_all(r)[r].find{|o| o.name == @args.name}
+      @client.find_all(r)[r].find{|o| o['name'] == @args.name}
     end
   end
 

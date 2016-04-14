@@ -7,5 +7,6 @@ describe 'Mio::Model::ImportAction' do
   let(:extra_model_args){build(:import_action_extra_data)}
 
   it_behaves_like 'generic_model'
+  it_behaves_like 'model_with_config_hash'
 
 end
