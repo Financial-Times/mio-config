@@ -36,7 +36,7 @@ class Mio
           import: @args.imports.map{|i| {value: i, isExpression: false}}
         },
         "timeout": @args.timeout,
-        "polling-time-period": @args.pollingTime
+        "polling-time-period": @args.polling_time
         }
       end
     end

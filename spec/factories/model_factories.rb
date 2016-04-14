@@ -118,7 +118,8 @@ FactoryGirl.define do
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
       timeout 0
-      pollingTime 10
+      polling_time 10
+      start :true
 
       factory :groovy_script_wait_invalid_data, traits: [:invalid_name]
       factory :groovy_script_wait_extra_data,   traits: [:invalid_field]
