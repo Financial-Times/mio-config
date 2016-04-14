@@ -1,4 +1,5 @@
 require 'faraday'
+require 'faraday/detailed_logger'
 require 'hashie/mash'
 require 'net/http/persistent'
 require 'json'
@@ -14,6 +15,7 @@ class Mio
       @base_uri = base_uri
       @agent = Faraday.new(url: base_uri) do |f|
         f.adapter :net_http_persistent
+        f.response :detailed_logger if ENV.fetch('VERBOSE', 'false').to_s.downcase == 'true'
       end
       @agent.basic_auth(username, password)
     end
@@ -25,7 +27,6 @@ class Mio
       unless response.success?
         raise Mio::Client::LoadOfBollocks, "GET on #{url} returned #{response.status}"
       end
-
       make_object response.body
     end
 
@@ -38,6 +39,17 @@ class Mio
 
       make_object response.body
     end
+
+    def update resource, payload, opts={}
+      url = path(resource)
+      response = put url, payload, opts
+      unless response.success?
+        raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
+      end
+
+      make_object response.body
+    end
+
 
     def configure resource, id, payload, opts={}
       url = path(resource, id, :configuration)
@@ -62,7 +74,6 @@ class Mio
         unless response.success?
           raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
         end
-
         return make_object response.body
       end
     end
@@ -81,7 +92,7 @@ class Mio
     end
 
     def make_object response
-      Hashie::Mash.new JSON.parse(response)
+      JSON.parse(response)
     end
 
     def path resource, id=nil, endpoint=nil
