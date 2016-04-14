@@ -1,15 +1,40 @@
 FactoryGirl.define do
+  trait :invalid_name do
+    name 123456
+  end
+
+  trait :invalid_field do
+    foo 'bar'
+  end
+
+  factory :node, class: OpenStruct do
+    name 'start 1'
+    action ''
+    type 'start'
+
+    factory :node_invalid_data, traits: [:invalid_name]
+    factory :node_extra_data,   traits: [:invalid_field]
+
+    factory :end_node do
+      name 'end 1'
+      type 'end'
+    end
+  end
+
+  factory :transition, class: OpenStruct do
+    from 'start 1'
+    to 'end 1'
+
+    factory :transition_invalid_data do
+      from 123
+    end
+
+    factory :transition_extra_data,   traits: [:invalid_field]
+  end
+
   factory :model, class: OpenStruct do
     visibility [4]
     enable :true
-
-    trait :invalid_name do
-      name 123456
-    end
-
-    trait :invalid_field do
-      foo 'bar'
-    end
 
     factory :s3 do
       name 'S3 Bucket Factory'
@@ -60,11 +85,22 @@ FactoryGirl.define do
 
     factory :workflow do
       name 'Workflow'
-      transitions []
-      nodes []
+      transitions [{from: 'Start 1', to: 'End 1'}]
+      nodes [{id: 456, name: 'End 1', path: '/e'},
+             {id: 123, name: 'Start 1', path: '/s'}]
 
-      factory :workflow_invalid_data, traits: [:invalid_name]
-      factory :workflow_extra_data,   traits: [:invalid_field]
+      trait :empty_nodes do
+        nodes []
+      end
+
+      trait :empty_transitions do
+        transitions []
+      end
+
+      factory :workflow_invalid_data,      traits: [:invalid_name]
+      factory :workflow_extra_data,        traits: [:invalid_field]
+      factory :workflow_empty_nodes,       traits: [:empty_nodes]
+      factory :workflow_empty_transitions, traits: [:empty_transitions]
     end
   end
 end

@@ -47,13 +47,6 @@ shared_examples 'generic_model' do
       end
 
     end
-
-    context 'when creating a mio resource' do
-      it 'Goes through the complete flow with #go' do
-        expect(valid_model.go).to be_a(Hash)
-      end
-    end
-
   end
 end
 
@@ -66,4 +59,29 @@ shared_examples 'model_with_config_hash' do
       expect(valid_model.method(m).call).to be_an(Hash)
     end
   end
+end
+
+shared_examples 'nested_model' do
+  let(:client){build :valid_client}
+  let(:valid_model){subject.new(client, model_args)}
+
+  it "returns true for #nested?" do
+    expect(subject.nested?).to be(true)
+  end
+end
+
+shared_examples 'non_nested_model' do
+  let(:client){build :valid_client}
+  let(:valid_model){subject.new(client, model_args)}
+
+  it "returns false for #nested?" do
+    expect(subject.nested?).to be(false)
+  end
+
+  context 'when creating a mio resource' do
+    it 'Goes through the complete flow with #go' do
+      expect(valid_model.go).to be_a(Hash)
+    end
+  end
+
 end

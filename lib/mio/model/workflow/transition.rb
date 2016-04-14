@@ -2,7 +2,7 @@ class Mio
  class Model
    class Workflow
      class Transition < Model
-       set_resource :poo
+       set_resource :workflowDefinitions
 
        field :from, String, 'Starting node name'
        field :to, String,'Destination node name'
