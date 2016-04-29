@@ -27,7 +27,7 @@ class Mio
         raise Mio::Model::NoSuchResource, "Could not find #{@args.storage_name}" unless storage
 
         # Get the workflow name
-        workflow = @search.find_workflows_by_name(@args.workflow_name).first
+        workflow = @search.find_workflowDefinitions_by_name(@args.workflow_name).first
         raise Mio::Model::NoSuchResource, "Could not find #{@args.workflow_name}" unless workflow
 
         owner = @search.find_users_by_displayName(@args.owner).first
