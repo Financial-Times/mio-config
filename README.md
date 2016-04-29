@@ -1,5 +1,7 @@
 # Mio Config
 
+![build status](https://circleci.com/gh/Financial-Times/mio-config.png)
+
 This simple rubygem will allow for a codified build out of mio resources and configuration.
 
 The builders are largely based on [rails migrations](http://edgeguides.rubyonrails.org/active_record_migrations.html), though they're closer in concept to configuration management tools like chef and puppet. Thus they should contain nothing new to most developers, ruby or not.
