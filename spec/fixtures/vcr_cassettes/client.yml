@@ -1,0 +1,2415 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/no-such-resource
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:04:48 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      content-type:
+      - application/json
+      content-length:
+      - '80'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Invalid Mio Object Type: no-such-resource"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:03:34 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/resources/10943/configuration
+    body:
+      encoding: UTF-8
+      string: '{"vfs-location":{"protocol":"S3","path":"/","key":"an-s3-key","secret":"an-s3-secret-key","bucket":"some-s3-bucket"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:04:49 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=C1NPwmilCp6z1wFGA57TP39D.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":102208,"instance":{"vfs-location":{"protocol":"S3","path":"/","key":"an-s3-key","secret":"an-s3-secret-key","bucket":"some-s3-bucket"}},"definitionId":103954,"definition":[{"id":103955,"name":"vfs-location","displayName":"VFS
+        Location","description":"Details for a Virtual File System location","type":"vfs-location","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":103978,"name":"file-details-check","displayName":"File
+        Details Check","description":"Perform regular checks of file existence, size
+        and last modification time.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":103979,"name":"checking-interval","displayName":"Checking
+        Interval","description":"Minimum interval between file details checking.","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":120000000}]}]}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:03:34 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/10943/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:04:49 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=i9O-OSEUAKYb8MNaY6lPO0FZ.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:03:35 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/no-such-resource
+    body:
+      encoding: UTF-8
+      string: '{"name":"vcr resource storage","visibilityIds":[4],"pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 400
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:04:49 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      content-type:
+      - application/json
+      content-length:
+      - '385'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Unrecognized field \"visibilityIds\" (Class tv.nativ.mio.api.model.userdefinedobject.create.NewUserDefinedObject), not marked as ignorable\n at [Source: org.apache.catalina.connector.CoyoteInputStream@18553652; line: 1, column: 49] (through reference chain: tv.nativ.mio.api.model.userdefinedobject.create.NewUserDefinedObject[\"visibilityIds\"])"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:03:35 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/no-such-resource/0/configuration
+    body:
+      encoding: UTF-8
+      string: '{"vfs-location":{"protocol":"S3","path":"/","key":"an-s3-key","secret":"an-s3-secret-key","bucket":"some-s3-bucket"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:04:50 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=8glc8ddeyzStwKWoi6fdvue9.-201388908; Path=/api; Secure
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '1380'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 404 - Could not find resource for relative : /no-such-resource/0/configuration
+        of full path: https://master.dev.nativ-systems.com/api/no-such-resource/0/configuration</h1><HR
+        size="1" noshade="noshade"><p><b>JBWEB000309: type</b> JBWEB000067: Status
+        report</p><p><b>JBWEB000068: message</b> <u>Could not find resource for relative
+        : /no-such-resource/0/configuration of full path: https://master.dev.nativ-systems.com/api/no-such-resource/0/configuration</u></p><p><b>JBWEB000069:
+        description</b> <u>JBWEB000124: The requested resource is not available.</u></p><HR
+        size="1" noshade="noshade"><h3>JBoss Web/7.4.8.Final-redhat-4</h3></body></html>'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:03:35 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/no-such-resource/0/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:04:50 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      content-type:
+      - application/json
+      content-length:
+      - '80'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Invalid Mio Object Type: no-such-resource"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:03:36 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: UTF-8
+      string: '{"name":"vcr resource storage","visibilityIds":[4],"pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:12:22 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=7gfcjDKzQkFoY-cumF2P6dS4.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/resources/11113
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11113,"uuid":"fc4b0eea-c9f8-4103-8a47-5643ca94515e","name":"vcr
+        resource storage","displayName":"vcr resource storage","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/11113","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:11:09 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/resources/11113/configuration
+    body:
+      encoding: UTF-8
+      string: '{"vfs-location":{"protocol":"S3","path":"/","key":"an-s3-key","secret":"an-s3-secret-key","bucket":"some-s3-bucket"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:12:50 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=K2EPwUYo67vitMCq71BFmzly.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103286,"instance":{"vfs-location":{"protocol":"S3","path":"/","key":"an-s3-key","secret":"an-s3-secret-key","bucket":"some-s3-bucket"}},"definitionId":107063,"definition":[{"id":107064,"name":"vfs-location","displayName":"VFS
+        Location","description":"Details for a Virtual File System location","type":"vfs-location","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107087,"name":"file-details-check","displayName":"File
+        Details Check","description":"Perform regular checks of file existence, size
+        and last modification time.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107088,"name":"checking-interval","displayName":"Checking
+        Interval","description":"Minimum interval between file details checking.","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":120000000}]}]}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:11:36 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/11113/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:12:50 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=JsMTJyjM8c18y6-5QFb46NFN.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:11:36 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources/11113/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:12:51 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=Y0a0hXfOsTPiqPPsw7NJmrKD.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11113,"uuid":"fc4b0eea-c9f8-4103-8a47-5643ca94515e","name":"vcr
+        resource storage","displayName":"vcr resource storage","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/11113","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:11:37 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"Groovy Script Factory","pluginClass":"tv.nativ.mio.plugins.actions.script.GroovyScriptCommand","visibilityIds":[4],"type":"script","runRuleExpression":""}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:24:58 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=lv0rsN8OGVusVLngT7XTrJSX.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/actions/11114
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11114,"uuid":"72808cbc-eb29-49a7-a869-a5b42cb282fa","name":"Groovy
+        Script Factory","displayName":"Groovy Script Factory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11114","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:23:44 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11114/configuration
+    body:
+      encoding: UTF-8
+      string: '{"script-contents":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:24:59 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=pg1zCh0QfAP6vIcImYRIFwUO.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103302,"instance":{"script-contents":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]}},"definitionId":107089,"definition":[{"id":107090,"name":"script-contents","displayName":"Script
+        Contents","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107091,"name":"script","displayName":"Groovy
+        Script","description":"Script Content (create a method called execute())","type":"script","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107092,"name":"script-file","displayName":"Groovy
+        Script File","description":"Groovy Script File (create a method called execute())","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107095,"name":"imports","displayName":"Script
+        Imports","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107096,"name":"jar-url","displayName":"JAR
+        File URL","description":"Jar File URL to be imported into the script.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107097,"name":"import","displayName":"Script
+        Import","description":"Script import to use.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:23:45 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions/11114/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:00 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=MDyWcRNmeghWPueeDz9Tgb3g.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=96
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11114,"uuid":"72808cbc-eb29-49a7-a869-a5b42cb282fa","name":"Groovy
+        Script Factory","displayName":"Groovy Script Factory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11114","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:23:45 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11114/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:00 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=9WWOmFt5iKqagiEP2pjp0JfU.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=95
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"disable"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:23:46 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"A Test Groovy Wait Script","pluginClass":"tv.nativ.mio.plugins.actions.wait.ScriptedWaitCommand","visibilityIds":[4],"type":"script","runRuleExpression":""}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:27 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=pI6wJVgCodSdBMOcTnZCWUML.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/actions/11115
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11115,"uuid":"8855172e-31c8-4f7b-96fc-39619f14dbd6","name":"A
+        Test Groovy Wait Script","displayName":"A Test Groovy Wait Script","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11115","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:12 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11115/configuration
+    body:
+      encoding: UTF-8
+      string: '{"script_type":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]},"timeout":0,"polling-time-period":10}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:27 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=70ihaz0HBaJgzEL4eqvlD9IO.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103310,"instance":{"script_type":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]},"timeout":0,"polling-time-period":10},"definitionId":107098,"definition":[{"id":107099,"name":"script_type","displayName":"Script","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107100,"name":"script","displayName":"Groovy
+        Script","description":"Script Content (execute() must return a boolean value)","type":"script","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107101,"name":"script-file","displayName":"Groovy
+        Script File","description":"Groovy Script File (execute() must return a boolean
+        value)","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107104,"name":"imports","displayName":"Script
+        Imports","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107105,"name":"jar-url","displayName":"JAR
+        File URL","description":"Jar File URL to be imported into the script.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107106,"name":"import","displayName":"Script
+        Import","description":"Script import to use.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107107,"name":"timeout","displayName":"Timeout","description":"Timeout
+        Period","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":0},{"id":107108,"name":"polling-time-period","displayName":"Polling
+        Time Period","description":"Polling Time Period in seconds( >= 10s ).","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":60000000}]}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:13 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11115/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:28 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=4agpsUj7guTU+S2n8kXL7hCF.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:13 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions/11115/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:28 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=cXB0Hyo6mQ0QZ94wkcYo-hG8.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11115,"uuid":"8855172e-31c8-4f7b-96fc-39619f14dbd6","name":"A
+        Test Groovy Wait Script","displayName":"A Test Groovy Wait Script","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11115","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:14 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: UTF-8
+      string: '{"name":"Hotfolder Factory","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.folder.hotfolder.MioHotFolderResource","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:38 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=ch9lsJkHdsPHPdeFeTHKylFb.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/resources/11116
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11116,"uuid":"981e82bd-06cc-434d-8e95-1bc9b77d51a4","name":"Hotfolder
+        Factory","displayName":"Hotfolder Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/11116","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:24 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: UTF-8
+      string: '{"name":"S3 Bucket Factory","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:53 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=egKEpprS67v680YwAX77xcLn.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/resources/11117
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11117,"uuid":"acbdb174-37db-44e6-a17c-dc50ccf884ba","name":"S3
+        Bucket Factory","displayName":"S3 Bucket Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/11117","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:39 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/resources/11117/configuration
+    body:
+      encoding: UTF-8
+      string: '{"vfs-location":{"protocol":"S3","path":"/","key":"some_s3_key","secret":"some_s3_secret","bucket":"some_faked_s3_bucket"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:54 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=okxkP9JaAVE210UZcz+-hkow.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103335,"instance":{"vfs-location":{"protocol":"S3","path":"/","key":"some_s3_key","secret":"some_s3_secret","bucket":"some_faked_s3_bucket"}},"definitionId":107124,"definition":[{"id":107125,"name":"vfs-location","displayName":"VFS
+        Location","description":"Details for a Virtual File System location","type":"vfs-location","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107148,"name":"file-details-check","displayName":"File
+        Details Check","description":"Perform regular checks of file existence, size
+        and last modification time.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107149,"name":"checking-interval","displayName":"Checking
+        Interval","description":"Minimum interval between file details checking.","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":120000000}]}]}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:41 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/11117/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:55 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=d4l0WDB5O32le819Qxm7umM-.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:41 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources/11117/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:25:56 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=wDbNZUxU087PZCPkeZuD0CJY.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11117,"uuid":"acbdb174-37db-44e6-a17c-dc50ccf884ba","name":"S3
+        Bucket Factory","displayName":"S3 Bucket Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/11117","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:24:43 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions
+    body:
+      encoding: UTF-8
+      string: '{"name":"Workflow","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:28:31 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=ZpTnmS2K9fTrRGblC+iWtTsH.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/workflowDefinitions/11118
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11118,"uuid":"08f08d75-03d5-4b25-b212-da0ce39ff75e","name":"Workflow","displayName":"Workflow","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11118","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:27:17 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:39:00 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=gvrvgeDF2B5vwig3VRXNcL77.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"actions":[{"id":11114,"uuid":"72808cbc-eb29-49a7-a869-a5b42cb282fa","name":"Groovy
+        Script Factory","displayName":"Groovy Script Factory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11114","type":{"id":42,"name":"script","displayName":"Script","href":"https://master.dev.nativ-systems.com/api/actionTypes/42","category":"Workflow"},"pluginClass":"tv.nativ.mio.plugins.actions.script.GroovyScriptCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/script.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/script.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/script.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/script.png"},"created":"29
+        Apr 2016 11:23:04 +0000","lastModified":"29 Apr 2016 11:23:05 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-2249385d5c7676c70fce5009bf9c3c30352f88fa"},{"id":11115,"uuid":"8855172e-31c8-4f7b-96fc-39619f14dbd6","name":"A
+        Test Groovy Wait Script","displayName":"A Test Groovy Wait Script","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11115","type":{"id":42,"name":"script","displayName":"Script","href":"https://master.dev.nativ-systems.com/api/actionTypes/42","category":"Workflow"},"pluginClass":"tv.nativ.mio.plugins.actions.wait.ScriptedWaitCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/script.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/script.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/script.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/script.png"},"created":"29
+        Apr 2016 11:23:32 +0000","lastModified":"29 Apr 2016 11:23:34 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-1b9f25183af5010981b8ff0278cbde1c7f6120da"}],"totalCount":2,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:37:46 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"id":456,"name":"End 1","path":"/e","layout":{"width":120,"height":45,"x":100,"y":100}},{"id":123,"name":"Start
+        1","path":"/s","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:39:16 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '4785'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 500 - java.lang.NullPointerException</h1><HR size=\"1\" noshade=\"noshade\"><p><b>JBWEB000309:
+        type</b> JBWEB000066: Exception report</p><p><b>JBWEB000068: message</b> <u>java.lang.NullPointerException</u></p><p><b>JBWEB000069:
+        description</b> <u>JBWEB000145: The server encountered an internal error that
+        prevented it from fulfilling this request.</u></p><p><b>JBWEB000070: exception</b>
+        <pre>org.jboss.resteasy.spi.UnhandledException: java.lang.NullPointerException\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleApplicationException(SynchronousDispatcher.java:365)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleException(SynchronousDispatcher.java:233)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleInvokerException(SynchronousDispatcher.java:209)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:557)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000071:
+        root cause</b> <pre>java.lang.NullPointerException\n\ttv.nativ.mio.api.helper.workflow.WorkflowStructureReader.addNode(WorkflowStructureReader.java:130)\n\ttv.nativ.mio.api.helper.workflow.WorkflowStructureReader.addNodes(WorkflowStructureReader.java:109)\n\ttv.nativ.mio.api.helper.workflow.WorkflowStructureReader.buildProcessDefinition(WorkflowStructureReader.java:93)\n\ttv.nativ.mio.api.helper.workflow.WorkflowStructureReader.read(WorkflowStructureReader.java:51)\n\ttv.nativ.mio.api.services.WorkflowDefinitionServiceImpl.setStructure(WorkflowDefinitionServiceImpl.java:306)\n\tsun.reflect.GeneratedMethodAccessor1663.invoke(Unknown
+        Source)\n\tsun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tjava.lang.reflect.Method.invoke(Method.java:606)\n\torg.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)\n\torg.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:269)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:227)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:216)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000072:
+        note</b> <u>JBWEB000073: The full stack trace of the root cause is available
+        in the JBoss Web/7.4.8.Final-redhat-4 logs.</u></p><HR size=\"1\" noshade=\"noshade\"><h3>JBoss
+        Web/7.4.8.Final-redhat-4</h3></body></html>"
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:38:02 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"name":"End 1","path":"/e","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"name":"Start
+        1","path":"/s","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:49:11 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=FFUPoMY5BCPH3dtCJL2nDHwu.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"Workflow","version":1,"width":900,"height":1024,"nodes":[{"id":101844,"name":"End
+        1","path":"/End 1","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"id":101845,"name":"Start
+        1","path":"/Start 1","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[],"image":"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcG\r\nBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwM\r\nDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAEsASwDASIA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKAP/2Q==\r\n"}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:47:57 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"name":"End 1","path":"/e","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"name":"Start
+        1","path":"/s","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[{"name":null,"from":{"id":101845,"name":"Start
+        1","path":"/Start 1"},"to":{"id":101844,"name":"End 1","path":"/End 1"}}],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:49:12 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=CDa3emptpmFAQ+g8kr9cJf3T.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=96
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"Workflow","version":2,"width":900,"height":1024,"nodes":[{"id":101846,"name":"End
+        1","path":"/End 1","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"id":101847,"name":"Start
+        1","path":"/Start 1","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[{"id":101414,"name":null,"description":null,"from":{"id":101847,"name":"Start
+        1","path":"/Start 1"},"to":{"id":101846,"name":"End 1","path":"/End 1"},"layout":{"labelX":null,"labelY":null,"bendPoints":[]}}],"image":"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcG\r\nBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwM\r\nDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAEsASwDASIA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKAP/2Q==\r\n"}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:47:58 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:49:12 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=2WDGw74Xf-JdUdBdwU+j+Oln.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=95
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:47:58 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:49:13 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=RSkjO6J7J2XoK+NK4r2e81an.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=94
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11118,"uuid":"08f08d75-03d5-4b25-b212-da0ce39ff75e","name":"Workflow","displayName":"Workflow","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11118","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:47:58 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/workflows
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:49:29 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=Z5j4b5zbfJjkr2HsjQziErmJ.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=94
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"workflows":[{"id":10971,"name":"complete migration workflow test","displayName":"complete
+        migration workflow test","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10971","status":"Failed,
+        Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":true,"start":"13
+        Apr 2016 13:07:27 +0000","end":"26 Apr 2016 13:57:19 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":11053,"uuid":"d6dc69b0-a672-4973-8e82-c6b485baf0fb","name":"complete
+        migration workflow test","displayName":"complete migration workflow test","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11053","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":32,"created":"13 Apr 2016 13:07:27
+        +0000","lastModified":"26 Apr 2016 13:57:19 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10925,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10925","status":"Running","priority":"Normal","running":true,"ended":false,"cancelled":false,"cancelling":false,"failed":false,"start":"15
+        Mar 2016 16:58:18 +0000","end":null,"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"15 Mar 2016 16:58:18
+        +0000","lastModified":"15 Mar 2016 16:58:26 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10922,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10922","status":"Running","priority":"Normal","running":true,"ended":false,"cancelled":false,"cancelling":false,"failed":false,"start":"15
+        Mar 2016 16:56:14 +0000","end":null,"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"15 Mar 2016 16:56:14
+        +0000","lastModified":"15 Mar 2016 16:56:20 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10918,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10918","status":"Completed","priority":"Normal","running":false,"ended":true,"cancelled":false,"cancelling":false,"failed":false,"start":"15
+        Mar 2016 16:43:06 +0000","end":"15 Mar 2016 16:47:24 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"asset":{"id":10815,"name":"proxy","displayName":"proxy","type":"Media
+        Asset","href":"https://master.dev.nativ-systems.com/api/assets/10815","creationContext":"Proxy","accountId":4,"workspaceId":3},"created":"15
+        Mar 2016 16:43:06 +0000","lastModified":"15 Mar 2016 16:47:24 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10915,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10915","status":"Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":false,"start":"15
+        Mar 2016 16:31:59 +0000","end":"15 Mar 2016 16:37:16 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"15 Mar 2016 16:31:59
+        +0000","lastModified":"15 Mar 2016 16:37:16 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10912,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10912","status":"Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":false,"start":"15
+        Mar 2016 16:27:57 +0000","end":"15 Mar 2016 16:28:41 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"15 Mar 2016 16:27:57
+        +0000","lastModified":"15 Mar 2016 16:28:41 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10908,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10908","status":"Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":false,"start":"15
+        Mar 2016 16:07:47 +0000","end":"15 Mar 2016 16:25:42 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"15 Mar 2016 16:07:47
+        +0000","lastModified":"15 Mar 2016 16:25:42 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10820,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10820","status":"Failed,
+        Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":true,"start":"13
+        Apr 2016 13:07:41 +0000","end":"26 Apr 2016 13:55:13 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"13 Apr 2016 13:07:41
+        +0000","lastModified":"26 Apr 2016 13:57:19 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10514,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10514","status":"Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":false,"start":"15
+        Mar 2016 15:41:27 +0000","end":"15 Mar 2016 16:01:13 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"15 Mar 2016 15:41:27
+        +0000","lastModified":"15 Mar 2016 16:01:13 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10512,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10512","status":"Failed,
+        Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":true,"start":"15
+        Mar 2016 15:23:20 +0000","end":"15 Mar 2016 15:39:20 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"asset":{"id":10605,"name":"Warren
+        G - Regulate ft. Nate Dogg.mp4","displayName":"Warren G - Regulate ft. Nate
+        Dogg.mp4","type":"Media Asset","href":"https://master.dev.nativ-systems.com/api/assets/10605","creationContext":"Import","accountId":4,"workspaceId":3},"created":"15
+        Mar 2016 15:23:20 +0000","lastModified":"15 Mar 2016 15:39:16 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10510,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10510","status":"Failed,
+        Cancelled","priority":"Normal","running":false,"ended":false,"cancelled":true,"cancelling":false,"failed":true,"start":"15
+        Mar 2016 15:14:36 +0000","end":"15 Mar 2016 15:17:14 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":2,"created":"15 Mar 2016 15:14:36
+        +0000","lastModified":"15 Mar 2016 15:17:13 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10106,"name":"Import Jizz","displayName":"Import
+        Jizz","objectType":{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","userDefined":false},"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflows/10106","status":"Completed","priority":"Normal","running":false,"ended":true,"cancelled":false,"cancelling":false,"failed":false,"start":"14
+        Mar 2016 15:50:43 +0000","end":"14 Mar 2016 15:51:02 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"definition":{"id":10104,"uuid":"f4e57201-d0cc-44e4-a5fd-e5b9445f7c3a","name":"Import
+        Jizz","displayName":"Import Jizz","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/10104","enabled":false,"deleted":true,"owner":"masteruser
+        masteruser","accountId":4},"definitionVersion":1,"asset":{"id":10201,"name":"TESTING","displayName":"TESTING","type":"Media
+        Asset","href":"https://master.dev.nativ-systems.com/api/assets/10201","creationContext":"Import","accountId":4,"workspaceId":3},"created":"14
+        Mar 2016 15:50:43 +0000","lastModified":"14 Mar 2016 15:51:02 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}}],"totalCount":12,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:48:15 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:51:14 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=qHfmd5Q3wS0aJQyk6ldXjHs5.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=94
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"resources":[{"id":11113,"uuid":"fc4b0eea-c9f8-4103-8a47-5643ca94515e","name":"vcr
+        resource storage","displayName":"vcr resource storage","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11113","resourceType":"Capacity","resourceSubType":"Storage","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource","status":"Stopped","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-storage.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-storage.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-storage.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-storage.png"},"created":"29
+        Apr 2016 11:10:28 +0000","lastModified":"29 Apr 2016 11:10:57 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-c7993fd4a6451c1240043dc4ace6988c55ca7b2b"},{"id":11117,"uuid":"acbdb174-37db-44e6-a17c-dc50ccf884ba","name":"S3
+        Bucket Factory","displayName":"S3 Bucket Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11117","resourceType":"Capacity","resourceSubType":"Storage","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource","status":"Stopped","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-storage.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-storage.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-storage.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-storage.png"},"created":"29
+        Apr 2016 11:23:58 +0000","lastModified":"29 Apr 2016 11:24:03 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-ff3cb537896049ad0d63af99b1f4ad4ba7b00e1c"},{"id":11116,"uuid":"981e82bd-06cc-434d-8e95-1bc9b77d51a4","name":"Hotfolder
+        Factory","displayName":"Hotfolder Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11116","resourceType":"Capacity","resourceSubType":"Hot
+        Folder","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.folder.hotfolder.MioHotFolderResource","status":"Stopped","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-hot-folder.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-hot-folder.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-hot-folder.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-hot-folder.png"},"created":"29
+        Apr 2016 11:23:43 +0000","lastModified":"29 Apr 2016 11:23:43 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-57dc08ce61ec5e495b88fbb64083cb07978dd480"}],"totalCount":3,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:50:00 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:51:15 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=D+6cJUo-JackptAZ7wnQuWzc.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=93
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"workflowDefinitions":[{"id":11118,"uuid":"08f08d75-03d5-4b25-b212-da0ce39ff75e","name":"Workflow","displayName":"Workflow","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11118","latestVersion":2,"created":"29
+        Apr 2016 11:26:37 +0000","lastModified":"29 Apr 2016 11:47:18 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"2-bdb10b7302259dd0a8f035ac3f95bce99013a31f"}],"totalCount":1,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:50:00 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:51:15 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=pZ4cjekT0PxEVGYFoGnAb8-q.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=92
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"users":[{"id":10509,"uuid":"641d4227-2361-41f6-8b78-86f5d4e43abe","name":"admin","displayName":"Titties
+        McVagina","objectType":{"id":8,"name":"user","href":"https://master.dev.nativ-systems.com/api/objectTypes/8","displayName":"User","pluralName":"Users","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/users/10509","firstName":"Titties","lastName":"McVagina","role":{"id":10508,"uuid":"9a2f318a-559a-4da9-a484-4ee18fd05e47","name":"ft-demo
+        Default Role","displayName":"ft-demo Default Role","objectType":{"id":10,"name":"role","href":"https://master.dev.nativ-systems.com/api/objectTypes/10","displayName":"Role","pluralName":"Roles","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/roles/10508","owner":"masteruser
+        masteruser","accountId":10507},"email":"admin@example.com","phoneNumber":"","lastLoggedIn":"15
+        Mar 2016 14:22:27 +0000","company":"","addressLine1":"","addressLine2":"","addressLine3":"","externalReference":"","created":"15
+        Mar 2016 12:27:45 +0000","lastModified":"15 Mar 2016 14:22:27 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":10507,"uuid":"eb7b4c0b-a1b3-440e-bd38-9781d19b173b","name":"ft-demo","objectType":{"id":25,"name":"account","href":"https://master.dev.nativ-systems.com/api/objectTypes/25","displayName":"Account","pluralName":"Accounts","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/accounts/10507","owner":"masteruser
+        masteruser","accountId":4},"revision":"0-d033e22ae348aeb5660fc2140aec35850c4da997"},{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","objectType":{"id":8,"name":"user","href":"https://master.dev.nativ-systems.com/api/objectTypes/8","displayName":"User","pluralName":"Users","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/users/5","firstName":"masteruser","lastName":"masteruser","lastLoggedIn":"29
+        Apr 2016 10:46:00 +0000","created":"10 Jun 2015 10:26:05 +0000","lastModified":"29
+        Apr 2016 10:46:00 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}}],"totalCount":2,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:50:00 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/resources/11116/configuration
+    body:
+      encoding: UTF-8
+      string: '{"housekeeping-period":5139767606400000000,"inactivity-timeout":30000000,"storage-resources":{"Storage
+        Resource":[{"id":11117}]},"use-md5":false,"workflow-definition":{"id":11118},"owner":{"id":5}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:51:15 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=9Jh6D8cBJmKvjPCpQXoUEVVG.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=91
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103322,"instance":{"housekeeping-period":5139767606400000000,"inactivity-timeout":30000000,"storage-resources":{"Storage
+        Resource":[{"id":"11117"}]},"use-md5":false,"workflow-definition":{"id":"11118"},"owner":{"id":"5"}},"definitionId":107109,"definition":[{"id":107110,"name":"housekeeping-period","displayName":"Housekeeping
+        Period","description":"The time after which unmodified files will be deleted.\n                ","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":86400000000},{"id":107111,"name":"inactivity-timeout","displayName":"Inactivity
+        Timeout","description":"Seconds of inactivity before considering transfer\n                    complete.\n                ","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":120000000},{"id":107112,"name":"storage-resources","displayName":"Storage
+        Resources","description":"Storage Resources used by the Hot Folder.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107113,"name":"Storage
+        Resource","displayName":"Storage Resource","description":"Name of storage
+        resource","type":"object","multiplicity":"1..*","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Storage)"}]},{"id":107114,"name":"match-pattern","displayName":"Match Pattern
+        (regular expression)","description":"Specify a regular expression to match
+        on assets file names to import.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107115,"name":"ignore-pattern","displayName":"Ignore
+        Pattern (regular expression)","description":"Specify a regular expression
+        used to ignore files to be imported.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107116,"name":"use-md5","displayName":"Use
+        MD5","description":"Whether or not an MD5 checksum file for the main file\n                    is
+        expected.\n                ","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107117,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":107118,"name":"No","displayName":"No","default":true,"value":"false"}]},{"id":107119,"name":"workflow-definition","displayName":"Workflow
+        Definition","description":"Name of the workflow definition to launch after
+        upload.\n                ","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Workflow
+        Definition"},{"id":107120,"name":"owner","displayName":"Workflow and Asset
+        Owner","description":"User to set as the owner of workflows and any imported
+        assets","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"User"},{"id":107121,"name":"workspace","displayName":"Workflow
+        and Asset Workspace","description":"\n                    Workspace to set
+        for workflows and any imported assets. If not set, the owner''s default workspace
+        will be used","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107122,"name":"sidecar","displayName":"Sidecar","description":"Use
+        a sidecar file (this will be injected into the\n                    workflow
+        as variable)\n                ","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107123,"name":"workflow-variable-name","displayName":"Workflow
+        Variable Name","description":"Specify the workflow variable name to use for
+        the injected payload.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:50:01 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/11116/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:51:16 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=CDDZ0ojfXI11HPRGBe4L1v2a.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=90
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:50:01 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources/11116/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:51:16 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      content-type:
+      - application/json
+      content-length:
+      - '145'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:50:02 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"Import Action Factory","pluginClass":"tv.nativ.mio.enterprise.execution.action.file.impl.objectimport.vfs.AssetImportCommand","visibilityIds":[4],"type":"import","runRuleExpression":""}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:52:47 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=ZY78g+fNWFxBz7Sj2HLefXwL.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/actions/11119
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11119,"uuid":"7b1333cf-006e-4480-aafd-cc023b69851e","name":"Import
+        Action Factory","displayName":"Import Action Factory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11119","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:51:34 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11119/configuration
+    body:
+      encoding: UTF-8
+      string: '{"source-file":{"source":{"vfs-source-file-path":{"protocol":{"value":"S3","isExpression":false},"path":{"value":"/${variables.externalFileName}","isExpression":false},"key":{"value":"some_s3_key","isExpression":false},"secret":{"value":"some_s3_secret","isExpression":false},"bucket":{"value":"some_faked_s3_bucket","isExpression":false}}},"keep-source-filename":false},"asset-details":{"title":{"value":"${variables.externalFilename}","isExpression":false},"creation-context":{"value":"IMPORT","isExpression":false}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:52:49 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=TxmgRtQ5vwek1sNFcVn1-1lx.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103351,"instance":{"source-file":{"source":{"vfs-source-file-path":{"protocol":{"value":"S3","isExpression":false},"path":{"value":"/${variables.externalFileName}","isExpression":false},"key":{"value":"some_s3_key","isExpression":false},"secret":{"value":"some_s3_secret","isExpression":false},"bucket":{"value":"some_faked_s3_bucket","isExpression":false}}},"keep-source-filename":false},"asset-details":{"title":{"value":"${variables.externalFilename}","isExpression":false},"creation-context":{"value":"IMPORT","isExpression":false}}},"definitionId":107150,"definition":[{"id":107151,"name":"source-file","displayName":"Source
+        File","description":"Details of the source file to import. If not specified,
+        no media file will be imported into the asset. This can be used to create
+        placeholder assets.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107152,"name":"source","displayName":"Source","description":"Details
+        of the source file.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107153,"name":"vfs-source-file-path","displayName":"Source
+        VFS Location","description":"The Virtual File System location of the media
+        file to import.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107176,"name":"source-resource-item","displayName":"Source
+        Resource Item","description":"The Resource and Item Name of the source file.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107177,"name":"source-resource","displayName":"Source
+        Resource","description":"\n\t\t\t\t\t\t\t\t\t\t\tThe Resource containing the
+        source item.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Capacity)"},{"id":107178,"name":"source-item-name","displayName":"Item Name","description":"The
+        name of the item in the source resource.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]},{"id":107179,"name":"original-filename","displayName":"Original
+        Filename","description":"The value to set as the original filename of the
+        imported media file. If not specified, the file''s name will be used.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107180,"name":"keep-source-filename","displayName":"Keep
+        Source File Name","description":"If true, then the source file name will be
+        maintained, otherwise a UUID will be generated.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107181,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":107182,"name":"No","displayName":"No","default":true,"value":"false"}]},{"id":107183,"name":"copy-file","displayName":"Copy
+        File","description":"Copy the file to a new location. If not specified the
+        media file will be ingested in place. One of either the target resource or
+        folder can be specified.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107184,"name":"copy-target-resource","displayName":"Target
+        Resource","description":"The Folder Resource for the imported media file to
+        be copied to.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Folder)"},{"id":107185,"name":"copy-vfs-location","displayName":"Target VFS
+        Location","description":"The Virtual File System location for the imported
+        media file to be copied to.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107208,"name":"move-file","displayName":"Move
+        File","description":"Move the file to a new location. If not specified the
+        media file will be ingested in place. One of either the target resource or
+        folder can be specified.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107209,"name":"move-target-resource","displayName":"Target
+        Resource","description":"The Folder Resource for the imported media file to
+        be moved to.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Folder)"},{"id":107210,"name":"move-vfs-location","displayName":"Target VFS
+        Location","description":"The Virtual File System location for the imported
+        media file to be moved to.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]},{"id":107233,"name":"asset-details","displayName":"Asset
+        Details","description":"Descriptive details for the asset.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107234,"name":"title","displayName":"Title","description":"The
+        title of the asset.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107235,"name":"description","displayName":"Description","description":"Optional
+        description for the asset.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107236,"name":"asset-type","displayName":"Placeholder
+        Asset Type","description":"The Placeholder Asset Type to create if no source
+        file is specified.","type":"single-option","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107237,"name":"media-asset","displayName":"Media
+        Asset","default":true,"value":"media-asset"},{"id":107238,"name":"image-asset","displayName":"Image
+        Asset","default":false,"value":"image-asset"},{"id":107239,"name":"text-asset","displayName":"Text
+        Asset","default":false,"value":"text-asset"}]},{"id":107240,"name":"creation-context","displayName":"Creation
+        Context","description":"The creation context to set on the asset.","type":"single-option","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107241,"name":"ingest","displayName":"Ingest","default":false,"value":"INGEST"},{"id":107242,"name":"proxy","displayName":"Proxy","default":false,"value":"PROXY"},{"id":107243,"name":"copy","displayName":"Copy","default":false,"value":"COPY"},{"id":107244,"name":"transcode","displayName":"Transcode","default":false,"value":"TRANSCODE"},{"id":107245,"name":"import","displayName":"Import","default":false,"value":"IMPORT"},{"id":107246,"name":"transform","displayName":"Transform","default":false,"value":"TRANSFORM"}]}]},{"id":107247,"name":"variant-and-metadata-definition","displayName":"Variant","description":"Specify
+        the Variant and optionally the Metadata Definition to set on the asset. If
+        not specified, a default will be used if it has been configured.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107248,"name":"variant","displayName":"Variant","description":"The
+        Variant to set. This must be a valid configured Variant name.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107249,"name":"metadata","displayName":"Metadata","description":"Specify
+        a Metadata Definition to set. If not specified, a default will be used if
+        it has been configured.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107250,"name":"metadata-definition","displayName":"Metadata
+        Definition","description":"The Metadata Definition to set.","type":"object","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Metadata
+        Definition"},{"id":107251,"name":"source-json-variable","displayName":"Source
+        JSON Variable","description":"Source JSON Variable.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107252,"name":"source-xml","displayName":"Source
+        XML","description":"Set the metadata based on details stored in an XML file
+        or workflow variable. If not specified a default metadata instance will be
+        created.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107253,"name":"source-xml-location","displayName":"Source
+        XML Location","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107254,"name":"vfs-source-xml-path","displayName":"Source
+        XML VFS Location","description":"The Virtual File System location of the source
+        XML file to read.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107277,"name":"source-xml-variable-name","displayName":"Source
+        XML Variable Name","description":"Source XML workflow variable name to use.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107278,"name":"xslt","displayName":"XSLT","description":"Optional
+        XSLT to apply to source XML. If not defined then XML is expected to be in
+        MioMetadata XML form.","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]},{"id":107281,"name":"keyframe","displayName":"Keyframe","description":"Keyframe
+        to set on the asset. This will be used only if the imported asset is a media
+        file. If an image file it will be ignored.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107282,"name":"vfs-source-keyframe-path","displayName":"Source
+        Keyframe VFS Location","description":"The Virtual File System location of
+        the source keyframe to import.","type":"vfs-location","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107305,"name":"keyframe-title","displayName":"Title","description":"Optional
+        title for the keyframe.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107306,"name":"keyframe-description","displayName":"Keyframe
+        Description","description":"Optional description for the keyframe.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107307,"name":"timecode","displayName":"Timecode","description":"Optional
+        timecode for the keyframe. If defined the keyframe is imported as an extracted
+        keyframe, otherwise it is imported as an uploaded keyframe.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107308,"name":"master","displayName":"Master","description":"Whether
+        the keyframe should be set as master. If multiple keyframes are configured
+        as master, the last to be imported will be set as master for the asset.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107309,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":107310,"name":"No","displayName":"No","default":true,"value":"false"}]}]},{"id":107311,"name":"asset-relationships","displayName":"Asset
+        Relationships","description":"Specify relationships with existing assets in
+        the system.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107312,"name":"child","displayName":"Child","description":"Add
+        a parent-child relationship.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107313,"name":"parent","displayName":"Parent
+        Asset ","description":"Specify the parent asset.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107314,"name":"parent-asset","displayName":"Parent
+        Asset","description":"Select the parent file asset to use.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (File)"},{"id":107315,"name":"parent-asset-id","displayName":"Parent Asset
+        ID","description":"Specify the parent file asset ID or use an expression.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107316,"name":"reference-name","displayName":"Reference
+        Name","description":"Optional reference name to set on the parent-child relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107317,"name":"member","displayName":"Member","description":"Add
+        a group-member relationship.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107318,"name":"group","displayName":"Parent
+        Group Asset","description":"Specify the parent group.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107319,"name":"group-asset","displayName":"Group
+        Asset","description":"Select the parent group asset to use.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (Group)"},{"id":107320,"name":"group-asset-id","displayName":"Group Asset
+        ID","description":"Specify the parent group asset ID or use an expression.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107321,"name":"membership-name","displayName":"Membership
+        Name","description":"Optional membership name to set on the group-member relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:51:36 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11119/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:52:51 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=wEOv8r-54kYSErrEjUU8pB7P.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:51:36 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions/11119/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 29 Apr 2016 11:52:51 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=PyCAnupsldzc7Isl57Jo4x9S.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11119,"uuid":"7b1333cf-006e-4480-aafd-cc023b69851e","name":"Import
+        Action Factory","displayName":"Import Action Factory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11119","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:51:37 GMT
+recorded_with: VCR 3.0.1

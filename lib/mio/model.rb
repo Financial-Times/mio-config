@@ -123,7 +123,10 @@ class Mio
     private
     def look_up
       r = self.class.resource_name
-      @client.find_all(r)[r].find{|o| o['name'] == @args.name}
+      all_resources = @client.find_all(r)
+      return nil if all_resources['totalCount'] == 0
+
+      all_resources[r].find{|o| o['name'] == @args.name}
     end
   end
 
