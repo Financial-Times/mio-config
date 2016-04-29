@@ -22,7 +22,7 @@ FactoryGirl.define do
 
     factory :action_node do
       name 'lauch 1'
-      action 'Launch and Wait'
+      action 'Groovy Script Factory'
       type 'ACTION'
     end
   end
@@ -55,8 +55,8 @@ FactoryGirl.define do
 
     factory :hotfolder do
       name 'Hotfolder Factory'
-      storage_name 'An S3 Test Resource'
-      workflow_name 'Import Jizz'
+      storage_name 'S3 Bucket Factory'
+      workflow_name 'Workflow'
       owner 'masteruser masteruser'
       start :true
 
@@ -92,8 +92,8 @@ FactoryGirl.define do
     factory :workflow do
       name 'Workflow'
       transitions [{from: 'Start 1', to: 'End 1'}]
-      nodes [{id: 456, name: 'End 1', path: '/e'},
-             {id: 123, name: 'Start 1', path: '/s'}]
+      nodes [{name: 'End 1', path: '/e', type: 'END'},
+             {name: 'Start 1', path: '/s', type: 'START'}]
 
       trait :empty_nodes do
         nodes []
