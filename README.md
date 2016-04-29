@@ -1,6 +1,8 @@
 # Mio Config
 
-![build status](https://circleci.com/gh/Financial-Times/mio-config.png)
+[![Build Status](https://circleci.com/gh/Financial-Times/mio-config.png)](https://circleci.com/gh/Financial-Times/mio-config)
+
+[![Gem Version](https://badge.fury.io/rb/mio-config.svg)](https://badge.fury.io/rb/mio-config)
 
 This simple rubygem will allow for a codified build out of mio resources and configuration.
 
