@@ -2,15 +2,16 @@
 
 This simple rubygem will allow for a codified build out of mio resources and configuration.
 
-The builders are largely based on [rails migrations](http://edgeguides.rubyonrails.org/active_record_migrations.html) and should contain nothing new to most developers, ruby or not.
+The builders are largely based on [rails migrations](http://edgeguides.rubyonrails.org/active_record_migrations.html), though they're closer in concept to configuration management tools like chef and puppet. Thus they should contain nothing new to most developers, ruby or not.
 
 ## Installation
 
 In your Gemfile:
 
 ```ruby
-gem 'mio-config', git: 'ssh://git@git.svc.ft.com:7999/video/mio-config.git'
+gem 'mio-config', github: 'financial-times/mio-config.git'
 ```
+
 ### Configuration
 
 `mio-config` relies on the config file: `./config/mio.yml`, which must live in the root of your project. It looks like:
@@ -54,6 +55,21 @@ $ bundle exec rake mio:migrate:create[s3,'create an s3 bucket for ingestion']
 
 This rake taks will look at the model and pre-populate the necessary arguments. From there any *Plain Ol' Ruby* will work. Probably.
 
+#### Handcrafting
+
+Models have a series of fields they expect to exist; a developer may see these by looking in the directory `lib/mio/model`. To create an s3 bucket resource as above, and after looking in this file, we end up with something similar to:
+
+```ruby
+migrate 'create an s3 bucket for ingestion' do
+  s3 do |s|
+    s.name = 'My S3 Bucket'
+    s.visibility = [32444]
+    s.key = 'S3-KEY'
+    # Snip
+  end
+end
+```
+
 ## Development
 
 This project was built and tested with ruby 2.3.0.
@@ -75,7 +91,7 @@ $ rbenv local 2.3.0
 
 ### Other environments
 
-Homebrew may be installed via your package manager or from [github](https://github.com/rbenv/rbenv#basic-github-checkout)
+rbenv may be installed via your package manager or from [github](https://github.com/rbenv/rbenv#basic-github-checkout)
 
 
 ## Building etc
@@ -129,5 +145,16 @@ class Mio
 `#field` has the signature:
 
 ```ruby
-def field key, type, matcher=nil
+def field key, type, desc, default=nil, matcher=nil
 ```
+
+## Licence
+
+The MIT License (MIT)
+Copyright (c) 2016, Financial Times
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
