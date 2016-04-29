@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.name = "mio-config"
-  s.version = "1.3.0"
+  s.version = "2.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
     s.authors = ["jspc","jemrayfield"]
-  s.date = "2016-03-30"
-  s.description = "Configure MIO with lots of lovely shite"
+  s.date = "2016-04-29"
+  s.description = "Configure MIO"
   s.summary = "Financial Times MIO mangler"
   s.email = "james.condron@ft.com"
   s.homepage = "https://ft.com"
