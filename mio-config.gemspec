@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "mio-config"
-  s.version = "2.0.2"
+  s.version = "2.0.3"
   s.license = 'MIT'
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('colorize', '~>0.7')
   s.add_dependency('faraday', '~>0.9')
-  s.add_dependency('faraday-detailed-logger', '~>1.0')
+  s.add_dependency('faraday-detailed_logger', '~>1.0')
   s.add_dependency('net-http-persistent', '~>2.9')
   s.add_dependency('rake', '~>0')
 end
