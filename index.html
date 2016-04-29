@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mio-config by Financial-Times</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mio-config</h1>
+        <p>Configuration tooling for ooyala&#39;s mio</p>
+
+        <p class="view"><a href="https://github.com/Financial-Times/mio-config">View the Project on GitHub <small>Financial-Times/mio-config</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Financial-Times/mio-config/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Financial-Times/mio-config/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Financial-Times/mio-config">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="mio-config" class="anchor" href="#mio-config" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mio Config</h1>
+
+<p><img src="https://circleci.com/gh/Financial-Times/mio-config.png" alt="build status"></p>
+
+<p>This simple rubygem will allow for a codified build out of mio resources and configuration.</p>
+
+<p>The builders are largely based on <a href="http://edgeguides.rubyonrails.org/active_record_migrations.html">rails migrations</a>, though they're closer in concept to configuration management tools like chef and puppet. Thus they should contain nothing new to most developers, ruby or not.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>In your Gemfile:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>mio-config<span class="pl-pds">'</span></span>, <span class="pl-c1">github:</span> <span class="pl-s"><span class="pl-pds">'</span>financial-times/mio-config.git<span class="pl-pds">'</span></span></pre></div>
+
+<h3>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h3>
+
+<p><code>mio-config</code> relies on the config file: <code>./config/mio.yml</code>, which must live in the root of your project. It looks like:</p>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s">-<span class="pl-s">---</span></span>
+<span class="pl-s"><span class="pl-ent">base_url:</span> <span class="pl-s">https://my-mio.example.com</span></span>
+<span class="pl-s"><span class="pl-ent">username:</span> <span class="pl-s">admin</span></span>
+<span class="pl-s"><span class="pl-ent">password:</span> <span class="pl-s">passwd</span></span></pre></div>
+
+<p><strong>Note:</strong> this may also be templated- it uses <a href="http://ruby-doc.org/stdlib-2.3.0/libdoc/erb/rdoc/ERB.html">ERB</a> under the hood.</p>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s">-<span class="pl-s">---</span></span>
+<span class="pl-s"><span class="pl-ent">base_url:</span> <span class="pl-s">&lt;%= ENV.fetch('MIO_URL', 'https://my-mio.example.com' %&gt;</span></span>
+<span class="pl-s"><span class="pl-ent">username:</span> <span class="pl-s">admin</span></span>
+<span class="pl-s"><span class="pl-ent">password:</span> <span class="pl-s">&lt;%= File.read( "#{ENV.fetch('HOME')}/.passwd" ) %&gt;</span></span></pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>We expose a couple of rake tasks:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ bundle <span class="pl-c1">exec</span> rake -T
+rake mio:migrate                     <span class="pl-c"># Handle migrations (via mio:migrate:up)</span>
+rake mio:migrate:create[model,desc]  <span class="pl-c"># Create a new migration</span>
+rake mio:migrate:up                  <span class="pl-c"># Run migrations</span></pre></div>
+
+<h3>
+<a id="create-migrations" class="anchor" href="#create-migrations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create migrations</h3>
+
+<p>You're more than welcome to handcraft these- they're pretty simple. You may, though, use the skeleton we create:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ bundle <span class="pl-c1">exec</span> rake mio:migrate:create[s3,<span class="pl-s"><span class="pl-pds">'</span>create an s3 bucket for ingestion<span class="pl-pds">'</span></span>]</pre></div>
+
+<p><strong>NOTE:</strong> There is a lack of spaces around stuff on purpose. Rake gets a bit funny with them in.</p>
+
+<p>This rake taks will look at the model and pre-populate the necessary arguments. From there any <em>Plain Ol' Ruby</em> will work. Probably.</p>
+
+<h4>
+<a id="handcrafting" class="anchor" href="#handcrafting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Handcrafting</h4>
+
+<p>Models have a series of fields they expect to exist; a developer may see these by looking in the directory <code>lib/mio/model</code>. To create an s3 bucket resource as above, and after looking in this file, we end up with something similar to:</p>
+
+<div class="highlight highlight-source-ruby"><pre>migrate <span class="pl-s"><span class="pl-pds">'</span>create an s3 bucket for ingestion<span class="pl-pds">'</span></span> <span class="pl-k">do</span>
+  s3 <span class="pl-k">do </span>|<span class="pl-smi">s</span>|
+    s.name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>My S3 Bucket<span class="pl-pds">'</span></span>
+    s.visibility <span class="pl-k">=</span> [<span class="pl-c1">32444</span>]
+    s.key <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>S3-KEY<span class="pl-pds">'</span></span>
+    <span class="pl-c"># Snip</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span></pre></div>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development</h2>
+
+<p>This project was built and tested with ruby 2.3.0.</p>
+
+<p>To install this via rbenv:</p>
+
+<h3>
+<a id="osx" class="anchor" href="#osx" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OSX</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c"># Install rbenv if not installed</span>
+$ brew install rbenv
+$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>eval "$(rbenv init -)" <span class="pl-pds">'</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bash_proile
+$ Install ruby 2.3.0
+$ rbenv install 2.3.0
+$ <span class="pl-c"># Either set as global version:</span>
+$ rbenv global 2.3.0
+$ <span class="pl-c"># Or install as local to this project:</span>
+$ rbenv <span class="pl-k">local</span> 2.3.0</pre></div>
+
+<h3>
+<a id="other-environments" class="anchor" href="#other-environments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other environments</h3>
+
+<p>rbenv may be installed via your package manager or from <a href="https://github.com/rbenv/rbenv#basic-github-checkout">github</a></p>
+
+<h2>
+<a id="building-etc" class="anchor" href="#building-etc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Building etc</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ bundle install</pre></div>
+
+<h2>
+<a id="adding-models" class="anchor" href="#adding-models" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding models</h2>
+
+<p>Any model added to <code>lib/mio/model</code> will be autoloaded. The final class name becomes the caller method:</p>
+
+<p>A model called:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">class</span> <span class="pl-en">Mio</span>
+  <span class="pl-k">class</span> <span class="pl-en">Model</span>
+    <span class="pl-k">class</span> <span class="pl-en">Foo</span>
+    <span class="pl-k">end</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span></pre></div>
+
+<p>will, then, be accessible by the helper method <code>foo</code>.</p>
+
+<p>A migration would look like:</p>
+
+<div class="highlight highlight-source-ruby"><pre>migrate <span class="pl-s"><span class="pl-pds">'</span>a simple test` do</span>
+<span class="pl-s">  foo do</span>
+<span class="pl-s">    #blah</span>
+<span class="pl-s">  end</span>
+<span class="pl-s">end</span></pre></div>
+
+<h3>
+<a id="helper-methods" class="anchor" href="#helper-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Helper methods</h3>
+
+<p>Models define a <code>resource</code> and a set of <code>fields</code>. The resource is the path appended to <code>base_uri</code>; with <code>example.com/api/workflows</code> <code>example.com</code> is the <code>base_uri</code> and <code>workflows</code> is the <code>resource</code>. (The <code>/api</code> path is added in the gem).</p>
+
+<p>The <code>s3</code> model, for example, looks a little like:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">class</span> <span class="pl-en">Mio</span>
+  <span class="pl-k">class</span> <span class="pl-en">Model</span>
+    <span class="pl-k">class</span> <span class="pl-en">S3<span class="pl-e"> &lt; Model</span></span>
+      set_resource <span class="pl-c1">:resources</span>
+      field <span class="pl-c1">:name</span>, <span class="pl-c1">String</span>, <span class="pl-sr"><span class="pl-pds">/</span>^<span class="pl-sr">(?!<span class="pl-cce">\s</span>*$)</span>.+<span class="pl-pds">/</span></span>
+<span class="pl-c"># SNIP</span></pre></div>
+
+<p><code>#field</code> has the signature:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">def</span> <span class="pl-en">field</span> <span class="pl-smi">key</span>, <span class="pl-smi">type</span>, <span class="pl-smi">desc</span>, <span class="pl-smi">default</span><span class="pl-k">=</span><span class="pl-c1">nil</span>, <span class="pl-smi">matcher</span><span class="pl-k">=</span><span class="pl-c1">nil</span></pre></div>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licence</h2>
+
+<p>The MIT License (MIT)
+Copyright (c) 2016, Financial Times</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Financial-Times">Financial-Times</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
