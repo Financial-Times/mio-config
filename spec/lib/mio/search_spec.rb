@@ -16,7 +16,7 @@ describe 'Mio::Search' do
     end
 
     it 'searches for resources by key correctly' do
-      expect(searcher.find_resources_by_name('some shit')).to be_a(Array)
+      expect(searcher.find_resources_by_name('vcr resource storage')).to be_an(Array)
     end
 
     context 'when regular expressions misses' do
