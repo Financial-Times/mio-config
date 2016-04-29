@@ -35,16 +35,16 @@ describe 'Mio::Client' do
     context 'when creating a valid resource' do
       let(:resource){'resources'}
 
-      xit 'successfully creates a new resource' do
+      it 'successfully creates a new resource' do
         expect(client.create(resource, create_payload)).to be_a(Hash)
       end
 
       it 'successfully configures a new resource' do
-        expect(client.configure(resource, 10943, configure_payload)).to be_an(Hash)
+        expect(client.configure(resource, 11113, configure_payload)).to be_a(Hash)
       end
 
       it 'successfully enables a new resource' do
-        expect(client.action(resource, 10943, action_payload)).to be_an(Hash)
+        expect(client.action(resource, 11113, action_payload)).to be_a(Hash)
       end
 
     end
