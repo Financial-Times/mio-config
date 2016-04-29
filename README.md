@@ -14,6 +14,13 @@ In your Gemfile:
 gem 'mio-config', github: 'financial-times/mio-config.git'
 ```
 
+or
+
+```ruby
+source 'https://rubygems.org'
+gem 'mio-config'
+```
+
 ### Configuration
 
 `mio-config` relies on the config file: `./config/mio.yml`, which must live in the root of your project. It looks like:
