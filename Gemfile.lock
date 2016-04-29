@@ -18,7 +18,6 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday-detailed_logger (1.0.0)
       faraday
-    hashie (3.4.3)
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.8.4)
@@ -57,7 +56,6 @@ DEPENDENCIES
   faker
   faraday
   faraday-detailed_logger
-  hashie
   net-http-persistent
   rake
   rspec

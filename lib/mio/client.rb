@@ -1,6 +1,6 @@
 require 'faraday'
 require 'faraday/detailed_logger'
-require 'hashie/mash'
+require 'ostruct'
 require 'net/http/persistent'
 require 'json'
 

@@ -1,4 +1,4 @@
-require 'hashie/mash'
+require 'ostruct'
 require 'yaml'
 require 'erb'
 
