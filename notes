@@ -1,1 +1,0 @@
-$:<<'.' ; require 'client' ; require 'models/events' ; Mio::Events.all
