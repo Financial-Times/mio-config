@@ -128,6 +128,26 @@ class Mio
 
       all_resources[r].find{|o| o['name'] == @args.name}
     end
+
+    def visiblity_id name
+      # There are two places to find this information; /api/accounts
+      # and /api/myInfo. The API apparently wont show you the details
+      # of the account you're in. Which makes total and perfect sense.
+      acct = @search.find_accounts_by_name(name).first
+      if acct.nil?
+        # Maybe its me? F-ing who knows?
+        me = client.find_all('myInfo')['user']['account']
+        if me['name'] == name
+          # Difference between account['id'] and account['accountId'] ?
+          # nooooo flipping clue
+          return me['accountId']
+        end
+        # If we're here then we have no matching account
+        raise Mio::Model::NoSuchAccount, "Can't find a matching account with the name '#{name}'"
+      end
+      # Remember me?
+      return acct['id']
+    end
   end
 
 end
