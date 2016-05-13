@@ -69,6 +69,7 @@ class Mio
                         config_hash
     end
 
+
     def set_enable a=nil
       if a.nil?
         action = @args.enable == :true ? 'enable' : 'disable'

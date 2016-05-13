@@ -1,5 +1,5 @@
 # Mio Config
-
+.
 [![Build Status](https://circleci.com/gh/Financial-Times/mio-config.png)](https://circleci.com/gh/Financial-Times/mio-config)
 
 [![Gem Version](https://badge.fury.io/rb/mio-config.svg)](https://badge.fury.io/rb/mio-config)
