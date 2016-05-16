@@ -83,9 +83,9 @@ class Mio
           @object = look_up
           set_start :stop
         end
-        @definition_path = "#{self.class.resource_name}/#{@object['id']}/definition"
+        definition_path = "#{self.class.resource_name}/#{@object['id']}/definition"
 
-        @client.definition @definition_path, definition_xml
+        @client.definition definition_path, definition_xml
 
         set_enable
         return @object
