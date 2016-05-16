@@ -7,7 +7,7 @@ class Mio
         field :name, String, 'Metadata Definition Name'
         field :displayName, String, 'Metadata Definition Description'
         field :default, Symbol, 'Metadata type'
-        field :value, String, 'Indexed and searchable', 
+        field :value, String, 'Indexed and searchable',
 
         nested true
 
