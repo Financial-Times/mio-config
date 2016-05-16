@@ -96,7 +96,7 @@ class Mio
       Mio::Requests.make_request :post, @agent, url, opts, payload
     end
 
-    def put url, payload, opts, content_type=nil
+    def put url, payload, opts, content_type='application/vnd.nativ.mio.v1+json'
       Mio::Requests.make_request :put, @agent, url, opts, payload, content_type
     end
 
