@@ -119,7 +119,7 @@ class Mio
       true
     end
     alias_method :valid?, :validate
-
+ 
     private
     def look_up
       r = self.class.resource_name

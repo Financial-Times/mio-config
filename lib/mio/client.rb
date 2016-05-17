@@ -50,10 +50,19 @@ class Mio
       make_object response.body
     end
 
-
     def configure resource, id, payload, opts={}
       url = path(resource, id, :configuration)
       response = put url, payload, opts
+      unless response.success?
+        raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
+      end
+
+      make_object response.body
+    end
+
+    def definition resource, payload, opts={}
+      url = path(resource)
+      response = put url, payload, opts, 'application/vnd.nativ.mio.v1+xml'
       unless response.success?
         raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
       end
@@ -87,8 +96,8 @@ class Mio
       Mio::Requests.make_request :post, @agent, url, opts, payload
     end
 
-    def put url, payload, opts
-      Mio::Requests.make_request :put, @agent, url, opts, payload
+    def put url, payload, opts, content_type='application/vnd.nativ.mio.v1+json'
+      Mio::Requests.make_request :put, @agent, url, opts, payload, content_type
     end
 
     def make_object response

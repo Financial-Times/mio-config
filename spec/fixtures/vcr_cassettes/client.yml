@@ -2412,4 +2412,412 @@ http_interactions:
         masteruser","accountId":4}'
     http_version: 
   recorded_at: Fri, 29 Apr 2016 11:51:37 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 13 May 2016 15:34:51 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=-yoJt8e2lA2A9-C0DzvMFV62.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"metadataDefinitions":[{"id":11217,"uuid":"e7d6cba9-329c-4448-9b29-9e4e7464c7bd","name":"testing-metadata-definition","displayName":"testing-metadata-definition","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11217","created":"05
+        May 2016 16:48:26 +0000","lastModified":"05 May 2016 16:48:26 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-0b4bd534db9b1eae8102e47c6898e6492d3b620b"},{"id":11215,"uuid":"73093118-7564-4130-969e-bee107fba17c","name":"test-metadata-definition","displayName":"test-metadata-definition","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11215","created":"05
+        May 2016 14:32:31 +0000","lastModified":"05 May 2016 14:32:31 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-8db33ca7341be0c6979c5f2a34c3d9756bae9be6"},{"id":11216,"uuid":"42e549d9-5415-4578-ba90-766da8c158d5","name":"test","displayName":"test","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11216","created":"05
+        May 2016 16:29:47 +0000","lastModified":"05 May 2016 16:29:47 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-a94a8fe5ccb19ba61c4c0873d391e987982fbbd3"},{"id":11214,"uuid":"1627238e-4657-4f6c-93e2-cd0685e5a82e","name":"project-metadata-definition","displayName":"project-metadata-definition","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11214","created":"05
+        May 2016 13:35:07 +0000","lastModified":"05 May 2016 13:35:07 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-b43f5f69773e6079c7183c7639e984592d979618"},{"id":11312,"uuid":"8b1c580d-a8ff-475e-bb6d-da3541093f9e","name":"project-metadata","displayName":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312","created":"13
+        May 2016 10:39:07 +0000","lastModified":"13 May 2016 12:17:47 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-10459566931405bd38b7d650f25d1d5c03f8b305"},{"id":11212,"uuid":"7e65524a-6db3-463b-83e2-9a2a42f8c00c","name":"project","displayName":"project","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"description":"Project
+        metadata definition","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11212","created":"05
+        May 2016 12:32:57 +0000","lastModified":"13 May 2016 09:15:52 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"5-fb349221510fc58008cba1be7fd3d3f0f1d78db8"}],"totalCount":6,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions
+    body:
+      encoding: UTF-8
+      string: '{"name":"Metadata_definition","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Fri, 13 May 2016 15:34:51 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      content-type:
+      - application/json
+      content-length:
+      - '155'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Unable to create Metadata Definition, validation failed: Only lower case letters, numbers and hyphens are allowed.\n"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 13 May 2016 15:32:39 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions
+    body:
+      encoding: UTF-8
+      string: '{"name":"metadata-definition","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 13 May 2016 15:38:10 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=tjI6v1wfIzdWN1qLwm90AYqi.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/metadataDefinitions/11313
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11313,"uuid":"0b65cfe6-ce4a-4640-82d0-085d301fbd90","name":"metadata-definition","displayName":"metadata-definition","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11313","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 15:35:58 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions/11313/definition
+    body:
+      encoding: UTF-8
+      string: <metadata name="metadata-definition"><searchable>true</searchable><editable>true</editable><required>true</required><children><text
+        name="project" display_name="Metadata_definition Display name"><searchable>true</searchable><editable>true</editable><required>true</required><validation
+        handler="tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler"/><form-type>textarea</form-type></text><single-option
+        name="section"><searchable>true</searchable><editable>true</editable><required>true</required><children><option-child
+        name="Markets &amp;amp; Investing" default="false" value="Markets &amp;amp;
+        Investing" display_name="Markets &amp;amp; Investing"/><option-child name="Companies
+        &amp;amp; Management" default="false" value="Companies &amp;amp; Management"
+        display_name="Companies &amp;amp; Management"/><option-child name="World &amp;amp;
+        Economy" default="false" value="World &amp;amp; Economy" display_name="World
+        &amp;amp; Economy"/><option-child name="Life &amp;amp; Arts" default="false"
+        value="Life &amp;amp; Arts" display_name="Life &amp;amp; Arts"/></children></single-option><single-option
+        name="brand"><searchable>true</searchable><editable>true</editable><required>true</required><children><option-child
+        name="SV" default="false" value="SV" display_name="Markets - Short View (SV)"/><option-child
+        name="AUTH" default="false" value="AUTH" display_name="Markets - John Authers'
+        Note (AUTH)"/><option-child name="MKTS" default="false" value="MKTS" display_name="Markets
+        - FT Markets (MKTS)"/><option-child name="FTFM" default="false" value="FTFM"
+        display_name="Markets - FTFM (FTFM)"/><option-child name="FTTR" default="false"
+        value="FTTR" display_name="Markets - Trading Room (FTTR)"/><option-child name="EMKT"
+        default="false" value="EMKT" display_name="Markets - FT Emerging Markets (EMKT)"/><option-child
+        name="BUS" default="false" value="BUS" display_name="Companies - FT Business
+        (BUS)"/><option-child name="LEX" default="false" value="LEX" display_name="Companies
+        - Lex (LEX)"/><option-child name="VFTT" default="false" value="VFTT" display_name="Companies
+        - View from the Top (VFTT)"/><option-child name="BSCL" default="false" value="BSCL"
+        display_name="Companies - Business School (BSCL)"/><option-child name="WRLD"
+        default="false" value="WRLD" display_name="World - FT World (WRLD)"/><option-child
+        name="LUCE" default="false" value="LUCE" display_name="World - Luce Talk (LUCE)"/><option-child
+        name="ANRV" default="false" value="ANRV" display_name="World - Analysis Review
+        (ANRV)"/><option-child name="CMNT" default="false" value="CMNT" display_name="World
+        - FT Comment (CMNT)"/><option-child name="ALST" default="false" value="ALST"
+        display_name="World - A list (ALST)"/><option-child name="FFT" default="false"
+        value="FFT" display_name="World - FirstFT (FFT)"/><option-child name="ARTS"
+        default="false" value="FFT" display_name="Life - FT Arts (ARTS)"/><option-child
+        name="LIFE" default="false" value="LIFE" display_name="Life - FT Life (LIFE)"/><option-child
+        name="WLTH" default="false" value="WLTH" display_name="Life - FT Wealth (WLTH)"/><option-child
+        name="SP" default="false" value="SP" display_name="Life - Special Projects
+        (SP)"/><option-child name="LAA" default="false" value="LAA" display_name="Life
+        - FT Life &amp;amp; Arts (LAA)"/></children></single-option></children></metadata>
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+xml
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 13 May 2016 15:38:11 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=wF4EZ9I+UQO5ACSrPVrP0V8x.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"definitionId":107594,"name":"metadata-definition","definition":[{"id":107595,"name":"project","displayName":"Metadata_definition
+        Display name","description":null,"type":"text","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107596,"name":"section","displayName":"section","description":null,"type":"single-option","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107597,"name":"Markets
+        &amp; Investing","displayName":"Markets &amp; Investing","default":false,"value":"Markets
+        &amp; Investing"},{"id":107598,"name":"Companies &amp; Management","displayName":"Companies
+        &amp; Management","default":false,"value":"Companies &amp; Management"},{"id":107599,"name":"World
+        &amp; Economy","displayName":"World &amp; Economy","default":false,"value":"World
+        &amp; Economy"},{"id":107600,"name":"Life &amp; Arts","displayName":"Life
+        &amp; Arts","default":false,"value":"Life &amp; Arts"}]},{"id":107601,"name":"brand","displayName":"brand","description":null,"type":"single-option","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107602,"name":"SV","displayName":"Markets
+        - Short View (SV)","default":false,"value":"SV"},{"id":107603,"name":"AUTH","displayName":"Markets
+        - John Authers'' Note (AUTH)","default":false,"value":"AUTH"},{"id":107604,"name":"MKTS","displayName":"Markets
+        - FT Markets (MKTS)","default":false,"value":"MKTS"},{"id":107605,"name":"FTFM","displayName":"Markets
+        - FTFM (FTFM)","default":false,"value":"FTFM"},{"id":107606,"name":"FTTR","displayName":"Markets
+        - Trading Room (FTTR)","default":false,"value":"FTTR"},{"id":107607,"name":"EMKT","displayName":"Markets
+        - FT Emerging Markets (EMKT)","default":false,"value":"EMKT"},{"id":107608,"name":"BUS","displayName":"Companies
+        - FT Business (BUS)","default":false,"value":"BUS"},{"id":107609,"name":"LEX","displayName":"Companies
+        - Lex (LEX)","default":false,"value":"LEX"},{"id":107610,"name":"VFTT","displayName":"Companies
+        - View from the Top (VFTT)","default":false,"value":"VFTT"},{"id":107611,"name":"BSCL","displayName":"Companies
+        - Business School (BSCL)","default":false,"value":"BSCL"},{"id":107612,"name":"WRLD","displayName":"World
+        - FT World (WRLD)","default":false,"value":"WRLD"},{"id":107613,"name":"LUCE","displayName":"World
+        - Luce Talk (LUCE)","default":false,"value":"LUCE"},{"id":107614,"name":"ANRV","displayName":"World
+        - Analysis Review (ANRV)","default":false,"value":"ANRV"},{"id":107615,"name":"CMNT","displayName":"World
+        - FT Comment (CMNT)","default":false,"value":"CMNT"},{"id":107616,"name":"ALST","displayName":"World
+        - A list (ALST)","default":false,"value":"ALST"},{"id":107617,"name":"FFT","displayName":"World
+        - FirstFT (FFT)","default":false,"value":"FFT"},{"id":107618,"name":"ARTS","displayName":"Life
+        - FT Arts (ARTS)","default":false,"value":"FFT"},{"id":107619,"name":"LIFE","displayName":"Life
+        - FT Life (LIFE)","default":false,"value":"LIFE"},{"id":107620,"name":"WLTH","displayName":"Life
+        - FT Wealth (WLTH)","default":false,"value":"WLTH"},{"id":107621,"name":"SP","displayName":"Life
+        - Special Projects (SP)","default":false,"value":"SP"},{"id":107622,"name":"LAA","displayName":"Life
+        - FT Life &amp; Arts (LAA)","default":false,"value":"LAA"}]}],"rules":[]}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 15:35:58 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions/11313/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 13 May 2016 15:38:12 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=S9gyOGx1vqNiGXLQpbiNUTJj.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 15:35:59 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions/11313/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 13 May 2016 15:38:12 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      set-cookie:
+      - JSESSIONID=SEGeYUAq4BrCLihL6gcElsq4.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-headers:
+      - origin, authorization, accept
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11313,"uuid":"0b65cfe6-ce4a-4640-82d0-085d301fbd90","name":"metadata-definition","displayName":"metadata-definition","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11313","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 13 May 2016 15:35:59 GMT
 recorded_with: VCR 3.0.1
