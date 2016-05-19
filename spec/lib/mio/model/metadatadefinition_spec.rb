@@ -6,7 +6,7 @@ describe 'Mio::Model::MetadataDefinition' do
   let(:invalid_model_args){build(:metadata_definition_invalid_data)}
   let(:extra_model_args){build(:metadata_definition_extra_data)}
 
-  let(:empty_definitions){build(:metadata_definition_empty_transitions)}
+  let(:empty_definitions){build(:metadata_definition_empty_definitions)}
 
   let(:client){build(:valid_client)}
 

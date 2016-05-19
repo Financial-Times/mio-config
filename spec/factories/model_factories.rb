@@ -39,8 +39,6 @@ FactoryGirl.define do
   end
 
   factory :model, class: OpenStruct do
-    visibility [4]
-    enable :true
 
     factory :s3 do
       name 'S3 Bucket Factory'
@@ -48,6 +46,9 @@ FactoryGirl.define do
       secret 'some_s3_secret'
       bucket 'some_faked_s3_bucket'
       start :true
+      enable :true
+      visibility [4]
+
 
       factory :s3_invalid_data, traits: [:invalid_name]
       factory :s3_extra_data,   traits: [:invalid_field]
@@ -59,6 +60,8 @@ FactoryGirl.define do
       workflow_name 'Workflow'
       owner 'masteruser masteruser'
       start :true
+      enable :true
+      visibility [4]
 
       factory :hotfolder_invalid_data, traits: [:invalid_name]
       factory :hotfolder_extra_data,   traits: [:invalid_field]
@@ -70,6 +73,8 @@ FactoryGirl.define do
       secret 'some_s3_secret'
       bucket 'some_faked_s3_bucket'
       start :true
+      enable :true
+      visibility [4]
 
       factory :import_action_invalid_data, traits: [:invalid_name]
       factory :import_action_extra_data,   traits: [:invalid_field]
@@ -84,6 +89,8 @@ FactoryGirl.define do
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
       start :true
+      enable :true
+      visibility [4]
 
       factory :groovy_script_invalid_data, traits: [:invalid_name]
       factory :groovy_script_extra_data,   traits: [:invalid_field]
@@ -94,6 +101,8 @@ FactoryGirl.define do
       transitions [{from: 'Start 1', to: 'End 1'}]
       nodes [{name: 'End 1', path: '/e', type: 'END'},
              {name: 'Start 1', path: '/s', type: 'START'}]
+      enable :true
+      visibility [4]
 
       trait :empty_nodes do
         nodes []
@@ -120,11 +129,12 @@ FactoryGirl.define do
       timeout 0
       polling_time 10
       start :true
+      enable :true
+      visibility [4]
 
       factory :groovy_script_wait_invalid_data, traits: [:invalid_name]
       factory :groovy_script_wait_extra_data,   traits: [:invalid_field]
     end
-
 
     factory :metadata_definition do
       name 'metadata-definition'
@@ -133,6 +143,8 @@ FactoryGirl.define do
       editable :true
       required :true
       start :false
+      enable :true
+      visibility [4]
 
       sectionOptions = [{name: 'Markets &amp; Investing', displayName: 'Markets &amp; Investing', default: false, value: 'Markets &amp; Investing'},
                         {name: 'Companies &amp; Management', displayName: 'Companies &amp; Management', default: false, value: 'Companies &amp; Management'},
@@ -195,8 +207,37 @@ FactoryGirl.define do
       factory :metadata_definition_invalid_data,      traits: [:invalid_name]
       factory :metadata_definition_extra_data,        traits: [:invalid_field]
       factory :metadata_definition_empty_definitions, traits: [:empty_definitions]
+    end
 
+    factory :variant do
+      name 'project-variant' 				                      # Name of the Object Variant
+      objectType 'project' 				                        # The Object which this varies
+      defaultVariant :false 				                      # AWS API Key with access to bucket
+      metadataDefinitions ['project-metadata']            # Array of metadata definitions
+      defaultMetadataDefinition 'project-metadata' 				# Default metadata definition name
+
+      trait :empty_metadata_definitions do
+        metadataDefinitions []
+      end
+
+      factory :variant_invalid_data,                traits: [:invalid_name]
+      factory :variant_extra_data,                  traits: [:invalid_field]
+      factory :variant_empty_metadataDefinitions,   traits: [:empty_metadata_definitions]
+    end
+
+    factory :create_place_holder_group_asset do
+      name 'testing-create-project-group-placeholder' 		# Name of the place holder asset
+      visibility [4] 				                          # IDs of accounts that may see this
+      creationContext "NEW" 				                  # Creation context
+      variantName "project-variant" 				          # Object Variant to create
+      metadataDefinition "project-metadata" 		  # The metadata definition to associate to this place holder asset
+      start :true
+      enable :true 				                            # :true or :false
+
+      factory :create_place_holder_group_asset_invalid_data,                traits: [:invalid_name]
+      factory :create_place_holder_group_asset_extra_data,                  traits: [:invalid_field]
     end
 
   end
 end
+
