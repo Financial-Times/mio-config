@@ -3,3 +3,4 @@ migrations/*
 .gem
 coverage/
 *.gem
+*.iml
