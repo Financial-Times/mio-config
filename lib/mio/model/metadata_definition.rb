@@ -31,11 +31,13 @@ class Mio
             'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
           when 'url'
             'tv.nativ.mio.metadata.resource.def.MioURLVariable$URLValidationHandler'
+          else
+            ''
         end
       end
 
       def build_options_xml children, hash
-        children.send("option-child", :"name" => hash.fetch(:name),
+        children.send("option-child", name: hash.fetch(:name),
                     default: hash.fetch(:default),
                     value: hash.fetch(:value),
                     display_name: hash.fetch(:displayName));
@@ -45,7 +47,7 @@ class Mio
         if type.nil?
           type = hash.fetch(:type)
         end
-        children.send(type+'_', :"name" =>  hash.fetch(:name), :"display_name" => hash.fetch(:displayName)) do |child|
+        children.send(type+'_', name: hash.fetch(:name), display_name: hash.fetch(:displayName)) do |child|
           child.searchable hash.fetch(:searchable).to_s
           child.editable hash.fetch(:editable).to_s
           child.required hash.fetch(:required)
@@ -91,7 +93,7 @@ class Mio
 
       def definition_xml
         xml_builder = Nokogiri::XML::Builder.new do |xml|
-          xml.metadata(:name => @args.name ) {
+          xml.metadata(name: @args.name ) {
             xml.searchable @args.searchable.to_s
             xml.editable @args.editable.to_s
             xml.required @args.required.to_s
@@ -102,8 +104,7 @@ class Mio
             end
           }
         end
-        test = xml_builder.to_xml
-        test
+        xml_builder.to_xml
       end
 
       def go
