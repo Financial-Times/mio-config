@@ -250,16 +250,29 @@ FactoryGirl.define do
     end
 
     factory :place_holder_group_asset_action do
-      name 'test-project-group-placeholder' 		# Name of the place holder asset
+      name 'test-project-group-placeholder' 		      # Name of the place holder asset
       visibility [4] 				                          # IDs of accounts that may see this
       creationContext "NEW" 				                  # Creation context
       variantName "project-variant" 				          # Object Variant to create
-      metadataDefinition "project-metadata" 		  # The metadata definition to associate to this place holder asset
+      metadataDefinition "project-metadata" 		      # The metadata definition to associate to this place holder asset
       start :true
       enable :true 				                            # :true or :false
 
       factory :place_holder_group_asset_action_invalid_data,                traits: [:invalid_name]
       factory :place_holder_group_asset_action_extra_data,                  traits: [:invalid_field]
+    end
+
+
+    factory :email_message_action do
+      name 'project-create-email-action-testing' 		      # Name of the email message action
+      visibility [4] 				                              # IDs of accounts that may see this
+      template 11818 				                              # Id of email template
+      recipientExpression '${job.mioObject.owner.email}'  # Evaluated Expression value which generates an email address
+      start :true
+      enable :false 				                              # :true or :false
+
+      factory :email_message_action_invalid_data,                traits: [:invalid_name]
+      factory :email_message_action_extra_data,                  traits: [:invalid_field]
     end
 
   end

@@ -6,7 +6,7 @@ class Mio
       field :key, String, 'AWS API Key with access to S3'
       field :secret, String, 'AWS secret'
       field :bucket, String, 'AWS bucket name'
-      field :visibility, Array, 'Ids of the accounts which may see the import action'
+      field :visibility, Array, 'Ids of the accounts which may see the import action', [4]
 
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
