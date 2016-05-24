@@ -4,10 +4,10 @@ class Mio
       class Definition < Model
         set_resource :metadatadefinition
 
-        field :name, String, 'Metadata Definition Name', ''
+        field :name, String, 'Metadata Definition Name'
         field :displayName, String, 'Display name'
         field :type, String, 'Metdata type text|single-option|checkbox|image', 'textarea'
-        field :description, String, 'Metadata Definition Description', ''
+        field :description, String, 'Metadata Definition Description'
         field :searchable, Symbol, 'Indexed and searchable', :true
         field :editable, Symbol, 'Editable field', :true
         field :required, Symbol, 'Required mandatory metadata item', :true
