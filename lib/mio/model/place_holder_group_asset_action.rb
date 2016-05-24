@@ -1,6 +1,6 @@
 class Mio
   class Model
-    class CreatePlaceHolderGroupAssetAction < Model
+    class PlaceHolderGroupAssetAction < Model
       set_resource :actions
 
       field :name, String, 'Name of the place holder asset'

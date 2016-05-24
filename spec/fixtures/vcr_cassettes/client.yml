@@ -3235,4 +3235,245 @@ http_interactions:
         masteruser","accountId":4}'
     http_version: 
   recorded_at: Thu, 19 May 2016 11:21:57 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"testing-project-group-placeholder","pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","visibilityIds":[4],"type":"create-object","runRuleExpression":""}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Tue, 24 May 2016 09:55:17 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=kUX4hkZ5mln2xTdYthLjDKvv.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/actions/11716
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11716,"uuid":"a4ab35fe-1609-47b1-937d-a4dea39b358a","name":"testing-project-group-placeholder","displayName":"testing-project-group-placeholder","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11716","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Tue, 24 May 2016 09:55:20 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11716/configuration
+    body:
+      encoding: UTF-8
+      string: '{"name":"testing-project-group-placeholder","asset-type":"group-asset","creation-context":"NEW","variant-and-metadata":{"variant-name":"project-variant","metadata-details":{"metadata-definition":{"id":11312}}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 24 May 2016 09:55:20 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=R-N5I+jj2PBmREVz4O3BDSm5.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103727,"instance":{"name":"testing-project-group-placeholder","asset-type":"group-asset","creation-context":"NEW","variant-and-metadata":{"variant-name":"project-variant","metadata-details":{"metadata-definition":{"id":"11312"}}},"set-in-context":true},"definitionId":108171,"definition":[{"id":108172,"name":"name","displayName":"Name","description":"Object
+        Name.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108173,"name":"description","displayName":"Description","description":"Object
+        description.","type":"text","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108174,"name":"asset-type","displayName":"Asset
+        Type","description":"The Placeholder Asset Type to create.","type":"single-option","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":108175,"name":"media-asset","displayName":"Media
+        Asset","default":true,"value":"media-asset"},{"id":108176,"name":"image-asset","displayName":"Image
+        Asset","default":false,"value":"image-asset"},{"id":108177,"name":"text-asset","displayName":"Text
+        Asset","default":false,"value":"text-asset"},{"id":108178,"name":"group-asset","displayName":"Group
+        Asset","default":false,"value":"group-asset"}]},{"id":108179,"name":"creation-context","displayName":"Creation
+        Context","description":"The creation context to set on the asset.","type":"single-option","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":108180,"name":"ingest","displayName":"Ingest","default":false,"value":"INGEST"},{"id":108181,"name":"proxy","displayName":"Proxy","default":false,"value":"PROXY"},{"id":108182,"name":"copy","displayName":"Copy","default":false,"value":"COPY"},{"id":108183,"name":"transcode","displayName":"Transcode","default":false,"value":"TRANSCODE"},{"id":108184,"name":"import","displayName":"Import","default":false,"value":"IMPORT"},{"id":108185,"name":"transform","displayName":"Transform","default":false,"value":"TRANSFORM"},{"id":108186,"name":"new","displayName":"New","default":false,"value":"NEW"}]},{"id":108187,"name":"variant-and-metadata","displayName":"Variant
+        And Metadata","description":"Specify the Variant and optionally the Metadata
+        Definition to set on the asset. If not specified, a default will be used if
+        it has been configured.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108188,"name":"variant-name","displayName":"Variant
+        Name","description":"The Variant to set. This must be a valid configured Variant
+        name.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108189,"name":"metadata-details","displayName":"Metadata
+        Details","description":"Metadata Details.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108190,"name":"metadata-definition","displayName":"Metadata
+        Definition","description":"The Metadata Definition to set. If not specified,
+        a default will be used if it has been configured.","type":"object","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Metadata
+        Definition"},{"id":108191,"name":"source-json-variable","displayName":"Source
+        JSON Variable","description":"Source JSON Variable.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108192,"name":"source-xml-details","displayName":"Source
+        XML Details","description":"Source XML Details.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108193,"name":"source-xml","displayName":"Source
+        XML","description":"Source XML.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108194,"name":"source-xml-path","displayName":"Source
+        XML Path","description":"Source XML Path.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108195,"name":"source-xml-variable","displayName":"Source
+        XML Variable","description":"Source XML Variable.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":108196,"name":"xslt","displayName":"XSLT","description":"XSLT
+        file.","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]},{"id":108199,"name":"relationships","displayName":"Relationships","description":"Relationships.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108200,"name":"child","displayName":"Child","description":"Child.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108201,"name":"parent-file-asset","displayName":"Parent
+        File asset","description":"Parent File asset.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108202,"name":"asset-id","displayName":"Asset
+        ID","description":"Asset ID.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108203,"name":"asset","displayName":"Asset","description":"Asset.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (File)"}]},{"id":108204,"name":"reference-name","displayName":"Reference Name","description":"Reference
+        name which will be set to asset.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":108205,"name":"member","displayName":"Member","description":"Member.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108206,"name":"parent-group","displayName":"Parent
+        Group","description":"Parent Group.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108207,"name":"group-id","displayName":"Group
+        ID","description":"Group ID.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108208,"name":"group","displayName":"Group","description":"Group.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (Group)"}]},{"id":108209,"name":"membership-name","displayName":"Membership
+        Name","description":"Optional membership name to set on the group-member relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":108210,"name":"parent-object-details","displayName":"Parent
+        Object Details","description":"Parent Object Details.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108211,"name":"parent-id","displayName":"Parent
+        ID","description":"Parent ID.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108212,"name":"parent","displayName":"Parent","description":"Parent.","type":"object","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"User
+        Defined Object"}]}]},{"id":108213,"name":"set-in-context","displayName":"Set
+        in Context","description":"Set in Context.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":108214,"name":"Yes","displayName":"Yes","default":true,"value":"true"},{"id":108215,"name":"No","displayName":"No","default":false,"value":"false"}]},{"id":108216,"name":"store-asset-as-variable","displayName":"Store
+        Asset as Variable","description":"Variable name to store asset as workflow
+        variable.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}'
+    http_version: 
+  recorded_at: Tue, 24 May 2016 09:55:23 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11716/actions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 24 May 2016 09:55:22 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=OE4KcOqvP0bLtPmzHI+9e6m5.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Tue, 24 May 2016 09:55:24 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions/11716/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 24 May 2016 09:55:23 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=flyQbIe0CqoVtDC6dJb8dmJK.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":11716,"uuid":"a4ab35fe-1609-47b1-937d-a4dea39b358a","name":"testing-project-group-placeholder","displayName":"testing-project-group-placeholder","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/11716","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Tue, 24 May 2016 09:55:24 GMT
 recorded_with: VCR 3.0.1

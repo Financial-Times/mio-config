@@ -225,8 +225,8 @@ FactoryGirl.define do
       factory :variant_empty_metadataDefinitions,   traits: [:empty_metadata_definitions]
     end
 
-    factory :create_place_holder_group_asset_action do
-      name 'testing-create-project-group-placeholder' 		# Name of the place holder asset
+    factory :place_holder_group_asset_action do
+      name 'testing-project-group-placeholder' 		# Name of the place holder asset
       visibility [4] 				                          # IDs of accounts that may see this
       creationContext "NEW" 				                  # Creation context
       variantName "project-variant" 				          # Object Variant to create
@@ -234,8 +234,8 @@ FactoryGirl.define do
       start :true
       enable :true 				                            # :true or :false
 
-      factory :create_place_holder_group_asset_action_invalid_data,                traits: [:invalid_name]
-      factory :create_place_holder_group_asset_action_extra_data,                  traits: [:invalid_field]
+      factory :place_holder_group_asset_action_invalid_data,                traits: [:invalid_name]
+      factory :place_holder_group_asset_action_extra_data,                  traits: [:invalid_field]
     end
 
   end

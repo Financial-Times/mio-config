@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe 'Mio::Model::CreatePlaceHolderGroupAssetAction' do
-  subject{ Mio::Model::CreatePlaceHolderGroupAssetAction }
-  let(:model_args){build(:create_place_holder_group_asset_action)}
-  let(:invalid_model_args){build(:create_place_holder_group_asset_action_invalid_data)}
-  let(:extra_model_args){build(:create_place_holder_group_asset_action_extra_data)}
+describe 'Mio::Model::PlaceHolderGroupAssetAction' do
+  subject{ Mio::Model::PlaceHolderGroupAssetAction }
+  let(:model_args){build(:place_holder_group_asset_action)}
+  let(:invalid_model_args){build(:place_holder_group_asset_action_invalid_data)}
+  let(:extra_model_args){build(:place_holder_group_asset_action_extra_data)}
 
 
   let(:client){build(:valid_client)}
