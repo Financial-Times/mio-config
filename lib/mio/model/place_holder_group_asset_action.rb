@@ -22,7 +22,6 @@ class Mio
         }
       end
 
-
       def metadata_definition_id metadata_definition_name
         r = 'metadataDefinitions'
         metadata_definitions = @client.find_all(r)
@@ -34,7 +33,6 @@ class Mio
 
         md['id']
       end
-
 
       def config_hash
         {"name": @args.name,
