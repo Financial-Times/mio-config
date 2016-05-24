@@ -146,59 +146,83 @@ FactoryGirl.define do
       enable :true
       visibility [4]
 
-      sectionOptions = [{name: 'Markets &amp; Investing', displayName: 'Markets &amp; Investing', default: false, value: 'Markets &amp; Investing'},
-                        {name: 'Companies &amp; Management', displayName: 'Companies &amp; Management', default: false, value: 'Companies &amp; Management'},
-                        {name: 'World &amp; Economy', displayName: 'World &amp; Economy', default: false, value: 'World &amp; Economy'},
-                        {name: 'Life &amp; Arts', displayName: 'Life &amp; Arts', default: false, value: 'Life &amp; Arts'}]
+      testOptions = [{name: 'test', displayName: 'test', default: false, value: 'http://api.ft.com/things/test'}]
 
-      brandOptions = [{name: 'SV', displayName: 'Markets - Short View (SV)', default: false, value: 'SV'},
-                      {name: 'AUTH', displayName: "Markets - John Authers' Note (AUTH)", default: false, value: 'AUTH'},
-                      {name: 'MKTS', displayName: 'Markets - FT Markets (MKTS)', default: false, value: 'MKTS'},
-                      {name: 'FTFM', displayName: 'Markets - FTFM (FTFM)', default: false, value: 'FTFM'},
-                      {name: 'FTTR', displayName: 'Markets - Trading Room (FTTR)', default: false, value: 'FTTR'},
-                      {name: 'EMKT', displayName: 'Markets - FT Emerging Markets (EMKT)', default: false, value: 'EMKT'},
-                      {name: 'BUS', displayName: 'Companies - FT Business (BUS)', default: false, value: 'BUS'},
-                      {name: 'LEX', displayName: 'Companies - Lex (LEX)', default: false, value: 'LEX'},
-                      {name: 'VFTT', displayName: 'Companies - View from the Top (VFTT)', default: false, value: 'VFTT'},
-                      {name: 'BSCL', displayName: 'Companies - Business School (BSCL)', default: false, value: 'BSCL'},
-                      {name: 'WRLD', displayName: 'World - FT World (WRLD)', default: false, value: 'WRLD'},
-                      {name: 'LUCE', displayName: 'World - Luce Talk (LUCE)', default: false, value: 'LUCE'},
-                      {name: 'ANRV', displayName: 'World - Analysis Review (ANRV)', default: false, value: 'ANRV'},
-                      {name: 'CMNT', displayName: 'World - FT Comment (CMNT)', default: false, value: 'CMNT'},
-                      {name: 'ALST', displayName: 'World - A list (ALST)', default: false, value: 'ALST'},
-                      {name: 'FFT', displayName: 'World - FirstFT (FFT)', default: false, value: 'FFT'},
-                      {name: 'ARTS', displayName: 'Life - FT Arts (ARTS)', default: false, value: 'FFT'},
-                      {name: 'LIFE', displayName: 'Life - FT Life (LIFE)', default: false, value: 'LIFE'},
-                      {name: 'WLTH', displayName: 'Life - FT Wealth (WLTH)', default: false, value: 'WLTH'},
-                      {name: 'SP', displayName: 'Life - Special Projects (SP)', default: false, value: 'SP'},
-                      {name: 'LAA', displayName: 'Life - FT Life &amp; Arts (LAA)', default: false, value: 'LAA'}]
+      checkBoxOptions = [{name: 'true', displayName: 'True', default: true, value: 'true'},
+                         {name: 'false', displayName: 'False', default: false, value: 'false'}]
 
-      definitions [{name: 'project',
+      urlStringsTest = [{name: 'file-name',
+                         displayName: 'Poster File Name',
+                         description: 'Poster File Name',
+                         type: 'string',
+                         searchable: true,
+                         editable: true,
+                         required: true,
+                         formType: 'text',
+                         maxLength: -1},
+                        {name: 'file-path',
+                         displayName: 'Poster File Path',
+                         description: 'Poster File Path',
+                         type: 'string',
+                         searchable: true,
+                         editable: true,
+                         required: true,
+                         formType: 'text',
+                         maxLength: -1}]
+
+      definitions [{name: 'section',
+                      displayName: 'Section',
+                      description: 'ft site section',
+                      type: 'single-option',
+                      searchable: true,
+                      editable: true,
+                      required: true,
+                      formType: 'select',
+                      maxLength: -1,
+                      options: testOptions
+                     },
+                     {name: 'headline',
+                      displayName: 'Headline',
                       description: 'describe what the project is about',
                       type: 'text',
                       searchable: true,
                       editable: true,
                       required: true,
                       formType: 'textarea',
-                      validationHandler: 'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
+                      maxLength: 100
                      },
-                     {name: 'section',
-                      description: 'section',
-                      type: 'string',
+                     {name: 'link-1',
+                      displayName: 'Link 1',
+                      description: 'Link 1',
+                      type: 'url',
                       searchable: true,
                       editable: true,
                       required: true,
-                      formType: 'select',
-                      options: sectionOptions
+                      formType: 'text',
+                      maxLength: -1
                      },
-                     {name: 'brand',
-                      description: 'brand',
-                      type: 'string',
+                     {name: 'restrictions',
+                      displayName: 'Restrictions',
+                      description: 'Restrictions',
+                      type: 'boolean',
                       searchable: true,
                       editable: true,
                       required: true,
-                      formType: 'select',
-                      options: brandOptions}]
+                      formType: 'checkbox',
+                      maxLength: -1,
+                      options: checkBoxOptions
+                     },
+                     {name: 'poster-image',
+                      displayName: 'Poster Image',
+                      description: 'Poster Image',
+                      type: 'image',
+                      searchable: true,
+                      editable: true,
+                      required: true,
+                      formType: 'file',
+                      maxLength: -1,
+                      strings: urlStringsTest
+                     }]
 
       trait :empty_definitions do
         definitions []
@@ -226,7 +250,7 @@ FactoryGirl.define do
     end
 
     factory :place_holder_group_asset_action do
-      name 'testing-project-group-placeholder' 		# Name of the place holder asset
+      name 'test-project-group-placeholder' 		# Name of the place holder asset
       visibility [4] 				                          # IDs of accounts that may see this
       creationContext "NEW" 				                  # Creation context
       variantName "project-variant" 				          # Object Variant to create
