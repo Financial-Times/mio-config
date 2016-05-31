@@ -5,12 +5,8 @@ class Mio
 
       field :name, String, 'Name of the Email Message Action'
       field :visibility, Array, 'Ids of the accounts which may see the import action', [4]
-      field :template, Fixnum, 'Id of email template'
+      field :template, String, 'Name of email template'
       field :recipientExpression, String, 'Evaluated Expression value which generates an email address', '${job.mioObject.owner.email}'
-
-      # @TODO mio api does not currently support templates
-      # templates CRUD needs to be automated via mio-config
-      # templates should be looked up by name rather than by id ^^
 
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
@@ -25,10 +21,20 @@ class Mio
         }
       end
 
-      def config_hash
-        # @TODO Get the Email Template id from the template name
+      def get_message_template_id mesage_template_name
+        r = 'messageTemplates'
+        message_templates = @client.find_all(r)
 
-        { :'message-template' => { id: @args.template },
+        md = message_templates[r].find{|md| md['name'] == mesage_template_name}
+        if md.nil?
+          raise Mio::Model::NoSuchResource, 'No such message template [' + mesage_template_name + ']'
+        end
+
+        md['id']
+      end
+
+      def config_hash
+        { :'message-template' => { id: get_message_template_id(@args.template) },
           recipients: { expression: [ { value: @args.recipientExpression, isExpression: false } ] }
         }
       end

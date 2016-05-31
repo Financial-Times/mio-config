@@ -1,12 +1,11 @@
 require 'faraday'
 require 'faraday/detailed_logger'
-require 'ostruct'
-require 'net/http/persistent'
 require 'json'
-
-require 'pp'
-
 require 'mio/requests'
+require 'net/http/persistent'
+require 'nokogiri'
+require 'ostruct'
+require 'pp'
 
 class Mio
   class Client
@@ -20,9 +19,9 @@ class Mio
       @agent.basic_auth(username, password)
     end
 
-    def find_all resource, opts={}
+    def find_all resource, opts={}, accept='application/json'
       url = path(resource)
-      response = get url, opts
+      response = get url, opts, accept
 
       unless response.success?
         raise Mio::Client::LoadOfBollocks, "GET on #{url} returned #{response.status}"
@@ -70,6 +69,17 @@ class Mio
       make_object response.body
     end
 
+
+    def template resource, payload, opts={}
+      url = path(resource)
+      response = put url, payload, opts, 'text/html', 'text/html'
+      unless response.success?
+        raise Mio::Client::LoadOfBollocks, "PUT on #{url}, with #{payload.inspect} returned #{response.status}"
+      end
+
+      Nokogiri::HTML(response.body)
+    end
+
     def action resource, id, payload, opts={}
       url = path(resource, id, :actions)
       statuses = get url, opts
@@ -88,16 +98,16 @@ class Mio
     end
 
     private
-    def get url, opts
-      Mio::Requests.make_request :get, @agent, url, opts
+    def get url, opts, accept='application/json'
+      Mio::Requests.make_request :get, @agent, url, opts, accept
     end
 
     def post url, payload, opts
       Mio::Requests.make_request :post, @agent, url, opts, payload
     end
 
-    def put url, payload, opts, content_type='application/vnd.nativ.mio.v1+json'
-      Mio::Requests.make_request :put, @agent, url, opts, payload, content_type
+    def put url, payload, opts, content_type='application/vnd.nativ.mio.v1+json', accept='application/json'
+      Mio::Requests.make_request :put, @agent, url, opts, payload, content_type, accept
     end
 
     def make_object response

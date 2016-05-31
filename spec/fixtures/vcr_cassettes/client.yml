@@ -3865,4 +3865,2110 @@ http_interactions:
       string: '[{"action":"delete"},{"action":"enable"}]'
     http_version: 
   recorded_at: Tue, 24 May 2016 15:20:18 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:23 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=PqBBeW0ZYDWJYENdiif2XZDf.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"resources":[{"id":11113,"uuid":"fc4b0eea-c9f8-4103-8a47-5643ca94515e","name":"vcr
+        resource storage","displayName":"vcr resource storage","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11113","resourceType":"Capacity","resourceSubType":"Storage","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource","status":"Stopped","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-storage.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-storage.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-storage.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-storage.png"},"created":"29
+        Apr 2016 11:10:28 +0000","lastModified":"29 Apr 2016 11:10:57 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-c7993fd4a6451c1240043dc4ace6988c55ca7b2b"},{"id":11218,"uuid":"49cc0e29-829c-496d-899b-1ec79c6c4e30","name":"test
+        bucket","displayName":"test bucket","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11218","resourceType":"Capacity","resourceSubType":"Storage","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource","status":"Failed","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-storage.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-storage.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-storage.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-storage.png"},"created":"09
+        May 2016 15:59:12 +0000","lastModified":"09 May 2016 15:59:19 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-fa68fbba347cd730e1593266daa9c644f13a1eae"},{"id":11213,"uuid":"f91a0fc4-e568-41a5-863a-fffe42121558","name":"S3
+        test bucket","displayName":"S3 test bucket","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11213","resourceType":"Capacity","resourceSubType":"Storage","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource","status":"Stopped","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-storage.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-storage.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-storage.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-storage.png"},"created":"05
+        May 2016 12:47:18 +0000","lastModified":"05 May 2016 12:47:19 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-0514b704af94455611ef645dc60af7953fac2875"},{"id":11117,"uuid":"acbdb174-37db-44e6-a17c-dc50ccf884ba","name":"S3
+        Bucket Factory","displayName":"S3 Bucket Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11117","resourceType":"Capacity","resourceSubType":"Storage","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.storage.vfs.VFSStorageResource","status":"Stopped","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-storage.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-storage.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-storage.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-storage.png"},"created":"29
+        Apr 2016 11:23:58 +0000","lastModified":"29 Apr 2016 11:24:03 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-ff3cb537896049ad0d63af99b1f4ad4ba7b00e1c"},{"id":11116,"uuid":"981e82bd-06cc-434d-8e95-1bc9b77d51a4","name":"Hotfolder
+        Factory","displayName":"Hotfolder Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/resources/11116","resourceType":"Capacity","resourceSubType":"Hot
+        Folder","pluginClass":"tv.nativ.mio.enterprise.resources.impl.capacity.folder.hotfolder.MioHotFolderResource","status":"Stopped","pollingInterval":0,"icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource-hot-folder.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource-hot-folder.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource-hot-folder.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource-hot-folder.png"},"created":"29
+        Apr 2016 11:23:43 +0000","lastModified":"29 Apr 2016 11:49:21 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-99019961dbf5e289ca3146df4c4948a177f5da3e"}],"totalCount":5,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:12 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/no-such-resource
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:24 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '80'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Invalid Mio Object Type: no-such-resource"
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:13 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/11113/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:24 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=i3ZelQYdw+ys0i1b3L3G88zU.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:13 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/no-such-resource/0/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:25 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '80'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Invalid Mio Object Type: no-such-resource"
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:14 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:25 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=bBvj4Q6mLB7mut5CM-5P6Z-s.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"messageTemplates":[{"id":12720,"uuid":"5fecfbc1-92e4-4e48-b646-fd5be67f0ec7","name":"xxx","displayName":"xxx","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"description":"template","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/12720","subject":"xxx","priority":"Highest","created":"27
+        May 2016 09:25:45 +0000","lastModified":"31 May 2016 09:44:32 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"2-4f2a0622114a7407216e8e4febfaec42ecdfb994"},{"id":9,"name":"User
+        Added Notification Workspace or Group","displayName":"User Added Notification
+        Workspace or Group","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/9","subject":"You
+        have been added as a member to #{event.mioObject.name}","priority":"Normal","created":"10
+        Jun 2015 10:47:08 +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":12,"name":"User Added Notification","displayName":"User
+        Added Notification","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/12","subject":"Welcome","priority":"Normal","created":"10
+        Jun 2015 10:47:08 +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":10,"name":"User Account Details Notification","displayName":"User
+        Account Details Notification","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/10","subject":"MioEverywhere
+        login details reminder","priority":"Normal","created":"10 Jun 2015 10:47:08
+        +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":11818,"uuid":"809dd11c-f647-4ff0-b762-8a0dddfebaae","name":"test-template","displayName":"test-template","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"description":"email template","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/11818","subject":"NEW
+        PROJECT: #{asset.mioObject.name}","priority":"Normal","created":"24 May 2016
+        14:06:07 +0000","lastModified":"24 May 2016 14:36:24 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-e79ed54b4ce22d3344beedc1e2f062392f481545"},{"id":17,"name":"Notification
+        SMS Template","displayName":"Notification SMS Template","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/17","priority":"Normal","created":"10
+        Jun 2015 10:47:08 +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":11,"name":"MioEverywhere set password notification","displayName":"MioEverywhere
+        set password notification","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/11","subject":"MioEverywhere
+        set password notification","priority":"Normal","created":"10 Jun 2015 10:47:08
+        +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":18,"name":"MioEverywhere password reset
+        notification","displayName":"MioEverywhere password reset notification","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/18","subject":"MioEverywhere
+        password reset notification","priority":"Normal","created":"10 Jun 2015 11:13:45
+        +0000","lastModified":"10 Jun 2015 11:13:45 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":13,"name":"Media Check Failed","displayName":"Media
+        Check Failed","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/13","subject":"A
+        media check in MioEverywhere has failed","priority":"Normal","created":"10
+        Jun 2015 10:47:08 +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":16,"name":"ITV Compliance Department Browse
+        Created","displayName":"ITV Compliance Department Browse Created","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/16","subject":"New
+        browse video available #{ProductionID}-#{SeriesTitle}","priority":"Normal","created":"10
+        Jun 2015 10:47:08 +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":14,"name":"End Date Approaching","displayName":"End
+        Date Approaching","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/14","subject":"End
+        date is approaching","priority":"Normal","created":"10 Jun 2015 10:47:08 +0000","lastModified":"10
+        Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":8,"name":"Email Notification","displayName":"Email
+        Notification","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/8","subject":"Notification
+        for #{event.mioObject.name}","priority":"Normal","created":"10 Jun 2015 10:47:08
+        +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":7,"name":"Default Task Template","displayName":"Default
+        Task Template","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/7","subject":"New
+        task available","priority":"Normal","created":"10 Jun 2015 10:47:08 +0000","lastModified":"10
+        Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":12894,"uuid":"88621aa3-07e6-4cf0-9181-ccc6d730939a","name":"create-project-email-template-999","displayName":"create-project-email-template-999","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/12894","subject":"NEW
+        PROJECT: #{asset.mioObject.name}","priority":"Normal","created":"31 May 2016
+        10:41:14 +0000","lastModified":"31 May 2016 10:54:02 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-a20af22c6768febf8d43e91cca1837bae584a93c"},{"id":12883,"uuid":"fd850e58-5f95-4afa-b888-2672a83ee434","name":"create-project-email-template-99","displayName":"create-project-email-template-99","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/12883","subject":"NEW
+        PROJECT: #{asset.mioObject.name}","priority":"Normal","created":"31 May 2016
+        10:20:55 +0000","lastModified":"31 May 2016 10:39:49 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-854ecb1d35e76aaf18ebe2fcaa65aaa80249e69b"},{"id":15,"name":"BBH
+        Youtube Notification","displayName":"BBH Youtube Notification","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/messageTemplates/15","subject":"A
+        new asset is ready for publishing to YouTube in MioEverywhere","priority":"Normal","created":"10
+        Jun 2015 10:47:08 +0000","lastModified":"10 Jun 2015 10:47:08 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}}],"totalCount":16,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:14 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:26 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=4qtBCW08YvGT3-kPOzrTblUr.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"actions":[{"id":11716,"uuid":"a4ab35fe-1609-47b1-937d-a4dea39b358a","name":"testing-project-group-placeholder","displayName":"testing-project-group-placeholder","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11716","type":{"id":44,"name":"create-object","displayName":"Create
+        Object","href":"https://master.dev.nativ-systems.com/api/actionTypes/44","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/create-object.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/create-object.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/create-object.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/create-object.png"},"created":"24
+        May 2016 09:55:20 +0000","lastModified":"24 May 2016 09:55:26 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-1be7d71d3442403687c6fe15144dd800e9f995b0"},{"id":11418,"uuid":"3ba2f638-9a90-4536-b16b-b63faeb710b0","name":"testing-create-project-group-placeholder","displayName":"testing-create-project-group-placeholder","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11418","type":{"id":44,"name":"create-object","displayName":"Create
+        Object","href":"https://master.dev.nativ-systems.com/api/actionTypes/44","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/create-object.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/create-object.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/create-object.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/create-object.png"},"created":"19
+        May 2016 11:05:43 +0000","lastModified":"19 May 2016 11:21:56 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-d394562e572af1b3f4aefc4f774828ac7db1ecc5"},{"id":11717,"uuid":"c491e68d-ab2a-402b-9a23-2f57eccfbead","name":"test-project-group-placeholder","displayName":"test-project-group-placeholder","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11717","type":{"id":44,"name":"create-object","displayName":"Create
+        Object","href":"https://master.dev.nativ-systems.com/api/actionTypes/44","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/create-object.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/create-object.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/create-object.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/create-object.png"},"created":"24
+        May 2016 11:04:30 +0000","lastModified":"27 May 2016 13:54:52 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"4-aeb2f1ca024b8131f0785401d90f81c132d11ac5"},{"id":12860,"uuid":"ba409a5e-875a-44e3-9e99-bf2e8baece8d","name":"test-create-project-group-placeholder-99","displayName":"test-create-project-group-placeholder-99","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/12860","type":{"id":44,"name":"create-object","displayName":"Create
+        Object","href":"https://master.dev.nativ-systems.com/api/actionTypes/44","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/create-object.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/create-object.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/create-object.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/create-object.png"},"created":"31
+        May 2016 09:32:14 +0000","lastModified":"31 May 2016 10:54:00 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-4982848e131a80f24b8915c252a230e96471bd07"},{"id":11417,"uuid":"552f8100-425f-4539-b48f-54d6ab90cfa6","name":"test-create-project-group-placeholder","displayName":"test-create-project-group-placeholder","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11417","type":{"id":44,"name":"create-object","displayName":"Create
+        Object","href":"https://master.dev.nativ-systems.com/api/actionTypes/44","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/create-object.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/create-object.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/create-object.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/create-object.png"},"created":"19
+        May 2016 10:24:12 +0000","lastModified":"27 May 2016 14:06:05 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"4-56b169c107e258dbbf1948aeaa2a02de6b8fde99"},{"id":11516,"uuid":"dd804e3b-3d1b-4735-b413-e2f45354fa6b","name":"test-create-object","displayName":"test-create-object","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11516","type":{"id":44,"name":"create-object","displayName":"Create
+        Object","href":"https://master.dev.nativ-systems.com/api/actionTypes/44","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/create-object.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/create-object.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/create-object.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/create-object.png"},"created":"18
+        May 2016 11:34:52 +0000","lastModified":"18 May 2016 11:34:52 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-759515dfb309b22b59916d9a75cc06a03c983ad1"},{"id":12861,"uuid":"8e10d2af-cb7e-473c-b0fe-c4e1e403da2c","name":"project-created-email-action-99","displayName":"project-created-email-action-99","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/12861","type":{"id":36,"name":"message","displayName":"Message","href":"https://master.dev.nativ-systems.com/api/actionTypes/36","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.message.email.SendEmailMessageCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/message.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/message.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/message.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/message.png"},"created":"31
+        May 2016 09:32:18 +0000","lastModified":"31 May 2016 10:54:41 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"2-f02b55ffc6d923f602d706bd4acaf699dd810d45"},{"id":11720,"uuid":"cc9e638d-b721-4c6f-aae9-2011ca6cdfbf","name":"project-create-email-action-testing","displayName":"project-create-email-action-testing","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11720","type":{"id":36,"name":"message","displayName":"Message","href":"https://master.dev.nativ-systems.com/api/actionTypes/36","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.message.email.SendEmailMessageCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/message.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/message.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/message.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/message.png"},"created":"24
+        May 2016 15:20:19 +0000","lastModified":"24 May 2016 15:20:19 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-54a67bec09b85e9d670d9d1ae46ef6641efab8d1"},{"id":11719,"uuid":"6342d578-4d31-4219-97ab-8dcec126f147","name":"project-create-email-action-test","displayName":"project-create-email-action-test","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11719","type":{"id":36,"name":"message","displayName":"Message","href":"https://master.dev.nativ-systems.com/api/actionTypes/36","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.message.email.SendEmailMessageCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/message.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/message.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/message.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/message.png"},"created":"24
+        May 2016 15:13:17 +0000","lastModified":"24 May 2016 15:13:18 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-1ddbd8f950fa22a20ac446cb15a874fa5cd209a5"},{"id":11718,"uuid":"bc4c5e92-5e22-4f3f-bc5b-a9912bf725e0","name":"project-create-email-action","displayName":"project-create-email-action","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11718","type":{"id":36,"name":"message","displayName":"Message","href":"https://master.dev.nativ-systems.com/api/actionTypes/36","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.message.email.SendEmailMessageCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/message.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/message.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/message.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/message.png"},"created":"24
+        May 2016 15:11:36 +0000","lastModified":"24 May 2016 15:11:38 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-fdeef0300f02635218ad36d02e4209dee102fce5"},{"id":11737,"uuid":"22de2505-4225-4087-91f1-479def1dd83f","name":"log-stuff","displayName":"log-stuff","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"description":"","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11737","type":{"id":42,"name":"script","displayName":"Script","href":"https://master.dev.nativ-systems.com/api/actionTypes/42","category":"Workflow"},"pluginClass":"tv.nativ.mio.plugins.actions.script.GroovyScriptCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/script.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/script.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/script.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/script.png"},"created":"26
+        May 2016 08:59:52 +0000","lastModified":"26 May 2016 09:01:18 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"2-1966a5f11a8e3e4a09606a40df8c026b86a399b2"},{"id":11119,"uuid":"7b1333cf-006e-4480-aafd-cc023b69851e","name":"Import
+        Action Factory","displayName":"Import Action Factory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11119","type":{"id":10,"name":"import","displayName":"Import","href":"https://master.dev.nativ-systems.com/api/actionTypes/10","category":"IO"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.impl.objectimport.vfs.AssetImportCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/import-asset.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/import-asset.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/import-asset.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/import-asset.png"},"created":"29
+        Apr 2016 11:50:53 +0000","lastModified":"29 Apr 2016 11:50:57 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-f1d83840bd46cb73d3f1a5a2b9e450eea0eb421d"},{"id":11114,"uuid":"72808cbc-eb29-49a7-a869-a5b42cb282fa","name":"Groovy
+        Script Factory","displayName":"Groovy Script Factory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11114","type":{"id":42,"name":"script","displayName":"Script","href":"https://master.dev.nativ-systems.com/api/actionTypes/42","category":"Workflow"},"pluginClass":"tv.nativ.mio.plugins.actions.script.GroovyScriptCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/script.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/script.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/script.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/script.png"},"created":"29
+        Apr 2016 11:23:04 +0000","lastModified":"29 Apr 2016 11:23:05 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-2249385d5c7676c70fce5009bf9c3c30352f88fa"},{"id":11721,"uuid":"da58ea00-efb2-4287-b08d-c5839587280f","name":"GetMetadataScript","displayName":"GetMetadataScript","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"description":"GetMetadataScript","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11721","type":{"id":42,"name":"script","displayName":"Script","href":"https://master.dev.nativ-systems.com/api/actionTypes/42","category":"Workflow"},"pluginClass":"tv.nativ.mio.plugins.actions.script.GroovyScriptCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/script.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/script.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/script.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/script.png"},"created":"24
+        May 2016 15:59:36 +0000","lastModified":"27 May 2016 13:43:54 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"53-f258b59bdef1976908e14117f5d73ff4231b021d"},{"id":11817,"uuid":"abf23381-b7a0-4616-b8c2-64e3357f6b56","name":"EmailMessageTest","displayName":"EmailMessageTest","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"description":"","enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11817","type":{"id":36,"name":"message","displayName":"Message","href":"https://master.dev.nativ-systems.com/api/actionTypes/36","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.message.email.SendEmailMessageCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/message.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/message.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/message.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/message.png"},"created":"24
+        May 2016 13:27:54 +0000","lastModified":"24 May 2016 15:10:29 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-6bc7de0561ef6c73553d559a646ec90250528a3f"},{"id":11413,"uuid":"f40d9e02-bea1-4e5b-abd8-925488c74175","name":"CreateProjectGroup","displayName":"CreateProjectGroup","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"description":"","enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11413","type":{"id":44,"name":"create-object","displayName":"Create
+        Object","href":"https://master.dev.nativ-systems.com/api/actionTypes/44","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/create-object.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/create-object.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/create-object.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/create-object.png"},"created":"17
+        May 2016 14:47:34 +0000","lastModified":"17 May 2016 15:21:20 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-b4f49d33c440d1a45bc8d490893bd9a9438c3b39"},{"id":11760,"uuid":"a425c6c8-1220-441e-80fa-7616e3319df4","name":"bright
+        cove notification","displayName":"bright cove notification","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"description":"","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11760","type":{"id":41,"name":"wait","displayName":"Wait","href":"https://master.dev.nativ-systems.com/api/actionTypes/41","category":"Workflow"},"pluginClass":"tv.nativ.mio.enterprise.execution.action.file.process.impl.wait.WaitForSignalCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/wait.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/wait.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/wait.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/wait.png"},"created":"27
+        May 2016 09:38:45 +0000","lastModified":"27 May 2016 09:45:29 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-6db8088be5ed4d29859b415424fee3cf34fe7354"},{"id":12862,"uuid":"e11dbaba-1ef1-4b15-a2ad-e66a01df5287","name":"apply-metadata-to-project-99","displayName":"apply-metadata-to-project-99","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/12862","type":{"id":42,"name":"script","displayName":"Script","href":"https://master.dev.nativ-systems.com/api/actionTypes/42","category":"Workflow"},"pluginClass":"tv.nativ.mio.plugins.actions.script.GroovyScriptCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/script.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/script.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/script.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/script.png"},"created":"31
+        May 2016 09:32:21 +0000","lastModified":"31 May 2016 10:54:43 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-29f9e67bcd9c5714ac82902f0ca4eb8af2c0a8ab"},{"id":11115,"uuid":"8855172e-31c8-4f7b-96fc-39619f14dbd6","name":"A
+        Test Groovy Wait Script","displayName":"A Test Groovy Wait Script","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/actions/11115","type":{"id":42,"name":"script","displayName":"Script","href":"https://master.dev.nativ-systems.com/api/actionTypes/42","category":"Workflow"},"pluginClass":"tv.nativ.mio.plugins.actions.wait.ScriptedWaitCommand","runRuleExpression":"","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/script.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/script.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/script.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/script.png"},"created":"29
+        Apr 2016 11:23:32 +0000","lastModified":"29 Apr 2016 11:23:34 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-1b9f25183af5010981b8ff0278cbde1c7f6120da"}],"totalCount":19,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:15 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11720/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:26 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=SQlWmd5cWQ5xTHox6gxd2DcV.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:15 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11114/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:27 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=3+MBhbfiFIlA8fufWoAh7yrx.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"disable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:16 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11115/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:27 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=NMy87AiQWCLMtagPosCBc4Dd.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=96
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"disable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:17 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:28 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=pkv+djHzFzH9hApvsB07RdTu.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=95
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"workflowDefinitions":[{"id":12387,"uuid":"06035926-2479-4f6a-bcfe-0f330d5b2815","name":"workflow-create-project","displayName":"workflow-create-project","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"description":"create
+        project workflow","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/12387","latestVersion":1,"created":"26
+        May 2016 08:58:27 +0000","lastModified":"26 May 2016 09:20:32 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"3-d0e1d55507ef45899aa9338495bb709c3d7c1d89"},{"id":11118,"uuid":"08f08d75-03d5-4b25-b212-da0ce39ff75e","name":"Workflow","displayName":"Workflow","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11118","latestVersion":2,"created":"29
+        Apr 2016 11:26:37 +0000","lastModified":"29 Apr 2016 11:47:18 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"2-bdb10b7302259dd0a8f035ac3f95bce99013a31f"},{"id":11761,"uuid":"7b6c75d7-ad78-48c5-a3b1-d2b3ce065fa4","name":"signaltestworkflow","displayName":"signaltestworkflow","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"description":"signaltestworkflow","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11761","latestVersion":1,"created":"27
+        May 2016 09:40:00 +0000","lastModified":"27 May 2016 09:49:07 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-799f42e720968b82f656dfe9ca4e9221f0836d26"},{"id":11819,"uuid":"99cc7f61-6e5b-4ba8-9e35-d83eed7ecdb3","name":"create-project-workflow","displayName":"create-project-workflow","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"description":"create-project-workflow","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11819","latestVersion":6,"created":"24
+        May 2016 15:32:30 +0000","lastModified":"27 May 2016 14:01:26 +0000","visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"6-08791f412dd9ede5e34edb427225b94fee30fe81"}],"totalCount":4,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:17 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/users
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:28 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=aWrPr1QvafF6Qu3w0I5XV-z5.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=94
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"users":[{"id":12354,"uuid":"2ea6a552-f81f-4a5a-95f8-2d8086b0abeb","name":"jem.rayfield","displayName":"Jem
+        Rayfield","objectType":{"id":8,"name":"user","href":"https://master.dev.nativ-systems.com/api/objectTypes/8","displayName":"User","pluralName":"Users","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/users/12354","firstName":"Jem","lastName":"Rayfield","email":"jem.rayfield@ft.com","phoneNumber":"","company":"","addressLine1":"","addressLine2":"","addressLine3":"","externalReference":"","created":"25
+        May 2016 12:41:55 +0000","lastModified":"25 May 2016 12:42:57 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"0-46a98f69fdb799b8233d6564d7acc28087a069a5"},{"id":11219,"uuid":"5a752864-cc54-4942-83ad-58af55e78d81","name":"jspc","displayName":"James
+        Condron","objectType":{"id":8,"name":"user","href":"https://master.dev.nativ-systems.com/api/objectTypes/8","displayName":"User","pluralName":"Users","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/users/11219","firstName":"James","lastName":"Condron","role":{"id":10508,"uuid":"9a2f318a-559a-4da9-a484-4ee18fd05e47","name":"ft-demo
+        Default Role","displayName":"ft-demo Default Role","objectType":{"id":10,"name":"role","href":"https://master.dev.nativ-systems.com/api/objectTypes/10","displayName":"Role","pluralName":"Roles","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/roles/10508","owner":"masteruser
+        masteruser","accountId":10507},"email":"james@zero-internet.org.uk","phoneNumber":"","company":"","addressLine1":"","addressLine2":"","addressLine3":"","externalReference":"","created":"09
+        May 2016 16:23:53 +0000","lastModified":"09 May 2016 16:23:58 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":10507,"uuid":"eb7b4c0b-a1b3-440e-bd38-9781d19b173b","name":"ft-demo","objectType":{"id":25,"name":"account","href":"https://master.dev.nativ-systems.com/api/objectTypes/25","displayName":"Account","pluralName":"Accounts","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/accounts/10507","owner":"masteruser
+        masteruser","accountId":4},"revision":"0-bf4034120a03f28c4e9b22923238fc21754cd66c"},{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","objectType":{"id":8,"name":"user","href":"https://master.dev.nativ-systems.com/api/objectTypes/8","displayName":"User","pluralName":"Users","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/users/5","firstName":"masteruser","lastName":"masteruser","lastLoggedIn":"31
+        May 2016 10:31:27 +0000","created":"10 Jun 2015 10:26:05 +0000","lastModified":"31
+        May 2016 10:31:27 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}}],"totalCount":3,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:18 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/11116/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:29 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=0ORPvAY6bXJLsNSn0BrAJ51U.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=93
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:18 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11119/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:30 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=r0g9YY9QVxHm97fFOgz+vjIt.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=92
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"disable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:19 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates
+    body:
+      encoding: UTF-8
+      string: '{"name":"project-create-email-template-testing","visibilityIds":[4],"subject":"NEW
+        PROJECT: #{asset.mioObject.name}","priority":"Normal"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:30 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=8JL2ZFJENMWEeDwupyJC2npi.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/messageTemplates/12913
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=91
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":12913,"uuid":"11ee2138-6108-4115-a51f-6fac50c329b7","name":"project-create-email-template-testing","displayName":"project-create-email-template-testing","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/messageTemplates/12913","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:20 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/12913/body
+    body:
+      encoding: UTF-8
+      string: "<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p>
+        <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created:
+        #{asset.created}</p>"
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - text/html
+      Accept:
+      - text/html
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:31 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=03Tbif-fKswdR+PA6kC1AFQm.-201388908; Path=/api; Secure
+      content-type:
+      - text/html
+      content-length:
+      - '178'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=90
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: "<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p>
+        <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created:
+        #{asset.created}</p>"
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:20 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/12913/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:31 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=SGog3UdoO2k3gFVu3JZQ-DSH.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=89
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:20 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/12913/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:32 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=TqgwjL+d2aX2ypySziBEi4kZ.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=88
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":12913,"uuid":"11ee2138-6108-4115-a51f-6fac50c329b7","name":"project-create-email-template-testing","displayName":"project-create-email-template-testing","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/messageTemplates/12913","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:21 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:32 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=JmMx87+gc6Zv5CpFT2Mmsz7Z.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=87
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"metadataDefinitions":[{"id":11616,"uuid":"4b68859f-dacd-4b85-98c4-38628880e523","name":"publish-metadata-test-baby-two","displayName":"publish-metadata-test-baby-two","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11616","created":"20
+        May 2016 13:30:36 +0000","lastModified":"20 May 2016 13:30:37 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-ba9087576ad32ca8d28fa8decf8f4621c7e05207"},{"id":11617,"uuid":"d7985bcd-5aff-4834-ac45-adb88d30c3dd","name":"publish-metadata-test-baby-three","displayName":"publish-metadata-test-baby-three","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11617","created":"20
+        May 2016 13:35:15 +0000","lastModified":"20 May 2016 13:35:16 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-1ca516ccdc2e2257fac176bd8fddcc0b6b4ba233"},{"id":11615,"uuid":"d307e79a-842f-43d0-abb3-b34724f3ebf7","name":"publish-metadata-test-baby","displayName":"publish-metadata-test-baby","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11615","created":"20
+        May 2016 13:06:55 +0000","lastModified":"27 May 2016 09:11:08 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"2-0a7b8f38510d58d35e52a33684398985e2acf8be"},{"id":11518,"uuid":"10e94236-a53b-4168-89b3-8f07e6df7eee","name":"publish-metadata","displayName":"publish-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"description":"publish
+        metadata","enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11518","created":"18
+        May 2016 15:11:00 +0000","lastModified":"19 May 2016 09:29:22 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-21ac72e6137c11b878ab2984f46aa181ded71067"},{"id":11419,"uuid":"b00ae81f-6601-40cc-8f5b-21682892ca95","name":"project-metadata-test-baby","displayName":"project-metadata-test-baby","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11419","created":"19
+        May 2016 16:24:43 +0000","lastModified":"20 May 2016 13:35:14 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"5-3e4c167fc9ab6ef32010164961333f4861d45a91"},{"id":11416,"uuid":"bfabf004-3108-4b69-823f-986169ec9383","name":"project-metadata-test","displayName":"project-metadata-test","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11416","created":"19
+        May 2016 10:24:09 +0000","lastModified":"19 May 2016 11:02:13 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-73c964bcbc0d00b9a9b5938435b7053531a09777"},{"id":12859,"uuid":"1a5015d6-c9ae-4c1f-b159-a66bc78be044","name":"project-metadata-99","displayName":"project-metadata-99","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/12859","created":"31
+        May 2016 09:32:11 +0000","lastModified":"31 May 2016 10:53:57 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-d13865d2bbad986ab16896408cec6a1d04502f12"},{"id":11312,"uuid":"8b1c580d-a8ff-475e-bb6d-da3541093f9e","name":"project-metadata","displayName":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312","created":"13
+        May 2016 10:39:07 +0000","lastModified":"27 May 2016 13:49:42 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"3-5dcc23a2819da18dd6f58fdc27a9d1c5b6465008"},{"id":11415,"uuid":"9b343554-01cc-46c2-9409-4e51cb604944","name":"multi-meta","displayName":"multi-meta","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"description":"","enabled":false,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11415","created":"18
+        May 2016 14:36:18 +0000","lastModified":"18 May 2016 14:50:19 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-75e6ee76577b42f6cbf5c3bae247fe69de29da95"},{"id":11517,"uuid":"d29a4c52-c74b-4a74-aa1d-45edf8381592","name":"ingest-metadata","displayName":"ingest-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"description":"ingest
+        metadata","enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11517","created":"18
+        May 2016 14:44:17 +0000","lastModified":"18 May 2016 15:02:52 +0000","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"visibility":[{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}],"account":{"id":4,"name":"Master Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"revision":"1-43677cf0e25ff0b85573c8155b7157114254980d"}],"totalCount":10,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:21 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions/11313/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:33 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=suyq0BTU3t5G9dqTTbT9VrWZ.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=86
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:22 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/11717/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:33 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=aaL7OaZWOVIMhKKF1bM9baPD.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=85
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"disable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:22 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/11117/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:34 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=kuwsRMD0q7jdGvZbGFVIg-xQ.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=84
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"disable"},{"action":"start"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:23 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources/11117/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"start"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:35 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '108'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":11117,"uuid":"acbdb174-37db-44e6-a17c-dc50ccf884ba","name":"S3
+        Bucket Factory","displayName":"S3 Bucket Factory","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/11117","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:27 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/objectTypes
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:38 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=zGpU4QtEHUA-g4GRhFgkU-X7.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"objectTypes":[{"id":25,"name":"account","href":"https://master.dev.nativ-systems.com/api/objectTypes/25","displayName":"Account","pluralName":"Accounts","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/account.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/account.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/account.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/account.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/account-workspace.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/account-workspace.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/account-workspace.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/account-workspace.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":false,"attachmentsSupported":false,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":false,"userDeleteSupported":false,"userRenameSupported":false,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/action.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/action.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/action.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/action.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":22,"name":"event-handler","href":"https://master.dev.nativ-systems.com/api/objectTypes/22","displayName":"Event
+        Handler","pluralName":"Event Handlers","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/event-handler.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/event-handler.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/event-handler.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/event-handler.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":true,"stopSupported":true,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":9,"name":"group","href":"https://master.dev.nativ-systems.com/api/objectTypes/9","displayName":"Group","pluralName":"Groups","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/group.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/group.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/group.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/group.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":2,"name":"group-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/2","displayName":"Group
+        Asset","pluralName":"Group Assets","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/group-asset.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/group-asset.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/group-asset.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/group-asset.png"},"workspaceSupported":true,"lockSupported":true,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":false,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":true,"approvalSupported":true,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":3,"name":"image-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/3","displayName":"Image
+        Asset","pluralName":"Image Assets","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/image-asset.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/image-asset.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/image-asset.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/image-asset.png"},"workspaceSupported":true,"lockSupported":true,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":false,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":true,"approvalSupported":true,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":6,"name":"job","href":"https://master.dev.nativ-systems.com/api/objectTypes/6","displayName":"Job","pluralName":"Jobs","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/job.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/job.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/job.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/job.png"},"workspaceSupported":true,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":false,"userDeleteSupported":true,"userRenameSupported":false,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":true,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/master-account.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/master-account.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/master-account.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/master-account.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":false,"attachmentsSupported":false,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":false,"userDeleteSupported":false,"userRenameSupported":false,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":28,"name":"master-role","href":"https://master.dev.nativ-systems.com/api/objectTypes/28","displayName":"Master
+        Role","pluralName":"Master Roles","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/master-role.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/master-role.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/master-role.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/master-role.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":false,"attachmentsSupported":false,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":false,"userDeleteSupported":false,"userRenameSupported":false,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":1,"name":"media-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/1","displayName":"Media
+        Asset","pluralName":"Media Assets","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/media-asset.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/media-asset.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/media-asset.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/media-asset.png"},"workspaceSupported":true,"lockSupported":true,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":false,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":true,"approvalSupported":true,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/message-template.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/message-template.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/message-template.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/message-template.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":false,"metadataSupported":false,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/metadata-definition.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/metadata-definition.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/metadata-definition.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/metadata-definition.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":32,"name":"user-defined-object-type","href":"https://master.dev.nativ-systems.com/api/objectTypes/32","displayName":"Object
+        Type","pluralName":"Object Types","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/user-defined-object-type.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/user-defined-object-type.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/user-defined-object-type.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/user-defined-object-type.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":false,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":4,"name":"player","href":"https://master.dev.nativ-systems.com/api/objectTypes/4","displayName":"Player","pluralName":"Players","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/player.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/player.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/player.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/player.png"},"workspaceSupported":true,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":false,"userDeleteSupported":false,"userRenameSupported":false,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":true,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":17,"name":"player-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/17","displayName":"Player
+        Definition","pluralName":"Player Definitions","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/player-definition.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/player-definition.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/player-definition.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/player-definition.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":13,"name":"profile","href":"https://master.dev.nativ-systems.com/api/objectTypes/13","displayName":"Profile","pluralName":"Profiles","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/profile.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/profile.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/profile.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/profile.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":34,"name":"project","href":"https://master.dev.nativ-systems.com/api/objectTypes/34","displayName":"Project","pluralName":"Project","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/project.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/project.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/project.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/project.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":false,"attachmentsSupported":false,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":false,"userDefined":true,"rootOfObjectTypeRelationshipHierarchy":true,"dataSupported":true,"dataDefinition":{"id":11312,"uuid":"8b1c580d-a8ff-475e-bb6d-da3541093f9e","name":"project-metadata","displayName":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312","owner":"masteruser
+        masteruser","accountId":4},"panelSupported":false,"relationships":[]},{"id":16,"name":"quota","href":"https://master.dev.nativ-systems.com/api/objectTypes/16","displayName":"Quota","pluralName":"Quotas","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/quota.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/quota.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/quota.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/quota.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":23,"name":"report","href":"https://master.dev.nativ-systems.com/api/objectTypes/23","displayName":"Report
+        Definition","pluralName":"Report Definitions","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/report.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/report.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/report.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/report.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/resource.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/resource.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/resource.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/resource.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":true,"stopSupported":true,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":10,"name":"role","href":"https://master.dev.nativ-systems.com/api/objectTypes/10","displayName":"Role","pluralName":"Roles","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/role.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/role.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/role.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/role.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":26,"name":"sub-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/26","displayName":"Sub-Account","pluralName":"Sub-Accounts","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/sub-account.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/sub-account.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/sub-account.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/sub-account.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":5,"name":"task","href":"https://master.dev.nativ-systems.com/api/objectTypes/5","displayName":"Task","pluralName":"Tasks","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/task.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/task.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/task.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/task.png"},"workspaceSupported":true,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":false,"userDeleteSupported":false,"userRenameSupported":false,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":19,"name":"task-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/19","displayName":"Task
+        Definition","pluralName":"Task Definitions","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/task-definition.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/task-definition.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/task-definition.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/task-definition.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":33,"name":"text-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/33","displayName":"Text
+        Asset","pluralName":"Text Assets","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/text-asset.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/text-asset.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/text-asset.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/text-asset.png"},"workspaceSupported":true,"lockSupported":true,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":false,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":true,"approvalSupported":true,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":14,"name":"timed-action","href":"https://master.dev.nativ-systems.com/api/objectTypes/14","displayName":"Timed
+        Action","pluralName":"Timed Actions","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/timed-action.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/timed-action.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/timed-action.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/timed-action.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":true,"stopSupported":true,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":8,"name":"user","href":"https://master.dev.nativ-systems.com/api/objectTypes/8","displayName":"User","pluralName":"Users","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/user.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/user.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/user.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/user.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":false,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":20,"name":"wizard","href":"https://master.dev.nativ-systems.com/api/objectTypes/20","displayName":"Wizard","pluralName":"Wizards","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/wizard.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/wizard.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/wizard.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/wizard.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":7,"name":"workflow","href":"https://master.dev.nativ-systems.com/api/objectTypes/7","displayName":"Workflow","pluralName":"Workflows","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/workflow.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/workflow.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/workflow.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/workflow.png"},"workspaceSupported":true,"lockSupported":false,"enableSupported":false,"disableSupported":false,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":false,"userDeleteSupported":true,"userRenameSupported":false,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":false,"exportSupported":false,"startSupported":false,"stopSupported":false,"duplicateNameSupported":true,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":true,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/workflow-definition.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/workflow-definition.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/workflow-definition.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/workflow-definition.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":false,"visibilitySupported":true,"globalSearchSupported":false,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":false,"contentMetadataSupported":false,"copySupported":true,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]},{"id":29,"name":"workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/29","displayName":"Workspace","pluralName":"Workspaces","icons":{"small":"https://master.dev.nativ-systems.com:443/images/icons/small/workspace.png","normal":"https://master.dev.nativ-systems.com:443/images/icons/normal/workspace.png","medium":"https://master.dev.nativ-systems.com:443/images/icons/medium/workspace.png","large":"https://master.dev.nativ-systems.com:443/images/icons/giant/workspace.png"},"workspaceSupported":false,"lockSupported":false,"enableSupported":true,"disableSupported":true,"commentsSupported":true,"attachmentsSupported":true,"metadataSupported":true,"visibilitySupported":false,"globalSearchSupported":true,"userCreateSupported":true,"userDeleteSupported":true,"userRenameSupported":true,"variantsSupported":true,"contentMetadataSupported":true,"copySupported":false,"exportSupported":true,"startSupported":false,"stopSupported":false,"duplicateNameSupported":false,"systemDeleteSupported":false,"approvalSupported":false,"variablesSupported":false,"duplicateChildNameSupported":true,"userDefined":false,"rootOfObjectTypeRelationshipHierarchy":false,"dataSupported":false,"panelSupported":false,"relationships":[]}],"totalCount":32,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:27 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/variants
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:39 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=cXWi1D4y3DcLaRh4dFwp9x+R.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"variants":[{"id":1,"name":"Project","href":"https://master.dev.nativ-systems.com/api/variants/1","objectType":{"id":34,"name":"project","href":"https://master.dev.nativ-systems.com/api/objectTypes/34","displayName":"Project","pluralName":"Project","userDefined":true},"defaultVariant":false,"metadataDefinitions":[{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}],"defaultMetadataDefinition":{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}},{"id":202,"name":"project-group-asset-variant","href":"https://master.dev.nativ-systems.com/api/variants/202","objectType":{"id":2,"name":"group-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/2","displayName":"Group
+        Asset","pluralName":"Group Assets","userDefined":false},"defaultVariant":false,"metadataDefinitions":[{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}],"defaultMetadataDefinition":{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}},{"id":102,"name":"project-variant","href":"https://master.dev.nativ-systems.com/api/variants/102","objectType":{"id":34,"name":"project","href":"https://master.dev.nativ-systems.com/api/objectTypes/34","displayName":"Project","pluralName":"Project","userDefined":true},"defaultVariant":false,"metadataDefinitions":[{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}],"defaultMetadataDefinition":{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}},{"id":404,"name":"project-variant-99","href":"https://master.dev.nativ-systems.com/api/variants/404","objectType":{"id":2,"name":"group-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/2","displayName":"Group
+        Asset","pluralName":"Group Assets","userDefined":false},"defaultVariant":false,"metadataDefinitions":[{"id":12859,"name":"project-metadata-99","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/12859"}],"defaultMetadataDefinition":{"id":12859,"name":"project-metadata-99","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/12859"}},{"id":2,"name":"variant-test","href":"https://master.dev.nativ-systems.com/api/variants/2","objectType":{"id":34,"name":"project","href":"https://master.dev.nativ-systems.com/api/objectTypes/34","displayName":"Project","pluralName":"Project","userDefined":true},"defaultVariant":false},{"id":3,"name":"variant-test-2","href":"https://master.dev.nativ-systems.com/api/variants/3","objectType":{"id":34,"name":"project","href":"https://master.dev.nativ-systems.com/api/objectTypes/34","displayName":"Project","pluralName":"Project","userDefined":true},"defaultVariant":false},{"id":4,"name":"variant-test-3","href":"https://master.dev.nativ-systems.com/api/variants/4","objectType":{"id":34,"name":"project","href":"https://master.dev.nativ-systems.com/api/objectTypes/34","displayName":"Project","pluralName":"Project","userDefined":true},"defaultVariant":false},{"id":101,"name":"variant-test-4","href":"https://master.dev.nativ-systems.com/api/variants/101","objectType":{"id":34,"name":"project","href":"https://master.dev.nativ-systems.com/api/objectTypes/34","displayName":"Project","pluralName":"Project","userDefined":true},"defaultVariant":false,"metadataDefinitions":[{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}],"defaultMetadataDefinition":{"id":11312,"name":"project-metadata","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11312"}},{"id":203,"name":"xxxxx","href":"https://master.dev.nativ-systems.com/api/variants/203","objectType":{"id":2,"name":"group-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/2","displayName":"Group
+        Asset","pluralName":"Group Assets","userDefined":false},"defaultVariant":false,"metadataDefinitions":[{"id":11615,"name":"publish-metadata-test-baby","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11615","enabled":false}],"defaultMetadataDefinition":{"id":11615,"name":"publish-metadata-test-baby","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11615","enabled":false}},{"id":303,"name":"yyyyyy","href":"https://master.dev.nativ-systems.com/api/variants/303","objectType":{"id":2,"name":"group-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/2","displayName":"Group
+        Asset","pluralName":"Group Assets","userDefined":false},"defaultVariant":false,"metadataDefinitions":[{"id":11419,"name":"project-metadata-test-baby","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11419"}],"defaultMetadataDefinition":{"id":11419,"name":"project-metadata-test-baby","objectType":{"id":12,"name":"metadata-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/12","displayName":"Metadata
+        Definition","pluralName":"Metadata Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/metadataDefinitions/11419"}}],"totalCount":10,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:28 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:00:40 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=SwPUTMpDCMLsxlf-iulPUlB6.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"disable"}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:00:29 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11720/configuration
+    body:
+      encoding: UTF-8
+      string: '{"message-template":{"id":12894},"recipients":{"expression":[{"value":"${job.mioObject.owner.email}","isExpression":false}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:06:09 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=XCeif4l9o6EmG-rdS6MUCrjK.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103757,"instance":{"message-template":{"id":"12894"},"recipients":{"expression":[{"value":"${job.mioObject.owner.email}","isExpression":false}]}},"definitionId":108390,"definition":[{"id":108391,"name":"message-template","displayName":"Message
+        Template","description":"The message template to use.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Message
+        Template"},{"id":108392,"name":"attachment","displayName":"Attachment","description":"Add
+        an attachment to the email.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108393,"name":"file-path","displayName":"File
+        Path","description":"File Path of the attachment ","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108394,"name":"attachment-name","displayName":"Attachment
+        Name","description":"Attachment name ","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":108395,"name":"recipients","displayName":"Recipients","description":"Recipients
+        of the email","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":108396,"name":"account","displayName":"Account","description":"All
+        enabled users within the account","type":"object","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Account"},{"id":108397,"name":"sub-account","displayName":"Sub-Account","description":"All
+        enabled users within the sub-account","type":"object","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Sub-Account"},{"id":108398,"name":"group","displayName":"Group","description":"All
+        enabled users within the group","type":"object","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Group"},{"id":108399,"name":"workspace","displayName":"Workspace","description":"All
+        enabled users within the workspace","type":"object","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Workspace"},{"id":108400,"name":"user","displayName":"User","description":"A
+        specific user","type":"object","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"User"},{"id":108401,"name":"email-address","displayName":"Email
+        Address","description":"A specific email address ","type":"email","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioEmailVariable$EmailValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108402,"name":"expression","displayName":"Expression","description":"\n                            An
+        evaluated expression resulting in an email address, user name or group name
+        ","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:05:59 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions/11313/definition
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <metadata name="metadata-definition">
+          <searchable>true</searchable>
+          <editable>true</editable>
+          <required>true</required>
+          <children>
+            <single-option name="section" display_name="Section">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <max-length>-1</max-length>
+              <validation handler=""/>
+              <form-type>select</form-type>
+              <children>
+                <option-child name="test" default="false" value="http://api.ft.com/things/test" display_name="test"/>
+              </children>
+            </single-option>
+            <text name="headline" display_name="Headline">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <max-length>100</max-length>
+              <validation handler="tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler"/>
+              <form-type>textarea</form-type>
+            </text>
+            <url name="link-1" display_name="Link 1">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <max-length>-1</max-length>
+              <validation handler="tv.nativ.mio.metadata.resource.def.MioURLVariable$URLValidationHandler"/>
+              <form-type>text</form-type>
+            </url>
+            <boolean name="restrictions" display_name="Restrictions">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <max-length>-1</max-length>
+              <validation handler=""/>
+              <form-type>checkbox</form-type>
+              <children>
+                <option-child name="true" default="true" value="true" display_name="True"/>
+                <option-child name="false" default="false" value="false" display_name="False"/>
+              </children>
+            </boolean>
+            <image name="poster-image" display_name="Poster Image">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <max-length>-1</max-length>
+              <validation handler="tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler"/>
+              <form-type>file</form-type>
+              <children>
+                <string name="file-name" display_name="Poster File Name">
+                  <searchable>true</searchable>
+                  <editable>true</editable>
+                  <required>true</required>
+                  <max-length>-1</max-length>
+                  <validation handler="tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler"/>
+                  <form-type>text</form-type>
+                </string>
+                <string name="file-path" display_name="Poster File Path">
+                  <searchable>true</searchable>
+                  <editable>true</editable>
+                  <required>true</required>
+                  <max-length>-1</max-length>
+                  <validation handler="tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler"/>
+                  <form-type>text</form-type>
+                </string>
+              </children>
+            </image>
+          </children>
+        </metadata>
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+xml
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 31 May 2016 11:35:02 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=k3UqwRSpSyG7P80VXi20gTu1.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"definitionId":107594,"name":"metadata-definition","definition":[{"id":107596,"name":"section","displayName":"Section","description":null,"type":"single-option","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":108082,"name":"test","displayName":"test","default":false,"value":"http://api.ft.com/things/test"}]},{"id":108084,"name":"headline","displayName":"Headline","description":null,"type":"text","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":100,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108087,"name":"link-1","displayName":"Link
+        1","description":null,"type":"url","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioURLVariable$URLValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108098,"name":"restrictions","displayName":"Restrictions","description":null,"type":"boolean","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"checkbox","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":108099,"name":"true","displayName":"True","default":true,"value":"true"},{"id":108100,"name":"false","displayName":"False","default":false,"value":"false"}]},{"id":108102,"name":"poster-image","displayName":"Poster
+        Image","description":null,"type":"image","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}],"rules":[]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 11:34:51 GMT
 recorded_with: VCR 3.0.1

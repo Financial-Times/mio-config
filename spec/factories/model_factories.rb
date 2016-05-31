@@ -262,11 +262,23 @@ FactoryGirl.define do
       factory :place_holder_group_asset_action_extra_data,                  traits: [:invalid_field]
     end
 
+    factory :message_template do
+      name 'project-create-email-template-testing'
+      visibility [4]
+      subject 'NEW PROJECT: #{asset.mioObject.name}'
+      priority "Normal"
+      template '<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p> <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created: #{asset.created}</p>'
+      start :true
+      enable :true
+
+      factory :message_template_invalid_data,                traits: [:invalid_name]
+      factory :message_template_extra_data,                  traits: [:invalid_field]
+    end
 
     factory :email_message_action do
       name 'project-create-email-action-testing' 		      # Name of the email message action
       visibility [4] 				                              # IDs of accounts that may see this
-      template 11818 				                              # Id of email template
+      template 'create-project-email-template-999'    # Id of email template
       recipientExpression '${job.mioObject.owner.email}'  # Evaluated Expression value which generates an email address
       start :true
       enable :false 				                              # :true or :false

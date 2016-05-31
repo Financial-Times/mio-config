@@ -61,9 +61,9 @@ class Mio
             validation_handler = hash.fetch(:validationHandler)
             unless validation_handler.nil?
               child.validation handler: validation_handler
-            else
-              child.validation handler: validation_handler_by_type(type)
             end
+          else
+            child.validation handler: validation_handler_by_type(type)
           end
           if hash.key?(:formType)
             child.send("form-type", hash.fetch(:formType))
