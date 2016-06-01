@@ -11,6 +11,7 @@ FactoryGirl.define do
     name 'start 1'
     action ''
     type 'start'
+    assetContext ''
 
     factory :node_invalid_data, traits: [:invalid_name]
     factory :node_extra_data,   traits: [:invalid_field]
@@ -24,6 +25,7 @@ FactoryGirl.define do
       name 'lauch 1'
       action 'Groovy Script Factory'
       type 'ACTION'
+      assetContext '.'
     end
   end
 
@@ -36,6 +38,38 @@ FactoryGirl.define do
     end
 
     factory :transition_extra_data,   traits: [:invalid_field]
+  end
+
+  factory :option, class: OpenStruct do
+    name 'name'
+    displayName 'displayName'
+    default  :true
+    value 'value'
+
+    factory :option_invalid_data, traits: [:invalid_name]
+    factory :option_extra_data,   traits: [:invalid_field]
+  end
+
+  factory :definition, class: OpenStruct do
+    searchable :true
+    editable :true
+    required :true
+
+    factory :text_metadata_definition, class: OpenStruct do
+      name 'project'
+      displayName 'Project'
+      description 'describe what the project is about'
+      type 'text'
+      formType 'textarea'
+      maxLength 100
+      validationHandler 'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
+      options []
+      strings []
+
+      factory :text_metadata_definition_invalid_data, traits: [:invalid_name]
+      factory :text_metadata_definition_extra_data,   traits: [:invalid_field]
+    end
+
   end
 
   factory :model, class: OpenStruct do
@@ -99,8 +133,8 @@ FactoryGirl.define do
     factory :workflow do
       name 'Workflow'
       transitions [{from: 'Start 1', to: 'End 1'}]
-      nodes [{name: 'End 1', path: '/e', type: 'END'},
-             {name: 'Start 1', path: '/s', type: 'START'}]
+      nodes [{name: 'End 1', path: '/e', type: 'END', assetContext: ''},
+             {name: 'Start 1', path: '/s', type: 'START', assetContext: ''}]
       enable :true
       visibility [4]
 

@@ -7,6 +7,7 @@ class Mio
         field :name, String, 'Nodal Name'
         field :action, String, 'Name of the action, empty for none', 'Load S3'
         field :type, String, 'Action Type', 'ACTION'
+        field :assetContext, String, 'Asset context', ''
 
         nested true
 
@@ -15,11 +16,14 @@ class Mio
                path: "/#{@args.path}",
                type: @args.type.upcase,
               }
+          unless @args.assetContext.eql? ''
+            h[:assetContext] = @args.assetContext
+          end
           if @args.type.upcase == 'ACTION'
             action = @search.find_actions_by_name(@args.action).first
             h[:action] = normalize_action action
-
           end
+
           h
         end
 

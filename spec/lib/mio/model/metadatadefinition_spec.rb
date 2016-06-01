@@ -27,7 +27,7 @@ describe 'Mio::Model::MetadataDefinition' do
 
   context 'when instantiated with valid options' do
     let(:metadata_definition){subject.new(client, model_args)}
-    [:definition_xml, :build_children_xml, :build_options_xml, :build_children_xml, :validation_handler_by_type].each do |m|
+    [:build_xml].each do |m|
 
       it "should respond to ##{m.to_s}" do
         expect(metadata_definition).to respond_to(m)

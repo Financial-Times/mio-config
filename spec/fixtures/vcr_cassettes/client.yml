@@ -5971,4 +5971,303 @@ http_interactions:
         Image","description":null,"type":"image","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}],"rules":[]}'
     http_version: 
   recorded_at: Tue, 31 May 2016 11:34:51 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"name":"End 1","path":"/e","type":"END","assetContext":"","layout":{"width":120,"height":45,"x":100,"y":100}},{"name":"Start
+        1","path":"/s","type":"START","assetContext":"","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 01 Jun 2016 09:31:37 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=N+54gQPUtnbMvm9uLrrXcMhK.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"Workflow","version":3,"width":900,"height":1024,"nodes":[{"id":102177,"name":"End
+        1","path":"/End 1","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"id":102178,"name":"Start
+        1","path":"/Start 1","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[],"image":"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcG\r\nBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwM\r\nDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAEsASwDASIA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKAP/2Q==\r\n"}'
+    http_version: 
+  recorded_at: Wed, 01 Jun 2016 09:31:25 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"name":"End 1","path":"/e","type":"END","assetContext":"","layout":{"width":120,"height":45,"x":100,"y":100}},{"name":"Start
+        1","path":"/s","type":"START","assetContext":"","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[{"name":null,"from":{"id":102178,"name":"Start
+        1","path":"/Start 1"},"to":{"id":102177,"name":"End 1","path":"/End 1"}}],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 01 Jun 2016 09:31:38 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=ezt8BsRlbydbJCgTEiOTBag2.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"Workflow","version":4,"width":900,"height":1024,"nodes":[{"id":102179,"name":"End
+        1","path":"/End 1","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"id":102180,"name":"Start
+        1","path":"/Start 1","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[{"id":101737,"name":null,"description":null,"from":{"id":102180,"name":"Start
+        1","path":"/Start 1"},"to":{"id":102179,"name":"End 1","path":"/End 1"},"layout":{"labelX":null,"labelY":null,"bendPoints":[]}}],"image":"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcG\r\nBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwM\r\nDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAEsASwDASIA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKAP/2Q==\r\n"}'
+    http_version: 
+  recorded_at: Wed, 01 Jun 2016 09:31:26 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions
+    body:
+      encoding: UTF-8
+      string: '{"name":"metadata-definition","visibilityIds":[4],"displayName":"Metadata_definition
+        Display name","searchable":"true","required":"true","editable":"true","definitions":[{"name":"section","displayName":"Section","description":"ft
+        site section","type":"single-option","searchable":true,"editable":true,"required":true,"formType":"select","maxLength":-1,"options":[{"name":"test","displayName":"test","default":false,"value":"http://api.ft.com/things/test"}]},{"name":"headline","displayName":"Headline","description":"describe
+        what the project is about","type":"text","searchable":true,"editable":true,"required":true,"formType":"textarea","maxLength":100},{"name":"link-1","displayName":"Link
+        1","description":"Link 1","type":"url","searchable":true,"editable":true,"required":true,"formType":"text","maxLength":-1},{"name":"restrictions","displayName":"Restrictions","description":"Restrictions","type":"boolean","searchable":true,"editable":true,"required":true,"formType":"checkbox","maxLength":-1,"options":[{"name":"true","displayName":"True","default":true,"value":"true"},{"name":"false","displayName":"False","default":false,"value":"false"}]},{"name":"poster-image","displayName":"Poster
+        Image","description":"Poster Image","type":"image","searchable":true,"editable":true,"required":true,"formType":"file","maxLength":-1,"strings":[{"name":"file-name","displayName":"Poster
+        File Name","description":"Poster File Name","type":"string","searchable":true,"editable":true,"required":true,"formType":"text","maxLength":-1},{"name":"file-path","displayName":"Poster
+        File Path","description":"Poster File Path","type":"string","searchable":true,"editable":true,"required":true,"formType":"text","maxLength":-1}]}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: 
+    headers:
+      date:
+      - Wed, 01 Jun 2016 14:31:52 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '385'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Unrecognized field \"displayName\" (Class tv.nativ.mio.api.model.metadatadefinition.create.NewMetadataDefinition), not marked as ignorable\n at [Source: org.apache.catalina.connector.CoyoteInputStream@643f7740; line: 1, column: 66] (through reference chain: tv.nativ.mio.api.model.metadatadefinition.create.NewMetadataDefinition[\"displayName\"])"
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 01 Jun 2016 14:31:39 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/metadataDefinitions/11313/definition
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <metadata name="metadata-definition">
+          <searchable>true</searchable>
+          <editable>true</editable>
+          <required>true</required>
+          <children>
+            <single-option name="section" display_name="Section">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <validation handler=""/>
+              <form-type>select</form-type>
+              <children>
+                <option-child name="test" default="false" value="http://api.ft.com/things/test" display_name="test"/>
+              </children>
+            </single-option>
+            <text name="headline" display_name="Headline">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <max-length>100</max-length>
+              <validation handler="tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler"/>
+              <form-type>textarea</form-type>
+            </text>
+            <url name="link-1" display_name="Link 1">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <validation handler="tv.nativ.mio.metadata.resource.def.MioURLVariable$URLValidationHandler"/>
+              <form-type>text</form-type>
+            </url>
+            <boolean name="restrictions" display_name="Restrictions">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <validation handler=""/>
+              <form-type>checkbox</form-type>
+              <children>
+                <option-child name="true" default="true" value="true" display_name="True"/>
+                <option-child name="false" default="false" value="false" display_name="False"/>
+              </children>
+            </boolean>
+            <image name="poster-image" display_name="Poster Image">
+              <searchable>true</searchable>
+              <editable>true</editable>
+              <required>true</required>
+              <validation handler="tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler"/>
+              <form-type>file</form-type>
+              <children>
+                <string name="file-name" display_name="Poster File Name">
+                  <searchable>true</searchable>
+                  <editable>true</editable>
+                  <required>true</required>
+                  <validation handler="tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler"/>
+                  <form-type>text</form-type>
+                </string>
+                <string name="file-path" display_name="Poster File Path">
+                  <searchable>true</searchable>
+                  <editable>true</editable>
+                  <required>true</required>
+                  <validation handler="tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler"/>
+                  <form-type>text</form-type>
+                </string>
+              </children>
+            </image>
+          </children>
+        </metadata>
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+xml
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 01 Jun 2016 14:45:05 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=coOxXxLGb0cg5bkz7vk6tN-y.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"definitionId":107594,"name":"metadata-definition","definition":[{"id":107596,"name":"section","displayName":"Section","description":null,"type":"single-option","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":108082,"name":"test","displayName":"test","default":false,"value":"http://api.ft.com/things/test"}]},{"id":108084,"name":"headline","displayName":"Headline","description":null,"type":"text","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":100,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108087,"name":"link-1","displayName":"Link
+        1","description":null,"type":"url","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioURLVariable$URLValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":108098,"name":"restrictions","displayName":"Restrictions","description":null,"type":"boolean","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"checkbox","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":108099,"name":"true","displayName":"True","default":true,"value":"true"},{"id":108100,"name":"false","displayName":"False","default":false,"value":"false"}]},{"id":108102,"name":"poster-image","displayName":"Poster
+        Image","description":null,"type":"image","multiplicity":"1","searchable":true,"editable":true,"required":true,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}],"rules":[]}'
+    http_version: 
+  recorded_at: Wed, 01 Jun 2016 14:44:53 GMT
 recorded_with: VCR 3.0.1
