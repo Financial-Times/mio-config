@@ -312,13 +312,22 @@ FactoryGirl.define do
     factory :email_message_action do
       name 'project-create-email-action-testing' 		      # Name of the email message action
       visibility [4] 				                              # IDs of accounts that may see this
-      template 'create-project-email-template-999'    # Id of email template
+      template 'create-project-email-template-999'        # Id of email template
       recipientExpression '${job.mioObject.owner.email}'  # Evaluated Expression value which generates an email address
       start :true
       enable :false 				                              # :true or :false
 
       factory :email_message_action_invalid_data,                traits: [:invalid_name]
       factory :email_message_action_extra_data,                  traits: [:invalid_field]
+    end
+
+    factory :account_property do
+      name 'account_property'
+      key 'account_property_key'
+      value 'account_property_value'
+
+      factory :account_property_invalid_data,                traits: [:invalid_name]
+      factory :account_property_extra_data,                  traits: [:invalid_field]
     end
 
   end
