@@ -117,8 +117,6 @@ FactoryGirl.define do
     factory :groovy_script do
       name 'Groovy Script Factory'
       displayName 'A Test Groovy Script'
-      key 'some_s3_key'
-      secret 'some_s3_secret'
       script 'test script'
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
@@ -155,8 +153,6 @@ FactoryGirl.define do
     factory :groovy_script_wait do
       name 'A Test Groovy Wait Script'
       displayName 'A Test Groovy Wait Script'
-      key 'some_s3_key'
-      secret 'some_s3_secret'
       script 'test script'
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
@@ -328,6 +324,20 @@ FactoryGirl.define do
 
       factory :account_property_invalid_data,                traits: [:invalid_name]
       factory :account_property_extra_data,                  traits: [:invalid_field]
+    end
+
+    factory :groovy_script_decision do
+      name 'Groovy Script Decision'
+      displayName 'A Test Groovy Decision Script'
+      script 'test script'
+      jars ['file:///test/test/jar','file:///test/test/test.jar']
+      imports ['com.test.test.test','com.testing.testing.test']
+      start :true
+      enable :true
+      visibility [4]
+
+      factory :groovy_script_decision_invalid_data, traits: [:invalid_name]
+      factory :groovy_script_decision_extra_data,   traits: [:invalid_field]
     end
 
   end

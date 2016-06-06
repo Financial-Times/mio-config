@@ -5,8 +5,6 @@ class Mio
 
       field :name, String, 'Script name'
       field :displayName, String, 'Script Display name'
-      field :key, String, 'AWS API Key with access to S3'
-      field :secret, String, 'AWS secret'
       field :visibility, Array, 'Ids of the accounts which may see the import action', [4]
       field :script, String, 'The groovy script (inline) ', '"File.read(/path/to/script.groovy)"'
       field :jars, Array, 'JARs to load on remote, empty for none', [] 
