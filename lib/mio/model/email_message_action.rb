@@ -34,7 +34,7 @@ class Mio
       end
 
       def config_hash
-        { :'message-template' => { id: get_message_template_id(@args.template) },
+        { 'message-template': { id: get_message_template_id(@args.template) },
           recipients: { expression: [ { value: @args.recipientExpression, isExpression: false } ] }
         }
       end

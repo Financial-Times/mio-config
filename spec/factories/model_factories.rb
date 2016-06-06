@@ -7,6 +7,11 @@ FactoryGirl.define do
     foo 'bar'
   end
 
+  trait :start_enable do
+    start :true
+    enable :true
+  end
+
   factory :node, class: OpenStruct do
     name 'start 1'
     action ''
@@ -74,13 +79,11 @@ FactoryGirl.define do
 
   factory :model, class: OpenStruct do
 
-    factory :s3 do
+    factory :s3, traits: [:start_enable] do
       name 'S3 Bucket Factory'
       key 'some_s3_key'
       secret 'some_s3_secret'
       bucket 'some_faked_s3_bucket'
-      start :true
-      enable :true
       visibility [4]
 
 
@@ -88,40 +91,34 @@ FactoryGirl.define do
       factory :s3_extra_data,   traits: [:invalid_field]
     end
 
-    factory :hotfolder do
+    factory :hotfolder, traits: [:start_enable] do
       name 'Hotfolder Factory'
       storage_name 'S3 Bucket Factory'
       workflow_name 'Workflow'
       owner 'masteruser masteruser'
-      start :true
-      enable :true
       visibility [4]
 
       factory :hotfolder_invalid_data, traits: [:invalid_name]
       factory :hotfolder_extra_data,   traits: [:invalid_field]
     end
 
-    factory :import_action do
+    factory :import_action, traits: [:start_enable] do
       name 'Import Action Factory'
       key 'some_s3_key'
       secret 'some_s3_secret'
       bucket 'some_faked_s3_bucket'
-      start :true
-      enable :true
       visibility [4]
 
       factory :import_action_invalid_data, traits: [:invalid_name]
       factory :import_action_extra_data,   traits: [:invalid_field]
     end
 
-    factory :groovy_script do
+    factory :groovy_script, traits: [:start_enable] do
       name 'Groovy Script Factory'
       displayName 'A Test Groovy Script'
       script 'test script'
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
-      start :true
-      enable :true
       visibility [4]
 
       factory :groovy_script_invalid_data, traits: [:invalid_name]
@@ -150,7 +147,7 @@ FactoryGirl.define do
       factory :workflow_empty_transitions, traits: [:empty_transitions]
     end
 
-    factory :groovy_script_wait do
+    factory :groovy_script_wait, traits: [:start_enable] do
       name 'A Test Groovy Wait Script'
       displayName 'A Test Groovy Wait Script'
       script 'test script'
@@ -158,8 +155,6 @@ FactoryGirl.define do
       imports ['com.test.test.test','com.testing.testing.test']
       timeout 0
       polling_time 10
-      start :true
-      enable :true
       visibility [4]
 
       factory :groovy_script_wait_invalid_data, traits: [:invalid_name]
@@ -279,27 +274,23 @@ FactoryGirl.define do
       factory :variant_empty_metadataDefinitions,   traits: [:empty_metadata_definitions]
     end
 
-    factory :place_holder_group_asset_action do
+    factory :place_holder_group_asset_action, traits: [:start_enable] do
       name 'test-project-group-placeholder' 		      # Name of the place holder asset
       visibility [4] 				                          # IDs of accounts that may see this
       creationContext "NEW" 				                  # Creation context
       variantName "project-variant" 				          # Object Variant to create
       metadataDefinition "project-metadata" 		      # The metadata definition to associate to this place holder asset
-      start :true
-      enable :true 				                            # :true or :false
 
       factory :place_holder_group_asset_action_invalid_data,                traits: [:invalid_name]
       factory :place_holder_group_asset_action_extra_data,                  traits: [:invalid_field]
     end
 
-    factory :message_template do
+    factory :message_template, traits: [:start_enable] do
       name 'project-create-email-template-testing'
       visibility [4]
       subject 'NEW PROJECT: #{asset.mioObject.name}'
       priority "Normal"
       template '<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p> <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created: #{asset.created}</p>'
-      start :true
-      enable :true
 
       factory :message_template_invalid_data,                traits: [:invalid_name]
       factory :message_template_extra_data,                  traits: [:invalid_field]
@@ -326,18 +317,40 @@ FactoryGirl.define do
       factory :account_property_extra_data,                  traits: [:invalid_field]
     end
 
-    factory :groovy_script_decision do
+    factory :groovy_script_decision, traits: [:start_enable] do
       name 'Groovy Script Decision'
       displayName 'A Test Groovy Decision Script'
       script 'test script'
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
-      start :true
-      enable :true
       visibility [4]
 
       factory :groovy_script_decision_invalid_data, traits: [:invalid_name]
       factory :groovy_script_decision_extra_data,   traits: [:invalid_field]
+    end
+
+    factory :add_to_group_action_empty_config, traits: [:start_enable] do
+      name 'Testing Add to group action'
+      visibility [4]
+      targetAssetId ''
+      groupName ''
+      referenceNamePrefix ''
+
+      factory :add_to_group_action_targetAssetId do
+        targetAssetId 'test'
+      end
+
+      factory :add_to_group_action_groupName do
+        groupName 'test'
+      end
+
+      factory :add_to_group_action_referenceNamePrefix do
+        referenceNamePrefix 'test'
+      end
+
+      factory :add_to_group_action_empty_config_invalid_data, traits: [:invalid_name]
+      factory :add_to_group_action_empty_config_extra_data, traits: [:invalid_field]
+
     end
 
   end
