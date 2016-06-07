@@ -6,7 +6,10 @@ class Mio
       field :key, String, 'AWS API Key with access to S3'
       field :secret, String, 'AWS secret'
       field :bucket, String, 'AWS bucket name'
+      field :variant, String, 'Variant name'
+      field :metadataDefinition, String, 'Metadata definition id'
       field :visibility, Array, 'Ids of the accounts which may see the import action', [4]
+      field :sourceJsonVariable, String, 'Json Variable to grab metadata from'
 
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
@@ -19,6 +22,18 @@ class Mio
          'type': 'import',
          'runRuleExpression': ''
         }
+      end
+
+      def metadata_definition_id metadata_definition_name
+        r = 'metadataDefinitions'
+        metadata_definitions = @client.find_all(r)
+
+        md = metadata_definitions[r].find{|md| md['name'] == metadata_definition_name}
+        if md.nil?
+          raise Mio::Model::NoSuchResource, 'No such metadata definition[' + metadata_definition_name + ']'
+        end
+
+        md['id']
       end
 
       def config_hash
@@ -60,6 +75,21 @@ class Mio
             "creation-context": {
               "value": "IMPORT",
               "isExpression": false
+            }
+          },
+          "variant-and-metadata-definition": {
+            "variant": {
+              "value": @args.variant,
+              "isExpression": false
+            },
+            "metadata": {
+              "metadata-definition": {
+                "id": metadata_definition_id(@args.metadataDefinition)
+              },
+              "source-json-variable": {
+                "value": @args.sourceJsonVariable,
+                "isExpression": false
+              }
             }
           }
         }

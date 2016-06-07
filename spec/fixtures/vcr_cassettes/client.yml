@@ -7205,4 +7205,609 @@ http_interactions:
         Name Prefix","description":"Reference Name Prefix for group members","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}'
     http_version: 
   recorded_at: Mon, 06 Jun 2016 12:21:17 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11119/configuration
+    body:
+      encoding: UTF-8
+      string: '{"source-file":{"source":{"vfs-source-file-path":{"protocol":{"value":"S3","isExpression":false},"path":{"value":"/${variables.externalFileName}","isExpression":false},"key":{"value":"some_s3_key","isExpression":false},"secret":{"value":"some_s3_secret","isExpression":false},"bucket":{"value":"some_faked_s3_bucket","isExpression":false}}},"keep-source-filename":false},"asset-details":{"title":{"value":"${variables.externalFilename}","isExpression":false},"creation-context":{"value":"IMPORT","isExpression":false}},"variant-and-metadata-definition":{"variant":{"value":null,"isExpression":false},"metadata":{"metadata-definition":{"id":11312},"source-json-variable":{"value":"${test}","isExpression":false}}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 08:18:42 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=Zj7qefIv3+XS2Z2-gHisy4Fl.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103351,"instance":{"source-file":{"source":{"vfs-source-file-path":{"protocol":{"value":"S3","isExpression":false},"path":{"value":"/${variables.externalFileName}","isExpression":false},"key":{"value":"some_s3_key","isExpression":false},"secret":{"value":"some_s3_secret","isExpression":false},"bucket":{"value":"some_faked_s3_bucket","isExpression":false}}},"keep-source-filename":false},"asset-details":{"title":{"value":"${variables.externalFilename}","isExpression":false},"creation-context":{"value":"IMPORT","isExpression":false}},"variant-and-metadata-definition":{"variant":{"value":"null","isExpression":false},"metadata":{"metadata-definition":{"id":"11312"},"source-json-variable":{"value":"${test}","isExpression":false}}}},"definitionId":107150,"definition":[{"id":107151,"name":"source-file","displayName":"Source
+        File","description":"Details of the source file to import. If not specified,
+        no media file will be imported into the asset. This can be used to create
+        placeholder assets.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107152,"name":"source","displayName":"Source","description":"Details
+        of the source file.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107153,"name":"vfs-source-file-path","displayName":"Source
+        VFS Location","description":"The Virtual File System location of the media
+        file to import.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107176,"name":"source-resource-item","displayName":"Source
+        Resource Item","description":"The Resource and Item Name of the source file.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107177,"name":"source-resource","displayName":"Source
+        Resource","description":"\n\t\t\t\t\t\t\t\t\t\t\tThe Resource containing the
+        source item.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Capacity)"},{"id":107178,"name":"source-item-name","displayName":"Item Name","description":"The
+        name of the item in the source resource.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]},{"id":107179,"name":"original-filename","displayName":"Original
+        Filename","description":"The value to set as the original filename of the
+        imported media file. If not specified, the file''s name will be used.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107180,"name":"keep-source-filename","displayName":"Keep
+        Source File Name","description":"If true, then the source file name will be
+        maintained, otherwise a UUID will be generated.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107181,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":107182,"name":"No","displayName":"No","default":true,"value":"false"}]},{"id":107183,"name":"copy-file","displayName":"Copy
+        File","description":"Copy the file to a new location. If not specified the
+        media file will be ingested in place. One of either the target resource or
+        folder can be specified.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107184,"name":"copy-target-resource","displayName":"Target
+        Resource","description":"The Folder Resource for the imported media file to
+        be copied to.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Folder)"},{"id":107185,"name":"copy-vfs-location","displayName":"Target VFS
+        Location","description":"The Virtual File System location for the imported
+        media file to be copied to.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107208,"name":"move-file","displayName":"Move
+        File","description":"Move the file to a new location. If not specified the
+        media file will be ingested in place. One of either the target resource or
+        folder can be specified.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107209,"name":"move-target-resource","displayName":"Target
+        Resource","description":"The Folder Resource for the imported media file to
+        be moved to.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Folder)"},{"id":107210,"name":"move-vfs-location","displayName":"Target VFS
+        Location","description":"The Virtual File System location for the imported
+        media file to be moved to.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]},{"id":107233,"name":"asset-details","displayName":"Asset
+        Details","description":"Descriptive details for the asset.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107234,"name":"title","displayName":"Title","description":"The
+        title of the asset.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107235,"name":"description","displayName":"Description","description":"Optional
+        description for the asset.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107236,"name":"asset-type","displayName":"Placeholder
+        Asset Type","description":"The Placeholder Asset Type to create if no source
+        file is specified.","type":"single-option","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107237,"name":"media-asset","displayName":"Media
+        Asset","default":true,"value":"media-asset"},{"id":107238,"name":"image-asset","displayName":"Image
+        Asset","default":false,"value":"image-asset"},{"id":107239,"name":"text-asset","displayName":"Text
+        Asset","default":false,"value":"text-asset"}]},{"id":107240,"name":"creation-context","displayName":"Creation
+        Context","description":"The creation context to set on the asset.","type":"single-option","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107241,"name":"ingest","displayName":"Ingest","default":false,"value":"INGEST"},{"id":107242,"name":"proxy","displayName":"Proxy","default":false,"value":"PROXY"},{"id":107243,"name":"copy","displayName":"Copy","default":false,"value":"COPY"},{"id":107244,"name":"transcode","displayName":"Transcode","default":false,"value":"TRANSCODE"},{"id":107245,"name":"import","displayName":"Import","default":false,"value":"IMPORT"},{"id":107246,"name":"transform","displayName":"Transform","default":false,"value":"TRANSFORM"}]}]},{"id":107247,"name":"variant-and-metadata-definition","displayName":"Variant","description":"Specify
+        the Variant and optionally the Metadata Definition to set on the asset. If
+        not specified, a default will be used if it has been configured.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107248,"name":"variant","displayName":"Variant","description":"The
+        Variant to set. This must be a valid configured Variant name.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107249,"name":"metadata","displayName":"Metadata","description":"Specify
+        a Metadata Definition to set. If not specified, a default will be used if
+        it has been configured.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107250,"name":"metadata-definition","displayName":"Metadata
+        Definition","description":"The Metadata Definition to set.","type":"object","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Metadata
+        Definition"},{"id":107251,"name":"source-json-variable","displayName":"Source
+        JSON Variable","description":"Source JSON Variable.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107252,"name":"source-xml","displayName":"Source
+        XML","description":"Set the metadata based on details stored in an XML file
+        or workflow variable. If not specified a default metadata instance will be
+        created.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107253,"name":"source-xml-location","displayName":"Source
+        XML Location","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107254,"name":"vfs-source-xml-path","displayName":"Source
+        XML VFS Location","description":"The Virtual File System location of the source
+        XML file to read.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107277,"name":"source-xml-variable-name","displayName":"Source
+        XML Variable Name","description":"Source XML workflow variable name to use.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107278,"name":"xslt","displayName":"XSLT","description":"Optional
+        XSLT to apply to source XML. If not defined then XML is expected to be in
+        MioMetadata XML form.","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]},{"id":107281,"name":"keyframe","displayName":"Keyframe","description":"Keyframe
+        to set on the asset. This will be used only if the imported asset is a media
+        file. If an image file it will be ignored.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107282,"name":"vfs-source-keyframe-path","displayName":"Source
+        Keyframe VFS Location","description":"The Virtual File System location of
+        the source keyframe to import.","type":"vfs-location","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107305,"name":"keyframe-title","displayName":"Title","description":"Optional
+        title for the keyframe.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107306,"name":"keyframe-description","displayName":"Keyframe
+        Description","description":"Optional description for the keyframe.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107307,"name":"timecode","displayName":"Timecode","description":"Optional
+        timecode for the keyframe. If defined the keyframe is imported as an extracted
+        keyframe, otherwise it is imported as an uploaded keyframe.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107308,"name":"master","displayName":"Master","description":"Whether
+        the keyframe should be set as master. If multiple keyframes are configured
+        as master, the last to be imported will be set as master for the asset.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107309,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":107310,"name":"No","displayName":"No","default":true,"value":"false"}]}]},{"id":107311,"name":"asset-relationships","displayName":"Asset
+        Relationships","description":"Specify relationships with existing assets in
+        the system.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107312,"name":"child","displayName":"Child","description":"Add
+        a parent-child relationship.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107313,"name":"parent","displayName":"Parent
+        Asset ","description":"Specify the parent asset.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107314,"name":"parent-asset","displayName":"Parent
+        Asset","description":"Select the parent file asset to use.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (File)"},{"id":107315,"name":"parent-asset-id","displayName":"Parent Asset
+        ID","description":"Specify the parent file asset ID or use an expression.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107316,"name":"reference-name","displayName":"Reference
+        Name","description":"Optional reference name to set on the parent-child relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107317,"name":"member","displayName":"Member","description":"Add
+        a group-member relationship.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107318,"name":"group","displayName":"Parent
+        Group Asset","description":"Specify the parent group.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107319,"name":"group-asset","displayName":"Group
+        Asset","description":"Select the parent group asset to use.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (Group)"},{"id":107320,"name":"group-asset-id","displayName":"Group Asset
+        ID","description":"Specify the parent group asset ID or use an expression.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107321,"name":"membership-name","displayName":"Membership
+        Name","description":"Optional membership name to set on the group-member relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]}'
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 08:18:20 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11119/configuration
+    body:
+      encoding: UTF-8
+      string: '{"source-file":{"source":{"vfs-source-file-path":{"protocol":{"value":"S3","isExpression":false},"path":{"value":"/${variables.externalFileName}","isExpression":false},"key":{"value":"some_s3_key","isExpression":false},"secret":{"value":"some_s3_secret","isExpression":false},"bucket":{"value":"some_faked_s3_bucket","isExpression":false}}},"keep-source-filename":false},"asset-details":{"title":{"value":"${variables.externalFilename}","isExpression":false},"creation-context":{"value":"IMPORT","isExpression":false}},"variant-and-metadata-definition":{"variant":{"value":"project-variant","isExpression":false},"metadata":{"metadata-definition":{"id":11312},"source-json-variable":{"value":"testJsonVariable","isExpression":false}}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 08:51:51 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=FN3hRErXzY9WF4St0ZBiCgcX.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":103351,"instance":{"source-file":{"source":{"vfs-source-file-path":{"protocol":{"value":"S3","isExpression":false},"path":{"value":"/${variables.externalFileName}","isExpression":false},"key":{"value":"some_s3_key","isExpression":false},"secret":{"value":"some_s3_secret","isExpression":false},"bucket":{"value":"some_faked_s3_bucket","isExpression":false}}},"keep-source-filename":false},"asset-details":{"title":{"value":"${variables.externalFilename}","isExpression":false},"creation-context":{"value":"IMPORT","isExpression":false}},"variant-and-metadata-definition":{"variant":{"value":"project-variant","isExpression":false},"metadata":{"metadata-definition":{"id":"11312"},"source-json-variable":{"value":"testJsonVariable","isExpression":false}}}},"definitionId":107150,"definition":[{"id":107151,"name":"source-file","displayName":"Source
+        File","description":"Details of the source file to import. If not specified,
+        no media file will be imported into the asset. This can be used to create
+        placeholder assets.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107152,"name":"source","displayName":"Source","description":"Details
+        of the source file.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107153,"name":"vfs-source-file-path","displayName":"Source
+        VFS Location","description":"The Virtual File System location of the media
+        file to import.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107176,"name":"source-resource-item","displayName":"Source
+        Resource Item","description":"The Resource and Item Name of the source file.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107177,"name":"source-resource","displayName":"Source
+        Resource","description":"\n\t\t\t\t\t\t\t\t\t\t\tThe Resource containing the
+        source item.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Capacity)"},{"id":107178,"name":"source-item-name","displayName":"Item Name","description":"The
+        name of the item in the source resource.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]},{"id":107179,"name":"original-filename","displayName":"Original
+        Filename","description":"The value to set as the original filename of the
+        imported media file. If not specified, the file''s name will be used.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107180,"name":"keep-source-filename","displayName":"Keep
+        Source File Name","description":"If true, then the source file name will be
+        maintained, otherwise a UUID will be generated.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107181,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":107182,"name":"No","displayName":"No","default":true,"value":"false"}]},{"id":107183,"name":"copy-file","displayName":"Copy
+        File","description":"Copy the file to a new location. If not specified the
+        media file will be ingested in place. One of either the target resource or
+        folder can be specified.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107184,"name":"copy-target-resource","displayName":"Target
+        Resource","description":"The Folder Resource for the imported media file to
+        be copied to.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Folder)"},{"id":107185,"name":"copy-vfs-location","displayName":"Target VFS
+        Location","description":"The Virtual File System location for the imported
+        media file to be copied to.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107208,"name":"move-file","displayName":"Move
+        File","description":"Move the file to a new location. If not specified the
+        media file will be ingested in place. One of either the target resource or
+        folder can be specified.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107209,"name":"move-target-resource","displayName":"Target
+        Resource","description":"The Folder Resource for the imported media file to
+        be moved to.","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Resource
+        (Folder)"},{"id":107210,"name":"move-vfs-location","displayName":"Target VFS
+        Location","description":"The Virtual File System location for the imported
+        media file to be moved to.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]},{"id":107233,"name":"asset-details","displayName":"Asset
+        Details","description":"Descriptive details for the asset.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107234,"name":"title","displayName":"Title","description":"The
+        title of the asset.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107235,"name":"description","displayName":"Description","description":"Optional
+        description for the asset.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107236,"name":"asset-type","displayName":"Placeholder
+        Asset Type","description":"The Placeholder Asset Type to create if no source
+        file is specified.","type":"single-option","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107237,"name":"media-asset","displayName":"Media
+        Asset","default":true,"value":"media-asset"},{"id":107238,"name":"image-asset","displayName":"Image
+        Asset","default":false,"value":"image-asset"},{"id":107239,"name":"text-asset","displayName":"Text
+        Asset","default":false,"value":"text-asset"}]},{"id":107240,"name":"creation-context","displayName":"Creation
+        Context","description":"The creation context to set on the asset.","type":"single-option","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107241,"name":"ingest","displayName":"Ingest","default":false,"value":"INGEST"},{"id":107242,"name":"proxy","displayName":"Proxy","default":false,"value":"PROXY"},{"id":107243,"name":"copy","displayName":"Copy","default":false,"value":"COPY"},{"id":107244,"name":"transcode","displayName":"Transcode","default":false,"value":"TRANSCODE"},{"id":107245,"name":"import","displayName":"Import","default":false,"value":"IMPORT"},{"id":107246,"name":"transform","displayName":"Transform","default":false,"value":"TRANSFORM"}]}]},{"id":107247,"name":"variant-and-metadata-definition","displayName":"Variant","description":"Specify
+        the Variant and optionally the Metadata Definition to set on the asset. If
+        not specified, a default will be used if it has been configured.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107248,"name":"variant","displayName":"Variant","description":"The
+        Variant to set. This must be a valid configured Variant name.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107249,"name":"metadata","displayName":"Metadata","description":"Specify
+        a Metadata Definition to set. If not specified, a default will be used if
+        it has been configured.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107250,"name":"metadata-definition","displayName":"Metadata
+        Definition","description":"The Metadata Definition to set.","type":"object","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Metadata
+        Definition"},{"id":107251,"name":"source-json-variable","displayName":"Source
+        JSON Variable","description":"Source JSON Variable.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107252,"name":"source-xml","displayName":"Source
+        XML","description":"Set the metadata based on details stored in an XML file
+        or workflow variable. If not specified a default metadata instance will be
+        created.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107253,"name":"source-xml-location","displayName":"Source
+        XML Location","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107254,"name":"vfs-source-xml-path","displayName":"Source
+        XML VFS Location","description":"The Virtual File System location of the source
+        XML file to read.","type":"vfs-location","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107277,"name":"source-xml-variable-name","displayName":"Source
+        XML Variable Name","description":"Source XML workflow variable name to use.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107278,"name":"xslt","displayName":"XSLT","description":"Optional
+        XSLT to apply to source XML. If not defined then XML is expected to be in
+        MioMetadata XML form.","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]},{"id":107281,"name":"keyframe","displayName":"Keyframe","description":"Keyframe
+        to set on the asset. This will be used only if the imported asset is a media
+        file. If an image file it will be ignored.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107282,"name":"vfs-source-keyframe-path","displayName":"Source
+        Keyframe VFS Location","description":"The Virtual File System location of
+        the source keyframe to import.","type":"vfs-location","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioVFSLocationVariable$MioVFSLocationVariableHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107305,"name":"keyframe-title","displayName":"Title","description":"Optional
+        title for the keyframe.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107306,"name":"keyframe-description","displayName":"Keyframe
+        Description","description":"Optional description for the keyframe.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107307,"name":"timecode","displayName":"Timecode","description":"Optional
+        timecode for the keyframe. If defined the keyframe is imported as an extracted
+        keyframe, otherwise it is imported as an uploaded keyframe.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":107308,"name":"master","displayName":"Master","description":"Whether
+        the keyframe should be set as master. If multiple keyframes are configured
+        as master, the last to be imported will be set as master for the asset.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":107309,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":107310,"name":"No","displayName":"No","default":true,"value":"false"}]}]},{"id":107311,"name":"asset-relationships","displayName":"Asset
+        Relationships","description":"Specify relationships with existing assets in
+        the system.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107312,"name":"child","displayName":"Child","description":"Add
+        a parent-child relationship.","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107313,"name":"parent","displayName":"Parent
+        Asset ","description":"Specify the parent asset.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107314,"name":"parent-asset","displayName":"Parent
+        Asset","description":"Select the parent file asset to use.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (File)"},{"id":107315,"name":"parent-asset-id","displayName":"Parent Asset
+        ID","description":"Specify the parent file asset ID or use an expression.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107316,"name":"reference-name","displayName":"Reference
+        Name","description":"Optional reference name to set on the parent-child relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107317,"name":"member","displayName":"Member","description":"Add
+        a group-member relationship.","type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107318,"name":"group","displayName":"Parent
+        Group Asset","description":"Specify the parent group.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":107319,"name":"group-asset","displayName":"Group
+        Asset","description":"Select the parent group asset to use.","type":"asset","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Asset
+        (Group)"},{"id":107320,"name":"group-asset-id","displayName":"Group Asset
+        ID","description":"Specify the parent group asset ID or use an expression.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":107321,"name":"membership-name","displayName":"Membership
+        Name","description":"Optional membership name to set on the group-member relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]}'
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 08:51:29 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/12894/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 09:27:16 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=-WoNMLoB3SgAroMIcnb0Chw6.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 09:26:54 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/12894/body
+    body:
+      encoding: UTF-8
+      string: "<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p>
+        <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created:
+        #{asset.created}</p>"
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - text/html
+      Accept:
+      - text/html
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 09:27:24 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=EyCj2516vB8-nQ2-XjQM8dMT.-201388932; Path=/api; Secure
+      content-type:
+      - text/html
+      content-length:
+      - '178'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: "<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p>
+        <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created:
+        #{asset.created}</p>"
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 09:27:02 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates
+    body:
+      encoding: UTF-8
+      string: '{"name":"create-project-email-template-100","visibilityIds":[4],"subject":"NEW
+        PROJECT: #{asset.mioObject.name}","priority":"Normal"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 09:31:13 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=206JV4Viwe+exOKpc0zIQg4j.-201388932; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/messageTemplates/13762
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":13762,"uuid":"bd4d57d3-70b1-4af6-a2fb-d23f76038279","name":"create-project-email-template-100","displayName":"create-project-email-template-100","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/messageTemplates/13762","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 09:30:51 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/13762/body
+    body:
+      encoding: UTF-8
+      string: "<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p>
+        <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created:
+        #{asset.created}</p>"
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - text/html
+      Accept:
+      - text/html
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 09:31:14 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=E7nmdxKyM4qhSRBO-sxKPPUk.-201388932; Path=/api; Secure
+      content-type:
+      - text/html
+      content-length:
+      - '178'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: "<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p>
+        <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created:
+        #{asset.created}</p>"
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 09:30:51 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/13762/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 09:31:14 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=s8273LQ-zl8gScO2WfCwd4HC.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 09:30:52 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/messageTemplates/13762/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 07 Jun 2016 09:31:15 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=vn45TLsdkZRCBXvDL8Yye33U.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":13762,"uuid":"bd4d57d3-70b1-4af6-a2fb-d23f76038279","name":"create-project-email-template-100","displayName":"create-project-email-template-100","objectType":{"id":31,"name":"message-template","href":"https://master.dev.nativ-systems.com/api/objectTypes/31","displayName":"Message
+        Template","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/messageTemplates/13762","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Tue, 07 Jun 2016 09:30:52 GMT
 recorded_with: VCR 3.0.1

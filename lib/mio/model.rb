@@ -1,5 +1,6 @@
 class Mio
   class Model
+    attr_reader :args
     class << self
       attr_accessor :fields, :resource_name
       def set_resource r

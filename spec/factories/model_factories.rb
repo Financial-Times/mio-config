@@ -107,10 +107,17 @@ FactoryGirl.define do
       key 'some_s3_key'
       secret 'some_s3_secret'
       bucket 'some_faked_s3_bucket'
+      variant "project-variant"
+      metadataDefinition "project-metadata"
+      sourceJsonVariable "testJsonVariable"
       visibility [4]
 
       factory :import_action_invalid_data, traits: [:invalid_name]
       factory :import_action_extra_data,   traits: [:invalid_field]
+
+      factory :import_action_unknown_metadata_definition do
+        metadataDefinition "xxxYYYUnknown9999"
+      end
     end
 
     factory :groovy_script, traits: [:start_enable] do
@@ -272,6 +279,15 @@ FactoryGirl.define do
       factory :variant_invalid_data,                traits: [:invalid_name]
       factory :variant_extra_data,                  traits: [:invalid_field]
       factory :variant_empty_metadataDefinitions,   traits: [:empty_metadata_definitions]
+
+      factory :variant_unknown_object_type do
+        objectType 'xxx??xx'
+      end
+
+      factory :variant_unknown_metadata_definition do
+        metadataDefinitions ['xxx??xx']
+      end
+
     end
 
     factory :place_holder_group_asset_action, traits: [:start_enable] do
@@ -283,10 +299,14 @@ FactoryGirl.define do
 
       factory :place_holder_group_asset_action_invalid_data,                traits: [:invalid_name]
       factory :place_holder_group_asset_action_extra_data,                  traits: [:invalid_field]
+
+      factory :place_holder_group_asset_action_unknown_metadata_definition do
+        metadataDefinition "xxx?xxx"
+      end
     end
 
     factory :message_template, traits: [:start_enable] do
-      name 'project-create-email-template-testing'
+      name 'create-project-email-template-100'
       visibility [4]
       subject 'NEW PROJECT: #{asset.mioObject.name}'
       priority "Normal"
@@ -294,6 +314,7 @@ FactoryGirl.define do
 
       factory :message_template_invalid_data,                traits: [:invalid_name]
       factory :message_template_extra_data,                  traits: [:invalid_field]
+
     end
 
     factory :email_message_action do
@@ -306,6 +327,10 @@ FactoryGirl.define do
 
       factory :email_message_action_invalid_data,                traits: [:invalid_name]
       factory :email_message_action_extra_data,                  traits: [:invalid_field]
+
+      factory :email_message_action_unknown_message_template do
+        template 'xxx?xxx'
+      end
     end
 
     factory :account_property do

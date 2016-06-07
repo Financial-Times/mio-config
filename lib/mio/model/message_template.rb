@@ -21,10 +21,10 @@ class Mio
       end
 
       def go
-        unless look_up
+        @object = look_up
+        unless @object
           @object = create
         else
-          @object = look_up
           set_start :stop
         end
         template_path = "#{self.class.resource_name}/#{@object['id']}/body"

@@ -43,10 +43,10 @@ class Mio
           raise Mio::Model::EmptyField, 'Field definitions to Mio::Model::MetadataDefinition must contain at least one definition'
         end
 
-        unless look_up
+        @object = look_up
+        unless @object
           @object = create
         else
-          @object = look_up
           set_start :stop
         end
         definition_path = "#{self.class.resource_name}/#{@object['id']}/definition"

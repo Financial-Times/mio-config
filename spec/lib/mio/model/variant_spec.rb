@@ -34,4 +34,24 @@ describe 'Mio::Model::Variant' do
     end
   end
 
+  context 'when instantiated with unknown object type' do
+    let(:client){build(:valid_client)}
+    let(:variant){subject.new(client, build(:variant_unknown_object_type))}
+
+    it 'should raise a Mio::Model::NoSuchResource error' do
+      expect{variant.object_type_id(variant.args.objectType)}.to raise_error(Mio::Model::NoSuchResource)
+    end
+  end
+
+  context 'when instantiated with unknown metadata definition' do
+    let(:client){build(:valid_client)}
+    let(:variant){subject.new(client, build(:variant_unknown_metadata_definition))}
+
+    it 'should raise a Mio::Model::NoSuchResource error' do
+      variant.args.metadataDefinitions.each do |md_name|
+        expect{variant.metadata_definition_id({md: [{name: 'test'}]}, md_name)}.to raise_error(Mio::Model::NoSuchResource)
+      end
+    end
+  end
+
 end
