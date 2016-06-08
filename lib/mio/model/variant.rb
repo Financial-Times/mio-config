@@ -9,17 +9,6 @@ class Mio
       field :metadataDefinitions, Array, 'Array of metadata definition names'
       field :defaultMetadataDefinition, String, 'Default metadata definition name'
 
-      def object_type_id object_type_name
-        r = 'objectTypes'
-        all_object_types = @client.find_all(r)
-        object_type = all_object_types[r].find{|object_type| object_type['name'] == object_type_name}
-        if object_type.nil?
-          raise Mio::Model::NoSuchResource, 'No such object type [' + object_type_name + ']'
-        end
-
-        object_type['id']
-      end
-
       def metadata_definition_hash metadata_definitions
         r = 'metadataDefinitions'
         all_metadata_definitions = @client.find_all(r)
@@ -56,8 +45,13 @@ class Mio
       def create_hash
         metadata_definitions = metadata_definition_hash @args.metadataDefinitions
 
+        object_type = @search.find_objectTypes_by_name(@args.objectType).first
+        if object_type.nil?
+          raise Mio::Model::NoSuchResource, 'No such object type [' + @args.objectType + ']'
+        end
+
         {name: @args.name,
-         objectTypeId: object_type_id(@args.objectType),
+         objectTypeId: object_type['id'],
          defaultVariant: @args.defaultVariant,
          metadataDefinitionIds: metadata_definition_ids(metadata_definitions, @args.metadataDefinitions),
          defaultMetadataDefinition: metadata_definition_id(metadata_definitions, @args.defaultMetadataDefinition)}

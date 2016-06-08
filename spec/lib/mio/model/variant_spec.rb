@@ -27,7 +27,7 @@ describe 'Mio::Model::Variant' do
 
   context 'when instantiated with valid options' do
     let(:variant){subject.new(client, model_args)}
-    [:object_type_id, :metadata_definition_hash, :metadata_definition_id, :metadata_definition_ids].each do |m|
+    [:metadata_definition_hash, :metadata_definition_id, :metadata_definition_ids].each do |m|
       it "should respond to ##{m.to_s}" do
         expect(variant).to respond_to(m)
       end
@@ -39,7 +39,7 @@ describe 'Mio::Model::Variant' do
     let(:variant){subject.new(client, build(:variant_unknown_object_type))}
 
     it 'should raise a Mio::Model::NoSuchResource error' do
-      expect{variant.object_type_id(variant.args.objectType)}.to raise_error(Mio::Model::NoSuchResource)
+      expect{variant.create_hash}.to raise_error(Mio::Model::NoSuchResource)
     end
   end
 
@@ -48,9 +48,7 @@ describe 'Mio::Model::Variant' do
     let(:variant){subject.new(client, build(:variant_unknown_metadata_definition))}
 
     it 'should raise a Mio::Model::NoSuchResource error' do
-      variant.args.metadataDefinitions.each do |md_name|
-        expect{variant.metadata_definition_id({md: [{name: 'test'}]}, md_name)}.to raise_error(Mio::Model::NoSuchResource)
-      end
+      expect{variant.create_hash}.to raise_error(Mio::Model::NoSuchResource)
     end
   end
 

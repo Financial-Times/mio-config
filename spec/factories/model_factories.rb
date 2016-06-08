@@ -77,6 +77,67 @@ FactoryGirl.define do
 
   end
 
+  trait :invalid_type do
+    type 123456
+  end
+
+  factory :workflowvariable, class: OpenStruct do
+    type 'string'
+    key 'teststringkey'
+    value 'teststringvalue'
+
+    factory :workflowvariable_invalid_data, traits: [:invalid_type]
+    factory :workflowvariable_extra_data,   traits: [:invalid_field]
+
+    factory :workflowvariable_object_variable do
+      type 'object'
+      key 'testobjectkey'
+      value '13553'
+
+      factory :workflowvariable_not_number_object_variable do
+        value 'asdlkjasd'
+      end
+
+      factory :workflowvariable_not_known_object_variable do
+        value '9999999999'
+      end
+    end
+
+    factory :workflowvariable_date_variable do
+      type 'date'
+      key 'testdatekey'
+      value '01-01-2016 11:00:00'
+
+      factory :workflowvariable_bad_date_variable do
+        value 'xxxxx'
+      end
+    end
+
+    factory :workflowvariable_bad_type do
+      type 'objectRR'
+    end
+
+    factory :workflowvariable_bad_date do
+      type 'date'
+      value 'notADate'
+    end
+  end
+
+  factory :launchworkflow, class: OpenStruct do
+    name "workflow-create-project"
+    inheritVariables :true
+    workFlowStringVariables [{key: 'teststringkey', type: 'string', value: 'teststring'}]
+    workFlowObjectVariables [{key: 'testobjectkey', type: 'object', value: '13553'}]
+    workflowDateVariables [{key: '', type: 'date', value: '01-01-2016 11:00:00'}]
+
+    factory :launchworkflow_invalid_data, traits: [:invalid_name]
+    factory :launchworkflow_extra_data, traits: [:invalid_field]
+
+    factory :launchworkflow_unknown_metadata_definition do
+      name "xxx?xxx"
+    end
+  end
+
   factory :model, class: OpenStruct do
 
     factory :s3, traits: [:start_enable] do
@@ -378,6 +439,24 @@ FactoryGirl.define do
 
     end
 
+    factory :launch_workflow_action, traits: [:start_enable] do
+
+      name 'test-ingest-workflow-launcher'
+      visibility [4]
+      workflows [{"Workflow":{"id":13707},"inherit-variables":"true",
+                  "workflow-string-variable": [{"string-variable-key":{"value":"test-key","isExpression":false},"string-variable-value":{"value":"test-value","isExpression":false}}],
+                  "workflow-object-variable":[{"object-variable-key":{"value":"test-key","isExpression":false},"object-variable-value":{"value":"222","isExpression":false}}],
+                  "workflow-date-variable":[{"date-variable-key":{"value":"test-key","isExpression":false},"date-variable-value":{"value":"01-01-2016 15:00:00","isExpression":false}}]
+                 }]
+
+      trait :empty_workflows do
+        workflows []
+      end
+
+      factory :launch_workflow_action_invalid_data,      traits: [:invalid_name]
+      factory :launch_workflow_action_extra_data,        traits: [:invalid_field]
+      factory :launch_workflow_action_empty_workflows,   traits: [:empty_workflows]
+    end
+
   end
 end
-

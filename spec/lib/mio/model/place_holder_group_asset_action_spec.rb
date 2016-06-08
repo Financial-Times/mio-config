@@ -12,22 +12,12 @@ describe 'Mio::Model::PlaceHolderGroupAssetAction' do
   it_behaves_like 'generic_model'
   it_behaves_like 'non_nested_model'
 
-
-  context 'when instantiated with valid options' do
-    let(:create_place_holder_group_asset_action){subject.new(client, model_args)}
-    [:metadata_definition_id].each do |m|
-      it "should respond to ##{m.to_s}" do
-        expect(create_place_holder_group_asset_action).to respond_to(m)
-      end
-    end
-  end
-
   context 'when instantiated with unknown metadata definition' do
     let(:client){build(:valid_client)}
     let(:place_holder_group_asset_action){subject.new(client, build(:place_holder_group_asset_action_unknown_metadata_definition))}
 
     it 'should raise a Mio::Model::NoSuchResource error' do
-      expect{place_holder_group_asset_action.metadata_definition_id(place_holder_group_asset_action.args.metadataDefinition)}.to raise_error(Mio::Model::NoSuchResource)
+      expect{place_holder_group_asset_action.config_hash}.to raise_error(Mio::Model::NoSuchResource)
     end
   end
 

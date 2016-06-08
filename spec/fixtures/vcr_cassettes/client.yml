@@ -1841,66 +1841,6 @@ http_interactions:
   recorded_at: Fri, 29 Apr 2016 11:50:00 GMT
 - request:
     method: get
-    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Authorization:
-      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
-      Content-Type:
-      - application/vnd.nativ.mio.v1+json
-  response:
-    status:
-      code: 200
-      message: 
-    headers:
-      date:
-      - Fri, 29 Apr 2016 11:51:15 GMT
-      server:
-      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
-      pragma:
-      - No-cache
-      cache-control:
-      - no-cache
-      expires:
-      - Thu, 01 Jan 1970 00:00:00 UTC
-      set-cookie:
-      - JSESSIONID=D+6cJUo-JackptAZ7wnQuWzc.-201388908; Path=/api; Secure
-      content-type:
-      - application/json
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET, POST, OPTIONS
-      access-control-allow-headers:
-      - origin, authorization, accept
-      access-control-allow-credentials:
-      - 'true'
-      keep-alive:
-      - timeout=5, max=93
-      connection:
-      - Keep-Alive
-      transfer-encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"workflowDefinitions":[{"id":11118,"uuid":"08f08d75-03d5-4b25-b212-da0ce39ff75e","name":"Workflow","displayName":"Workflow","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
-        Definition","pluralName":"Workflow Definitions","userDefined":false},"enabled":true,"deleted":false,"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/11118","latestVersion":2,"created":"29
-        Apr 2016 11:26:37 +0000","lastModified":"29 Apr 2016 11:47:18 +0000","visibility":[{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4}],"owner":{"id":5,"name":"masteruser","displayName":"masteruser
-        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","accountId":4},"account":{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4},"revision":"2-bdb10b7302259dd0a8f035ac3f95bce99013a31f"}],"totalCount":1,"offset":0,"limit":100}'
-    http_version: 
-  recorded_at: Fri, 29 Apr 2016 11:50:00 GMT
-- request:
-    method: get
     uri: https://master.dev.nativ-systems.com/api/users
     body:
       encoding: US-ASCII
@@ -7810,4 +7750,701 @@ http_interactions:
         masteruser","accountId":4}'
     http_version: 
   recorded_at: Tue, 07 Jun 2016 09:30:52 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/xxx?xxx
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 08:40:12 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '67'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Invalid Mio Object Type: xxx"
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 08:39:48 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"test-ingest-workflow-launcher","pluginClass":"tv.nativ.mio.enterprise.execution.action.file.impl.launch.DefaultLaunchWorkflowCommand","visibilityIds":[4],"type":"launch","runRuleExpression":""}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 10:32:23 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=j3-E9H89JhTC1aw9vi05kGAH.-201388908; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/actions/13714
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":13714,"uuid":"6efaf2f8-e3cc-4f39-b9f0-8993912af470","name":"test-ingest-workflow-launcher","displayName":"test-ingest-workflow-launcher","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/13714","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 10:31:59 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/configuration
+    body:
+      encoding: UTF-8
+      string: '{"workflows":"launchworkflow"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 10:32:24 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '5784'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 500 - java.lang.IllegalArgumentException: Can't set a string value
+        for a container</h1><HR size=\"1\" noshade=\"noshade\"><p><b>JBWEB000309:
+        type</b> JBWEB000066: Exception report</p><p><b>JBWEB000068: message</b> <u>java.lang.IllegalArgumentException:
+        Can't set a string value for a container</u></p><p><b>JBWEB000069: description</b>
+        <u>JBWEB000145: The server encountered an internal error that prevented it
+        from fulfilling this request.</u></p><p><b>JBWEB000070: exception</b> <pre>org.jboss.resteasy.spi.UnhandledException:
+        java.lang.IllegalArgumentException: Can't set a string value for a container\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleApplicationException(SynchronousDispatcher.java:365)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleException(SynchronousDispatcher.java:233)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleInvokerException(SynchronousDispatcher.java:209)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:557)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000071:
+        root cause</b> <pre>java.lang.IllegalArgumentException: Can't set a string
+        value for a container\n\ttv.nativ.mio.metadata.variable.exe.MioContainerInstance.handleSetStringValue(MioContainerInstance.java:128)\n\ttv.nativ.mio.metadata.variable.exe.MioVariableInstance.setStringValue(MioVariableInstance.java:371)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processValueNode(JsonMetadataInstanceReader.java:241)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:184)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processObjectNode(JsonMetadataInstanceReader.java:376)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:192)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.buildMetadataInstance(JsonMetadataInstanceReader.java:148)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.buildMetadataInstance(JsonMetadataInstanceReader.java:109)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:852)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:797)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:781)\n\ttv.nativ.mio.api.services.ActionServiceImpl.setConfiguration(ActionServiceImpl.java:129)\n\tsun.reflect.GeneratedMethodAccessor1333.invoke(Unknown
+        Source)\n\tsun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tjava.lang.reflect.Method.invoke(Method.java:606)\n\torg.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)\n\torg.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:269)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:227)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:216)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000072:
+        note</b> <u>JBWEB000073: The full stack trace of the root cause is available
+        in the JBoss Web/7.4.8.Final-redhat-4 logs.</u></p><HR size=\"1\" noshade=\"noshade\"><h3>JBoss
+        Web/7.4.8.Final-redhat-4</h3></body></html>"
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 10:32:00 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/configuration
+    body:
+      encoding: UTF-8
+      string: '{"workflows":["launchworkflow"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 10:33:24 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '6009'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 500 - java.lang.IllegalArgumentException: Can't set a string value
+        for a container</h1><HR size=\"1\" noshade=\"noshade\"><p><b>JBWEB000309:
+        type</b> JBWEB000066: Exception report</p><p><b>JBWEB000068: message</b> <u>java.lang.IllegalArgumentException:
+        Can't set a string value for a container</u></p><p><b>JBWEB000069: description</b>
+        <u>JBWEB000145: The server encountered an internal error that prevented it
+        from fulfilling this request.</u></p><p><b>JBWEB000070: exception</b> <pre>org.jboss.resteasy.spi.UnhandledException:
+        java.lang.IllegalArgumentException: Can't set a string value for a container\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleApplicationException(SynchronousDispatcher.java:365)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleException(SynchronousDispatcher.java:233)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleInvokerException(SynchronousDispatcher.java:209)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:557)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000071:
+        root cause</b> <pre>java.lang.IllegalArgumentException: Can't set a string
+        value for a container\n\ttv.nativ.mio.metadata.variable.exe.MioContainerInstance.handleSetStringValue(MioContainerInstance.java:128)\n\ttv.nativ.mio.metadata.variable.exe.MioVariableInstance.setStringValue(MioVariableInstance.java:371)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processValueNode(JsonMetadataInstanceReader.java:241)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:184)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processArrayNode(JsonMetadataInstanceReader.java:317)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:188)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processObjectNode(JsonMetadataInstanceReader.java:376)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:192)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.buildMetadataInstance(JsonMetadataInstanceReader.java:148)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.buildMetadataInstance(JsonMetadataInstanceReader.java:109)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:852)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:797)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:781)\n\ttv.nativ.mio.api.services.ActionServiceImpl.setConfiguration(ActionServiceImpl.java:129)\n\tsun.reflect.GeneratedMethodAccessor1333.invoke(Unknown
+        Source)\n\tsun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tjava.lang.reflect.Method.invoke(Method.java:606)\n\torg.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)\n\torg.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:269)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:227)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:216)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000072:
+        note</b> <u>JBWEB000073: The full stack trace of the root cause is available
+        in the JBoss Web/7.4.8.Final-redhat-4 logs.</u></p><HR size=\"1\" noshade=\"noshade\"><h3>JBoss
+        Web/7.4.8.Final-redhat-4</h3></body></html>"
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 10:33:00 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/configuration
+    body:
+      encoding: UTF-8
+      string: '{"workflows":["#<FactoryGirl::Declaration::Implicit:0x007f8973a4cc08>"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 10:35:04 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '6009'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 500 - java.lang.IllegalArgumentException: Can't set a string value
+        for a container</h1><HR size=\"1\" noshade=\"noshade\"><p><b>JBWEB000309:
+        type</b> JBWEB000066: Exception report</p><p><b>JBWEB000068: message</b> <u>java.lang.IllegalArgumentException:
+        Can't set a string value for a container</u></p><p><b>JBWEB000069: description</b>
+        <u>JBWEB000145: The server encountered an internal error that prevented it
+        from fulfilling this request.</u></p><p><b>JBWEB000070: exception</b> <pre>org.jboss.resteasy.spi.UnhandledException:
+        java.lang.IllegalArgumentException: Can't set a string value for a container\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleApplicationException(SynchronousDispatcher.java:365)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleException(SynchronousDispatcher.java:233)\n\torg.jboss.resteasy.core.SynchronousDispatcher.handleInvokerException(SynchronousDispatcher.java:209)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:557)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000071:
+        root cause</b> <pre>java.lang.IllegalArgumentException: Can't set a string
+        value for a container\n\ttv.nativ.mio.metadata.variable.exe.MioContainerInstance.handleSetStringValue(MioContainerInstance.java:128)\n\ttv.nativ.mio.metadata.variable.exe.MioVariableInstance.setStringValue(MioVariableInstance.java:371)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processValueNode(JsonMetadataInstanceReader.java:241)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:184)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processArrayNode(JsonMetadataInstanceReader.java:317)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:188)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processObjectNode(JsonMetadataInstanceReader.java:376)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.processNode(JsonMetadataInstanceReader.java:192)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.buildMetadataInstance(JsonMetadataInstanceReader.java:148)\n\ttv.nativ.mio.metadata.jsonreader.JsonMetadataInstanceReader.buildMetadataInstance(JsonMetadataInstanceReader.java:109)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:852)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:797)\n\ttv.nativ.mio.api.services.object.ObjectServiceImpl.setMioObjectMetadataAndGetResponse(ObjectServiceImpl.java:781)\n\ttv.nativ.mio.api.services.ActionServiceImpl.setConfiguration(ActionServiceImpl.java:129)\n\tsun.reflect.GeneratedMethodAccessor1333.invoke(Unknown
+        Source)\n\tsun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tjava.lang.reflect.Method.invoke(Method.java:606)\n\torg.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)\n\torg.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:269)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:227)\n\torg.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:216)\n\torg.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\n\torg.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)\n\torg.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)\n\torg.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)\n\tjavax.servlet.http.HttpServlet.service(HttpServlet.java:847)\n\ttv.nativ.mio.api.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:83)\n\ttv.nativ.mio.api.filter.JSONPRequestFilter.doFilter(JSONPRequestFilter.java:67)\n\torg.jbpm.web.JbpmContextFilter.doFilter(JbpmContextFilter.java:124)\n\ttv.nativ.mio.api.filter.MioRestContextFilter.doFilter(MioRestContextFilter.java:36)\n</pre></p><p><b>JBWEB000072:
+        note</b> <u>JBWEB000073: The full stack trace of the root cause is available
+        in the JBoss Web/7.4.8.Final-redhat-4 logs.</u></p><HR size=\"1\" noshade=\"noshade\"><h3>JBoss
+        Web/7.4.8.Final-redhat-4</h3></body></html>"
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 10:34:40 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/configuration
+    body:
+      encoding: UTF-8
+      string: '{"workflows":[{"name":"ingest-workflow-test","workFlowStringVariables":[{"key":"teststringkey","type":"string","value":"teststring"}],"workFlowObjectVariables":[{"key":"testobjectkey","type":"object","value":"13553"}],"workflowDateVariables":[{"key":"","type":"date","value":"01-01-2016
+        11:00:00"}]}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 10:46:56 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '108'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "tv.nativ.mio.metadata.variable.def.MioVariableNotFoundException: name"
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 10:46:32 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/configuration
+    body:
+      encoding: UTF-8
+      string: '{"workflows":[]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 10:56:07 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=gUCGbLx-5NCMXtYCyAUcax8r.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"validationErrors":[{"id":105011,"displayName":"Workflow","path":"Launch
+        workflow:workflows[0]:Workflow[0]","message":"Required value is not set for
+        Workflow."}],"valid":false}'
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 10:55:43 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/configuration
+    body:
+      encoding: UTF-8
+      string: '{"workflows":[{"Workflow":{"id":13707},"inherit-variables":"true","workflow-string-variable":[{"string-variable-key":{"value":"test-key","isExpression":false},"string-variable-value":{"value":"test-value","isExpression":false}}],"workflow-object-variable":[{"object-variable-key":{"value":"test-key","isExpression":false},"object-variable-value":{"value":"222","isExpression":false}}],"workflow-date-variable":[{"date-variable-key":{"value":"test-key","isExpression":false},"date-variable-value":{"value":"01-01-2016
+        15:00:00","isExpression":false}}]}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 11:07:18 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=Q-37yqOfgoSNUeN0+DbhpUwS.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":105009,"instance":{"workflows":[{"Workflow":{"id":"13707"},"inherit-variables":true,"workflow-string-variable":[{"string-variable-key":{"value":"test-key","isExpression":false},"string-variable-value":{"value":"test-value","isExpression":false}}],"workflow-object-variable":[{"object-variable-key":{"value":"test-key","isExpression":false},"object-variable-value":{"id":"222"}}],"workflow-date-variable":[{"date-variable-key":{"value":"test-key","isExpression":false},"date-variable-value":{"value":"01-01-2016
+        15:00:00","isExpression":false}}]}]},"definitionId":109052,"definition":[{"id":109053,"name":"workflows","displayName":"Workflows","description":null,"type":"complex","multiplicity":"1..*","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":109054,"name":"Workflow","displayName":"Workflow","description":"Name
+        of the workflow definition to be launched","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Workflow
+        Definition"},{"id":109055,"name":"inherit-variables","displayName":"Inherit
+        Variables?","description":"Inherit variables from the parent workflow instance?","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"checkbox","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":109056,"name":"true","displayName":"Yes","default":true,"value":"true"},{"id":109057,"name":"false","displayName":"No","default":false,"value":"false"}]},{"id":109058,"name":"workflow-string-variable","displayName":"Workflow
+        String Variable","description":null,"type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":109059,"name":"string-variable-key","displayName":"Key","description":"Key
+        of the string variable","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":109060,"name":"string-variable-value","displayName":"Value","description":"Value
+        of the string variable","type":"text","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":109061,"name":"workflow-object-variable","displayName":"Workflow
+        Object Variable","description":null,"type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":109062,"name":"object-variable-key","displayName":"Key","description":"Key
+        of the object variable","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":109063,"name":"object-variable-value","displayName":"Value","description":"Value
+        of the object variable","type":"object","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Workflow
+        Object"}]},{"id":109064,"name":"workflow-date-variable","displayName":"Workflow
+        Date Variable","description":null,"type":"complex","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":109065,"name":"date-variable-key","displayName":"Key","description":"Key
+        of the object variable","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":109066,"name":"date-variable-value","displayName":"Value","description":"Date
+        value","type":"time","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"time","format":"dd-MM-yyyy
+        HH:mm:ss","formatDescription":"dd-MM-yyyy HH:mm:ss","validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":109067,"name":"workspace","displayName":"Workflow
+        Workspace","description":"\n                            Workspace in which
+        to create the launched workflow. If this is not configured, the workspace
+        of the job will be used.","type":"object","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"typeahead","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"objectType":"Workspace"}]}]}'
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 11:06:54 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 11:07:19 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=aXFzueQLfUgJf+HVBWok6OFb.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 11:06:55 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions/13714/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 11:07:19 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=ZWeIyWGHJ1g0NXBOSRnxJh1T.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":13714,"uuid":"6efaf2f8-e3cc-4f39-b9f0-8993912af470","name":"test-ingest-workflow-launcher","displayName":"test-ingest-workflow-launcher","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/13714","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 11:06:55 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/assets/13553
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 11:56:32 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=wcRC1im1FrD5sw0yp59hKXVL.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":13553,"name":"JEMSFANTASTICPROJECT","displayName":"JEMSFANTASTICPROJECT","objectType":{"id":2,"name":"group-asset","href":"https://master.dev.nativ-systems.com/api/objectTypes/2","displayName":"Group
+        Asset","pluralName":"Group Assets","userDefined":false},"variant":{"id":405,"name":"project-group-variant","href":"https://master.dev.nativ-systems.com/api/variants/405"},"isGroup":true,"href":"https://master.dev.nativ-systems.com/api/assets/13553","owner":{"id":5,"name":"masteruser","displayName":"masteruser
+        masteruser","href":"https://master.dev.nativ-systems.com/api/users/5","email":"videyo@ft.com","accountId":4},"approved":false,"exists":true,"deleted":false,"purged":false,"archived":false,"created":"06
+        Jun 2016 09:14:34 +0000","lastModified":"06 Jun 2016 09:14:36 +0000","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4},"workspace":{"id":3,"name":"Master Account","objectType":{"id":30,"name":"account-workspace","href":"https://master.dev.nativ-systems.com/api/objectTypes/30","displayName":"Account
+        Workspace","pluralName":"Account Workspaces","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}}'
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 11:56:08 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/assets/9999999999
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      date:
+      - Wed, 08 Jun 2016 12:24:23 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '67'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "Asset: 9999999999 not found."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 12:23:59 GMT
 recorded_with: VCR 3.0.1

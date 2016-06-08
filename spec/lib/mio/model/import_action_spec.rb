@@ -16,7 +16,7 @@ describe 'Mio::Model::ImportAction' do
 
     context "with unknown metadataDefinition" do
       it 'should raise a Mio::Model::NoSuchResource error' do
-        expect{import_action.metadata_definition_id(import_action.args.metadataDefinition)}.to raise_error(Mio::Model::NoSuchResource)
+        expect{import_action.config_hash}.to raise_error(Mio::Model::NoSuchResource)
       end
     end
   end

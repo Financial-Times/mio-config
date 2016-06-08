@@ -19,6 +19,18 @@ class Mio
       @agent.basic_auth(username, password)
     end
 
+    def find resource, id, opts={}, accept='application/json'
+      url = path resource, id
+      response = get url, opts, accept
+      unless response.success? || response.status == 404
+        raise Mio::Client::LoadOfBollocks, "GET on #{url}, returned #{response.status}"
+      end
+
+      h = make_object response.body
+      h[:status] = response.status
+      h
+    end
+
     def find_all resource, opts={}, accept='application/json'
       url = path(resource)
       response = get url, opts, accept

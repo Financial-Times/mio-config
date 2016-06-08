@@ -18,7 +18,7 @@ describe 'Mio::Model::EmailMessageAction' do
     let(:email_message_action){subject.new(client, build(:email_message_action_unknown_message_template))}
 
     it 'should raise a Mio::Model::NoSuchResource error' do
-      expect{email_message_action.get_message_template_id(email_message_action.args.template)}.to raise_error(Mio::Model::NoSuchResource)
+      expect{email_message_action.config_hash}.to raise_error(Mio::Model::NoSuchResource)
     end
   end
 end

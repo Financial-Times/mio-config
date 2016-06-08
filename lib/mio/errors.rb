@@ -10,6 +10,8 @@ class Mio
     class DataValueError < ArgumentError ; end
     class NoSuchResource < ArgumentError ; end
     class EmptyField < ArgumentError ; end
+    class DateVariableInvalid < ArgumentError ; end
+    class ObjectVariableInvalid < ArgumentError ; end
   end
 
   class Config

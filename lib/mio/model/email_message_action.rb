@@ -21,20 +21,13 @@ class Mio
         }
       end
 
-      def get_message_template_id mesage_template_name
-        r = 'messageTemplates'
-        message_templates = @client.find_all(r)
-
-        md = message_templates[r].find{|md| md['name'] == mesage_template_name}
-        if md.nil?
-          raise Mio::Model::NoSuchResource, 'No such message template [' + mesage_template_name + ']'
+      def config_hash
+        template = @search.find_messageTemplates_by_name(@args.template).first
+        if template.nil?
+          raise Mio::Model::NoSuchResource, 'No such template [' + @args.template + ']'
         end
 
-        md['id']
-      end
-
-      def config_hash
-        { 'message-template': { id: get_message_template_id(@args.template) },
+        { 'message-template': { id: template['id'] },
           recipients: { expression: [ { value: @args.recipientExpression, isExpression: false } ] }
         }
       end

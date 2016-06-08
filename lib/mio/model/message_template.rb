@@ -6,7 +6,7 @@ class Mio
       field :name, String, 'Name of the Email Message Action'
       field :visibility, Array, 'Ids of the accounts which may see the import action', [4]
       field :subject, String, 'Subject of email'
-      field :priority, String, 'Email Priority - Highest, High, Normal, Low, Lowest', 'Normal'
+      field :priority, String, 'Email Priority - Highest, High, Normal, Low, Lowest', 'Normal', /^(Highest|High|Normal|Low|Lowest)$/
       field :template, String, 'Email template HTML'
 
       field :enable, Symbol, ':true or :false', :true

@@ -6,12 +6,12 @@ class Mio
 
         field :name, String, 'Metadata Definition Name'
         field :displayName, String, 'Display name'
-        field :type, String, 'Metdata type text|single-option|checkbox|image', 'textarea'
+        field :type, String, 'Metdata type tsingle-option|text|url|boolean|image', 'text', /^(single-option|text|url|boolean|image)$/
         field :description, String, 'Metadata Definition Description'
         field :searchable, Symbol, 'Indexed and searchable', :true
         field :editable, Symbol, 'Editable field', :true
         field :required, Symbol, 'Required mandatory metadata item', :true
-        field :formType, String, 'Form control type'
+        field :formType, String, 'Form control type', 'textarea' , /^(select|textarea|text|checkbox|file)$/
         field :maxLength, Fixnum, 'MaxLength', -1
         field :validationHandler, String, 'Validation handler', ''
         field :options, Array, 'Array of options', []

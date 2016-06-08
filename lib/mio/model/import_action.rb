@@ -24,19 +24,12 @@ class Mio
         }
       end
 
-      def metadata_definition_id metadata_definition_name
-        r = 'metadataDefinitions'
-        metadata_definitions = @client.find_all(r)
-
-        md = metadata_definitions[r].find{|md| md['name'] == metadata_definition_name}
-        if md.nil?
-          raise Mio::Model::NoSuchResource, 'No such metadata definition[' + metadata_definition_name + ']'
+      def config_hash
+        metadata_definition = @search.find_metadataDefinitions_by_name(@args.metadataDefinition).first
+        if metadata_definition.nil?
+          raise Mio::Model::NoSuchResource, 'No such metadata definition [' + @args.metadataDefinition + ']'
         end
 
-        md['id']
-      end
-
-      def config_hash
         {
           "source-file": {
             "source": {
@@ -84,7 +77,7 @@ class Mio
             },
             "metadata": {
               "metadata-definition": {
-                "id": metadata_definition_id(@args.metadataDefinition)
+                "id": metadata_definition['id']
               },
               "source-json-variable": {
                 "value": @args.sourceJsonVariable,
