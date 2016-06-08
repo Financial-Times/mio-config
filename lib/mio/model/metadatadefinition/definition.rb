@@ -85,6 +85,47 @@ class Mio
           end
         end
 
+        def multiple_identical_options key
+          hash_count = @args.options.each_with_object(Hash.new(0)) { |option, count| count[option[key.to_sym]] += 1 }
+          error_msg = ''
+          hash_count.each do |key, count|
+            if count > 1
+              error_msg += error_msg == '' ? "#{key} occurs #{count} times" : ", #{key} occurs #{count} times"
+            end
+          end
+          unless error_msg == ''
+            raise Mio::Model::DataValueError, "Multiple identical options not allowed [" + error_msg + "]"
+          end
+        end
+
+        def boolean_option_check
+          if @args.type == 'boolean'
+            @args.options.each do |option|
+              unless option[:name] =~ /^(true|false)$/
+                raise Mio::Model::DataValueError, "Boolean option name must be true|false"
+              end
+              unless option[:value] =~ /^(true|false)$/
+                raise Mio::Model::DataValueError, "Boolean option value must be true|false"
+              end
+              if option[:name] == 'true' && option[:value] != 'true'
+                raise Mio::Model::DataValueError, "true option name must have true option value"
+              end
+              if option[:name] == 'false' && option[:value] != 'false'
+                raise Mio::Model::DataValueError, "false option name must have false option value"
+              end
+            end
+          end
+        end
+
+        def validate
+          super
+          multiple_identical_options 'name'
+          multiple_identical_options 'value'
+          boolean_option_check
+          true
+        end
+        alias_method :valid?, :validate
+
       end
     end
   end

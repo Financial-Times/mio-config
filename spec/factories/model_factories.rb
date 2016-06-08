@@ -73,6 +73,38 @@ FactoryGirl.define do
 
       factory :text_metadata_definition_invalid_data, traits: [:invalid_name]
       factory :text_metadata_definition_extra_data,   traits: [:invalid_field]
+
+      factory :definition_multiple_same_name_options do
+        options [{name: 'test', displayName: 'True', default: true, value: 'true'},
+                 {name: 'test', displayName: 'True', default: true, value: 'true'}]
+      end
+
+      factory :boolean_defintion do
+        type 'boolean'
+
+        factory :boolean_bad_name do
+          options [{name: 'test', displayName: 'True', default: true, value: 'true'},
+                   {name: 'false', displayName: 'True', default: true, value: 'false'}]
+        end
+
+        factory :boolean_name_value_dont_match do
+          options [{name: 'true', displayName: 'True', default: true, value: 'false'},
+                   {name: 'false', displayName: 'True', default: true, value: 'true'}]
+        end
+
+        factory :boolean_value_not_boolean do
+          options [{name: 'true', displayName: 'True', default: true, value: 'true'},
+                   {name: 'false', displayName: 'True', default: true, value: 'xxxx'}]
+        end
+
+        factory :boolean_name_false_value_not_false do
+          options [{name: 'false', displayName: 'True', default: true, value: 'true'},
+                   {name: 'true', displayName: 'True', default: true, value: 'true'}
+                   ]
+        end
+
+      end
+
     end
 
   end
