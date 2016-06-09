@@ -208,6 +208,8 @@ FactoryGirl.define do
       variant "project-variant"
       metadataDefinition "project-metadata"
       sourceJsonVariable "testJsonVariable"
+      s3PathVariable '${variables.assetS3Path}'
+      assetTitleVariable '${variables.assetTitle}'
       visibility [4]
 
       factory :import_action_invalid_data, traits: [:invalid_name]

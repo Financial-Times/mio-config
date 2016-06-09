@@ -7,6 +7,8 @@ class Mio
       field :secret, String, 'AWS secret'
       field :bucket, String, 'AWS bucket name'
       field :variant, String, 'Variant name'
+      field :s3PathVariable, String, 'S3 Path variable', '${variables.assetS3Path}'
+      field :assetTitleVariable, String, 'S3 asset title variable', '${variables.assetTitle}'
       field :metadataDefinition, String, 'Metadata definition id'
       field :visibility, Array, 'Ids of the accounts which may see the import action', [4]
       field :sourceJsonVariable, String, 'Json Variable to grab metadata from'
@@ -39,7 +41,7 @@ class Mio
                   "isExpression": false
                 },
                 "path": {
-                  "value": "/${variables.externalFileName}",
+                  "value": @args.s3PathVariable,
                   "isExpression": false
                 },
                 "key": {
@@ -61,7 +63,7 @@ class Mio
           },
           "asset-details": {
             "title": {
-              "value": "${variables.externalFilename}",
+              "value": @args.assetTitleVariable,
               "isExpression": false
 
             },
