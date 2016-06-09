@@ -103,6 +103,11 @@ FactoryGirl.define do
                    ]
         end
 
+        factory :boolean_single_option do
+          options [{name: 'false', displayName: 'True', default: true, value: 'true'}
+                  ]
+        end
+
       end
 
     end

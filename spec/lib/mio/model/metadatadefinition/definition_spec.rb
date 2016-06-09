@@ -65,4 +65,14 @@ describe 'Mio::Model::MetadataDefinition::Definition' do
     end
   end
 
+
+  context 'when boolean has single option' do
+    let(:client){build(:valid_client)}
+    let(:definition){subject.new(client, build(:boolean_single_option))}
+
+    it 'should raise a Mio::Model::DateVariableInvalid error' do
+      expect{definition.validate}.to raise_error(Mio::Model::DataValueError)
+    end
+  end
+
 end
