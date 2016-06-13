@@ -497,5 +497,25 @@ FactoryGirl.define do
       factory :launch_workflow_action_empty_workflows,   traits: [:empty_workflows]
     end
 
+    factory :extractresouce, traits: [:start_enable] do
+      name 'extraction'
+      visibility [4]
+
+      factory :extractresouce_invalid_data,      traits: [:invalid_name]
+      factory :extractresouce_extra_data,        traits: [:invalid_field]
+    end
+
+    factory :extract, traits: [:start_enable] do
+      name 'test-key-frames-extractor'
+      visibility [4]
+      autoApproveFrames :true
+      masterFrame 10
+      setFramesOfParentAsset :true
+      numberOfKeyFramesToExtract 10
+
+      factory :extract_invalid_data,      traits: [:invalid_name]
+      factory :extract_extra_data,        traits: [:invalid_field]
+    end
+
   end
 end

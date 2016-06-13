@@ -8583,4 +8583,663 @@ http_interactions:
         Name","description":"Optional membership name to set on the group-member relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]}'
     http_version: 
   recorded_at: Thu, 09 Jun 2016 13:19:11 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: UTF-8
+      string: '{"name":"test-extract","pluginClass":"tv.nativ.mio.enterprise.resources.impl.process.extract.MioExtractResource","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 09:51:54 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      www-authenticate:
+      - Basic realm="Realm"
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '1062'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 401 - </h1><HR size="1" noshade="noshade"><p><b>JBWEB000309: type</b>
+        JBWEB000067: Status report</p><p><b>JBWEB000068: message</b> <u></u></p><p><b>JBWEB000069:
+        description</b> <u>JBWEB000121: This request requires HTTP authentication.</u></p><HR
+        size="1" noshade="noshade"><h3>JBoss Web/7.4.8.Final-redhat-4</h3></body></html>'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 09:51:22 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: UTF-8
+      string: '{"name":"testing-extract","pluginClass":"tv.nativ.mio.enterprise.resources.impl.process.extract.MioExtractResource","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 10:22:59 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      www-authenticate:
+      - Basic realm="Realm"
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '1062'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 401 - </h1><HR size="1" noshade="noshade"><p><b>JBWEB000309: type</b>
+        JBWEB000067: Status report</p><p><b>JBWEB000068: message</b> <u></u></p><p><b>JBWEB000069:
+        description</b> <u>JBWEB000121: This request requires HTTP authentication.</u></p><HR
+        size="1" noshade="noshade"><h3>JBoss Web/7.4.8.Final-redhat-4</h3></body></html>'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 10:22:27 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources
+    body:
+      encoding: UTF-8
+      string: '{"name":"extraction","pluginClass":"tv.nativ.mio.enterprise.resources.impl.process.extract.MioExtractResource","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 10:37:41 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=+mwgdAgQpPc-QPbzTVOF1iWJ.-201388932; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/resources/15947
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":15947,"uuid":"275e5145-bced-4b27-aae7-1a53abfb77d1","name":"extraction","displayName":"extraction","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/15947","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 10:37:09 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/resources/15947/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 10:37:42 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=yDB2q+Q3CF0pDQKq+iIFGYJM.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 10:37:10 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/resources/15947/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 10:37:43 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=Og8CoOkrBIOQW2TXsUCsX6Lw.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":15947,"uuid":"275e5145-bced-4b27-aae7-1a53abfb77d1","name":"extraction","displayName":"extraction","objectType":{"id":15,"name":"resource","href":"https://master.dev.nativ-systems.com/api/objectTypes/15","displayName":"Resource","pluralName":"Resources","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/resources/15947","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 10:37:11 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"test-key-frame-extractor","pluginClass":"tv.nativ.mio.enterprise.execution.action.file.impl.extract.DefaultExtractCommand","type":"extract","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 11:51:23 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      www-authenticate:
+      - Basic realm="Realm"
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '1062'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 401 - </h1><HR size="1" noshade="noshade"><p><b>JBWEB000309: type</b>
+        JBWEB000067: Status report</p><p><b>JBWEB000068: message</b> <u></u></p><p><b>JBWEB000069:
+        description</b> <u>JBWEB000121: This request requires HTTP authentication.</u></p><HR
+        size="1" noshade="noshade"><h3>JBoss Web/7.4.8.Final-redhat-4</h3></body></html>'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 11:50:50 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"test-key-frame-extractors","pluginClass":"tv.nativ.mio.enterprise.execution.action.file.impl.extract.DefaultExtractCommand","type":"extract","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 11:52:57 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      www-authenticate:
+      - Basic realm="Realm"
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '1062'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 401 - </h1><HR size="1" noshade="noshade"><p><b>JBWEB000309: type</b>
+        JBWEB000067: Status report</p><p><b>JBWEB000068: message</b> <u></u></p><p><b>JBWEB000069:
+        description</b> <u>JBWEB000121: This request requires HTTP authentication.</u></p><HR
+        size="1" noshade="noshade"><h3>JBoss Web/7.4.8.Final-redhat-4</h3></body></html>'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 11:52:25 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"test-key-frames-extractor","pluginClass":"tv.nativ.mio.enterprise.execution.action.file.impl.extract.DefaultExtractCommand","type":"extract","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 11:58:07 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=9ux-PkrB73Z0lzRf2WGGI8hd.-201388932; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/actions/16379
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":16379,"uuid":"c89e1d70-d26c-4e4c-a388-5f1c4b90a95f","name":"test-key-frames-extractor","displayName":"test-key-frames-extractor","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/16379","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 11:57:36 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/16379/configuration
+    body:
+      encoding: UTF-8
+      string: '{"extract-metadata":false,"extract-frames":{"approve-frames":"true","set-master-frame":10,"set-frames-on-parent-asset":"true","fixed-number":10}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 11:58:08 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=e+9yNTLMam0Bk3rvcZ0f0Qf7.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":112049,"instance":{"extract-metadata":false,"extract-frames":{"approve-frames":true,"set-master-frame":10,"set-frames-on-parent-asset":true,"fixed-number":10}},"definitionId":110007,"definition":[{"id":110008,"name":"extract-metadata","displayName":"Extract
+        Metadata","description":"Whether or not to extract metadata.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":110009,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":110010,"name":"No","displayName":"No","default":true,"value":"false"}]},{"id":110011,"name":"extract-frames","displayName":"Extract
+        Frames","description":"Whether or not to extract frames if the asset has a
+        video stream.","type":"complex","multiplicity":"0..1","searchable":false,"editable":false,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110012,"name":"approve-frames","displayName":"Approve
+        Frames","description":"Set all extracted frames as approved automatically.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":110013,"name":"Yes","displayName":"Yes","default":true,"value":"true"},{"id":110014,"name":"No","displayName":"No","default":false,"value":"false"}]},{"id":110015,"name":"set-master-frame","displayName":"Set
+        Master Frame","description":"Approve and set the n-th extracted frame as master.
+        If n is greater than the number of frames, the last frame will be used.","type":"integer","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":"value
+        > 0","maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":1},{"id":110016,"name":"set-frames-on-parent-asset","displayName":"Set
+        Frames On Parent Asset","description":"Set the extracted frames to the parent
+        asset if it exists, otherwise set on the current asset.","type":"boolean","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":110017,"name":"Yes","displayName":"Yes","default":false,"value":"true"},{"id":110018,"name":"No","displayName":"No","default":true,"value":"false"}]},{"id":110019,"name":"create-tiled-image","displayName":"Create
+        Tiled Image","description":"Create images from the extracted frames. Individual
+        extracted frames will be discarded.","type":"complex","multiplicity":"0..1","searchable":false,"editable":false,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110020,"name":"title","displayName":"Title","description":"Optional
+        title for tiled image. Use %index for an auto-incremented title. Use %interval
+        to include the time interval between frames if using Fixed Interval.","type":"string","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110021,"name":"tiled-image-output","displayName":"Tiled
+        Image Output","description":"Specify output of tiled keyframe image, this
+        may lead to produce multiple tiled keyframes.\n\t\t\t\t\t\t\t\t","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110022,"name":"frames-per-row","displayName":"Frames
+        Per Row","description":"The number of keyframe images want to keep in a row
+        of tiled image.\n\t\t\t\t\t\t\t\t\t\t","type":"integer","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":"value
+        > 0","maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":40},{"id":110023,"name":"number-of-rows","displayName":"Number
+        of Rows","description":"Number of row want to produce in a tiled image.\n\t\t\t\t\t\t\t\t\t\t","type":"integer","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":"value
+        > 0","maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":25},{"id":110024,"name":"image-format","displayName":"Image
+        Format","description":"The format for the resulting tiled image.","type":"single-option","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"radio","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":110025,"name":"PNG","displayName":"PNG","default":true,"value":"PNG"},{"id":110026,"name":"JPG","displayName":"JPG","default":false,"value":"JPEG"}]}]},{"id":110027,"name":"keyframe-output","displayName":"Keyframe
+        Output","description":"Output format specification for each tiled frame.","type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110028,"name":"width","displayName":"Target
+        Width (px)","description":"Width of each frame tile desired. Ignored if Resize
+        Mode = Fixed Height or Scale.","type":"integer","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110029,"name":"height","displayName":"Target
+        Height (px)","description":"Height of each frame tile desired. Ignored if
+        Resize Mode = Fixed Width or Scale.","type":"integer","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110030,"name":"width-scale","displayName":"Width
+        Scale (> 0.0)","description":"Scale to be applied to each frame tile if Resize
+        Mode = Scale.","type":"double","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#,##0.###","formatDescription":"#,##0.###","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110031,"name":"height-scale","displayName":"Height
+        Scale (> 0.0)","description":"Scale to be applied to each frame tile if Resize
+        Mode = Scale.","type":"double","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#,##0.###","formatDescription":"#,##0.###","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110032,"name":"resize-mode","displayName":"Resize
+        Mode","description":"Resize Mode","type":"single-option","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"select","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"options":[{"id":110033,"name":"distort","displayName":"Distort","default":false,"value":"DISTORT"},{"id":110034,"name":"crop","displayName":"Crop","default":false,"value":"CROP"},{"id":110035,"name":"scale","displayName":"Scale","default":false,"value":"SCALE"},{"id":110036,"name":"fixed-width","displayName":"Fixed
+        Width","default":false,"value":"FIXED_WIDTH"},{"id":110037,"name":"fixed-height","displayName":"Fixed
+        Height","default":false,"value":"FIXED_HEIGHT"},{"id":110038,"name":"max-both","displayName":"Max
+        Both","default":false,"value":"MAX_BOTH"}]}]}]},{"id":110039,"name":"fixed-number","displayName":"Fixed
+        Number","description":"Number of frames to extract at equally spaced intervals.","type":"integer","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":"value
+        > 0","maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":10},{"id":110040,"name":"fixed-time","displayName":"Fixed
+        Time","description":"Fixed time in seconds to extract a frame (if Fixed Number
+        not set).","type":"complex","multiplicity":"0..1","searchable":false,"editable":false,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110041,"name":"time","displayName":"Time","description":"The
+        time to extract from in seconds.","type":"integer","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":"value
+        > 0","maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110042,"name":"time-range","displayName":"Time
+        Range","description":"Time range in seconds around specified time from which
+        each and every frame should be extracted.","type":"integer","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":"value
+        > 0","maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":110043,"name":"fixed-interval","displayName":"Fixed
+        Interval","description":"Extract frames at equally space intervals (if Fixed
+        Number and Fixed Time not set).","type":"complex","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110044,"name":"interval","displayName":"Interval","description":"Time
+        interval in seconds starting from zero at which to extract frames.","type":"integer","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":"value
+        > 0","maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110045,"name":"maximum-limit","displayName":"Maximum
+        Limit","description":"If the interval specified would result in more than
+        this number of keyframes, the interval will be adjusted (to a whole second
+        value) to ensure this limit is met.","type":"integer","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 11:57:37 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/16379/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 11:58:09 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=BxUammBLcC6yXfACfBh7efV7.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 11:57:37 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions/16379/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 11:58:10 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=-lDWLdZLf1P495GPe9W2M2Og.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":16379,"uuid":"c89e1d70-d26c-4e4c-a388-5f1c4b90a95f","name":"test-key-frames-extractor","displayName":"test-key-frames-extractor","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/16379","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 11:57:38 GMT
 recorded_with: VCR 3.0.1
