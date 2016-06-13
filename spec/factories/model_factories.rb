@@ -37,6 +37,7 @@ FactoryGirl.define do
   factory :transition, class: OpenStruct do
     from 'start 1'
     to 'end 1'
+    name 'start to end'
 
     factory :transition_invalid_data do
       from 123
@@ -233,8 +234,8 @@ FactoryGirl.define do
     end
 
     factory :workflow do
-      name 'Workflow'
-      transitions [{from: 'Start 1', to: 'End 1'}]
+      name 'WorkflowTest'
+      transitions [{from: 'Start 1', to: 'End 1', name: 'start to end'}]
       nodes [{name: 'End 1', path: '/e', type: 'END', assetContext: ''},
              {name: 'Start 1', path: '/s', type: 'START', assetContext: ''}]
       enable :true

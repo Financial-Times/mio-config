@@ -22,6 +22,6 @@ end
 
 shared_examples 'masteruser_masteruser_client' do
   it 'configures basic auth correctly' do
-    expect(client.instance_variable_get(:@agent).headers['Authorization']).to eql 'Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy'
+    expect(client.instance_variable_get(:@agent).headers['Authorization']).to eql 'Basic bWFzdGVydXNlcjptNHN0M3J1czNy'
   end
 end

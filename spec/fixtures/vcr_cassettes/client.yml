@@ -9242,4 +9242,352 @@ http_interactions:
         masteruser","accountId":4}'
     http_version: 
   recorded_at: Mon, 13 Jun 2016 11:57:38 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/11118/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"name":"End 1","path":"/e","type":"END","assetContext":"","layout":{"width":120,"height":45,"x":100,"y":100}},{"name":"Start
+        1","path":"/s","type":"START","assetContext":"","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[{"name":"start
+        to end","from":{"id":102178,"name":"Start 1","path":"/Start 1"},"to":{"id":102177,"name":"End
+        1","path":"/End 1"}}],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 16:24:53 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      www-authenticate:
+      - Basic realm="Realm"
+      content-type:
+      - text/html;charset=utf-8
+      content-length:
+      - '1062'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '<html><head><title>JBoss Web/7.4.8.Final-redhat-4 - JBWEB000064: Error
+        report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065:
+        HTTP Status 401 - </h1><HR size="1" noshade="noshade"><p><b>JBWEB000309: type</b>
+        JBWEB000067: Status report</p><p><b>JBWEB000068: message</b> <u></u></p><p><b>JBWEB000069:
+        description</b> <u>JBWEB000121: This request requires HTTP authentication.</u></p><HR
+        size="1" noshade="noshade"><h3>JBoss Web/7.4.8.Final-redhat-4</h3></body></html>'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 16:24:18 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions
+    body:
+      encoding: UTF-8
+      string: '{"name":"WorkflowTest","visibilityIds":[4]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 16:28:42 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=G0T2iNuZ5xdrZMDTcV35MTah.-201388932; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/workflowDefinitions/16669
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":16669,"uuid":"551af76e-7974-4fa0-9579-cd0167aa2be4","name":"WorkflowTest","displayName":"WorkflowTest","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/16669","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 16:28:07 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/16669/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"name":"End 1","path":"/e","type":"END","assetContext":"","layout":{"width":120,"height":45,"x":100,"y":100}},{"name":"Start
+        1","path":"/s","type":"START","assetContext":"","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 16:28:43 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=aHpqbWUI7hmkjHRlyGnbH-6M.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"WorkflowTest","version":1,"width":900,"height":1024,"nodes":[{"id":102777,"name":"End
+        1","path":"/End 1","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"id":102778,"name":"Start
+        1","path":"/Start 1","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[],"image":"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcG\r\nBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwM\r\nDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAEsASwDASIA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKAP/2Q==\r\n"}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 16:28:08 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/16669/structure
+    body:
+      encoding: UTF-8
+      string: '{"nodes":[{"name":"End 1","path":"/e","type":"END","assetContext":"","layout":{"width":120,"height":45,"x":100,"y":100}},{"name":"Start
+        1","path":"/s","type":"START","assetContext":"","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[{"name":"start
+        to end","from":{"id":102778,"name":"Start 1","path":"/Start 1"},"to":{"id":102777,"name":"End
+        1","path":"/End 1"}}],"width":900,"height":1024}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 16:28:44 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=jEbzgLsjFNbMzpAipw8Jg2va.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"WorkflowTest","version":2,"width":900,"height":1024,"nodes":[{"id":102779,"name":"End
+        1","path":"/End 1","type":"END","layout":{"width":120,"height":45,"x":100,"y":100}},{"id":102780,"name":"Start
+        1","path":"/Start 1","type":"START","layout":{"width":120,"height":45,"x":320,"y":100}}],"transitions":[{"id":101975,"name":"start
+        to end","description":null,"from":{"id":102780,"name":"Start 1","path":"/Start
+        1"},"to":{"id":102779,"name":"End 1","path":"/End 1"},"layout":{"labelX":null,"labelY":null,"bendPoints":[]}}],"image":"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcG\r\nBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwM\r\nDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAEsASwDASIA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA\r\nooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\r\niigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\r\nKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo\r\nAKKKKACiiigAooooAKKKKAP/2Q==\r\n"}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 16:28:09 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/16669/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 16:28:45 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=KuV41dGIZjcxfeWfJDRnlQ-W.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 16:28:09 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/workflowDefinitions/16669/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 13 Jun 2016 16:28:45 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=XSN2kk37fNPYx2FEjmI67rkU.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=96
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":16669,"uuid":"551af76e-7974-4fa0-9579-cd0167aa2be4","name":"WorkflowTest","displayName":"WorkflowTest","objectType":{"id":11,"name":"workflow-definition","href":"https://master.dev.nativ-systems.com/api/objectTypes/11","displayName":"Workflow
+        Definition","pluralName":"Workflow Definitions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/workflowDefinitions/16669","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Mon, 13 Jun 2016 16:28:10 GMT
 recorded_with: VCR 3.0.1
