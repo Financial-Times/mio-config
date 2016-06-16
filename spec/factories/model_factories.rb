@@ -211,6 +211,10 @@ FactoryGirl.define do
       sourceJsonVariable "testJsonVariable"
       s3PathVariable '${variables.assetS3Path}'
       assetTitleVariable '${variables.assetTitle}'
+      creationContext 'INGEST'
+      parentAssetId '${variables.test}'
+      parentRelationName ''
+      runRuleExpression ''
       visibility [4]
 
       factory :import_action_invalid_data, traits: [:invalid_name]
