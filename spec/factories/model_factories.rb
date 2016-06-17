@@ -522,5 +522,27 @@ FactoryGirl.define do
       factory :extract_extra_data,        traits: [:invalid_field]
     end
 
+    factory :wait_groovy_script, traits: [:start_enable] do
+      name 'GroovyScriptFactory'
+      displayName 'A Test Groovy Script'
+      script 'test script'
+      jars ['file:///test/test/jar','file:///test/test/test.jar']
+      imports ['com.test.test.test','com.testing.testing.test']
+      timeout 1000 * 60 * 60
+      pollingTimePeriodMs 1000 * 10
+      visibility [4]
+
+      factory :wait_groovy_script_invalid_data, traits: [:invalid_name]
+      factory :wait_groovy_script_extra_data,   traits: [:invalid_field]
+
+      factory :wait_groovy_script_bad_timeout do
+        timeout 1
+      end
+
+      factory :wait_groovy_script_bad_pollingTimePeriod do
+        pollingTimePeriodMs 1
+      end
+    end
+
   end
 end

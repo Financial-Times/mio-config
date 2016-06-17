@@ -9912,4 +9912,337 @@ http_interactions:
         Name","description":"Optional membership name to set on the group-member relationship.","type":"string","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":true,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]}]}]}'
     http_version: 
   recorded_at: Thu, 16 Jun 2016 08:23:12 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/11114/configuration
+    body:
+      encoding: UTF-8
+      string: '{"script_type":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]},"timeout":3600000,"polling-time-period":5000}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Fri, 17 Jun 2016 09:51:25 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '115'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errors" : {
+            "error" : "tv.nativ.mio.metadata.variable.def.MioVariableNotFoundException: script_type"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 17 Jun 2016 09:50:50 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions
+    body:
+      encoding: UTF-8
+      string: '{"name":"GroovyScriptFactory","pluginClass":"tv.nativ.mio.plugins.actions.wait.ScriptedWaitCommand","type":"script","visibilityIds":[4],"runRuleExpression":""}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      date:
+      - Fri, 17 Jun 2016 09:52:53 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=CdX0036y2pyZDyAix+Vgwf5K.-201388932; Path=/api; Secure
+      location:
+      - https://master.dev.nativ-systems.com/api/actions/19745
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":19745,"uuid":"3f97a276-71c7-42bf-9139-34eb7bf71836","name":"GroovyScriptFactory","displayName":"GroovyScriptFactory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/19745","enabled":false,"owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 17 Jun 2016 09:52:19 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/19745/configuration
+    body:
+      encoding: UTF-8
+      string: '{"script_type":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]},"timeout":3600000,"polling-time-period":5000}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 17 Jun 2016 09:52:55 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=D23K+1-b0s9xT-tiEpFLpEHx.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":120701,"instance":{"script_type":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]},"timeout":3600000,"polling-time-period":5000},"definitionId":110831,"definition":[{"id":110832,"name":"script_type","displayName":"Script","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110833,"name":"script","displayName":"Groovy
+        Script","description":"Script Content (execute() must return a boolean value)","type":"script","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110834,"name":"script-file","displayName":"Groovy
+        Script File","description":"Groovy Script File (execute() must return a boolean
+        value)","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":110837,"name":"imports","displayName":"Script
+        Imports","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110838,"name":"jar-url","displayName":"JAR
+        File URL","description":"Jar File URL to be imported into the script.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110839,"name":"import","displayName":"Script
+        Import","description":"Script import to use.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":110840,"name":"timeout","displayName":"Timeout","description":"Timeout
+        Period","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":0},{"id":110841,"name":"polling-time-period","displayName":"Polling
+        Time Period","description":"Polling Time Period in seconds( >= 10s ).","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":60000000}]}'
+    http_version: 
+  recorded_at: Fri, 17 Jun 2016 09:52:20 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/actions/19745/actions
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 17 Jun 2016 09:52:55 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=c1zYTFSJU7KM2ZJiuosc7C+R.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=98
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"action":"delete"},{"action":"enable"}]'
+    http_version: 
+  recorded_at: Fri, 17 Jun 2016 09:52:20 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/actions/19745/actions
+    body:
+      encoding: UTF-8
+      string: '{"action":"enable"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 17 Jun 2016 09:52:56 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      set-cookie:
+      - JSESSIONID=nuHGVhl8RArNAcoIL5ti5Rfw.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=97
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":19745,"uuid":"3f97a276-71c7-42bf-9139-34eb7bf71836","name":"GroovyScriptFactory","displayName":"GroovyScriptFactory","objectType":{"id":18,"name":"action","href":"https://master.dev.nativ-systems.com/api/objectTypes/18","displayName":"Action","pluralName":"Actions","userDefined":false},"href":"https://master.dev.nativ-systems.com/api/actions/19745","owner":"masteruser
+        masteruser","accountId":4}'
+    http_version: 
+  recorded_at: Fri, 17 Jun 2016 09:52:21 GMT
+- request:
+    method: put
+    uri: https://master.dev.nativ-systems.com/api/actions/19745/configuration
+    body:
+      encoding: UTF-8
+      string: '{"script_type":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]},"timeout":3600000,"polling-time-period":10000}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 17 Jun 2016 09:56:07 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=2158qlJ3qOyblWhtAVcUFbO8.-201388932; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":120701,"instance":{"script_type":{"script":"test script"},"imports":{"jar-url":[{"value":"file:///test/test/jar","isExpression":false},{"value":"file:///test/test/test.jar","isExpression":false}],"import":[{"value":"com.test.test.test","isExpression":false},{"value":"com.testing.testing.test","isExpression":false}]},"timeout":3600000,"polling-time-period":10000},"definitionId":110831,"definition":[{"id":110832,"name":"script_type","displayName":"Script","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110833,"name":"script","displayName":"Groovy
+        Script","description":"Script Content (execute() must return a boolean value)","type":"script","multiplicity":"0..1","searchable":false,"editable":true,"required":true,"formType":"textarea","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110834,"name":"script-file","displayName":"Groovy
+        Script File","description":"Groovy Script File (execute() must return a boolean
+        value)","type":"file","multiplicity":"0..1","searchable":false,"editable":true,"required":false,"formType":"file","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.resource.def.MioFileVariable.FileValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":110837,"name":"imports","displayName":"Script
+        Imports","description":null,"type":"complex","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":null,"format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[],"children":[{"id":110838,"name":"jar-url","displayName":"JAR
+        File URL","description":"Jar File URL to be imported into the script.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]},{"id":110839,"name":"import","displayName":"Script
+        Import","description":"Script import to use.","type":"string","multiplicity":"0..*","searchable":false,"editable":true,"required":true,"formType":"text","format":null,"formatDescription":null,"validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":"tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler","valueGeneratorType":null,"unitString":null,"commentable":false,"isVisible":true,"preProcessors":[]}]},{"id":110840,"name":"timeout","displayName":"Timeout","description":"Timeout
+        Period","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":false,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":0},{"id":110841,"name":"polling-time-period","displayName":"Polling
+        Time Period","description":"Polling Time Period in seconds( >= 10s ).","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":60000000}]}'
+    http_version: 
+  recorded_at: Fri, 17 Jun 2016 09:55:32 GMT
 recorded_with: VCR 3.0.1
