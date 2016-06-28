@@ -6,7 +6,7 @@ class Mio
 
         field :name, String, 'Nodal Name'
         field :action, String, 'Name of the action, empty for none', 'Load S3'
-        field :type, String, 'Action Type', 'ACTION'
+        field :type, String, 'Action Type', 'ACTION', /^(START|ACTION|FORK|END)$/
         field :assetContext, String, 'Asset context', ''
 
         nested true

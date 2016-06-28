@@ -6,7 +6,7 @@ class Mio
 
         field :name, String, 'Metadata Definition Name'
         field :displayName, String, 'Display name'
-        field :type, String, 'Metdata type tsingle-option|text|url|boolean|image', 'text', /^(single-option|text|url|boolean|image)$/
+        field :type, String, 'Metdata type tsingle-option|text|url|boolean|image', 'text', /^(single-option|text|url|boolean|image|string)$/
         field :description, String, 'Metadata Definition Description'
         field :searchable, Symbol, 'Indexed and searchable', :true
         field :editable, Symbol, 'Editable field', :true
@@ -30,7 +30,8 @@ class Mio
            formType: @args.formType,
            maxLength: @args.maxLength,
            validationHandler: @args.validationHandler,
-           options: @args.options
+           options: @args.options,
+           strings: @args.strings
           }
         end
 
@@ -44,6 +45,8 @@ class Mio
               'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
             when 'url'
               'tv.nativ.mio.metadata.resource.def.MioURLVariable$URLValidationHandler'
+            when 'string'
+              'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
             else
               ''
           end
