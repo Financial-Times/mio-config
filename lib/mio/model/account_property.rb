@@ -12,17 +12,22 @@ class Mio
          value: @args.value}
       end
 
-      def go
-        unless look_up
-          @object = create
-        #else
-        #  @object = look_up
-        end
+      def look_up
+        r = self.class.resource_name
+        all_resources = @client.find_all r
+        return nil if all_resources['totalCount'] == 0
 
-        # @TODO Update the account property??
-        # Does not appear to support PUT ?
-        # Will need raise feature with oooooyyyyyaaaallllllaaaa
-        # No configure endpoint as no configuration
+        all_resources[r].find{|o| o['key'] == @args.key}
+      end
+
+      def go
+        @object = look_up
+        if @object.nil?
+          @object = create
+        elsif  ((@object != nil) && (@object['value'] != @args.value))
+          @client.remove self.class.resource_name, @object['id']
+          @object = create
+        end
 
         @object['name'] = @args.name
         @object['id'] = @object['href'].scan( /\d+$/).last

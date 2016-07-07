@@ -15,7 +15,7 @@ FactoryGirl.define do
   factory :node, class: OpenStruct do
     name 'start 1'
     action ''
-    type 'start'
+    type 'START'
     assetContext ''
 
     factory :node_invalid_data, traits: [:invalid_name]
@@ -23,7 +23,7 @@ FactoryGirl.define do
 
     factory :end_node do
       name 'end 1'
-      type 'end'
+      type 'END'
     end
 
     factory :action_node do
@@ -442,6 +442,10 @@ FactoryGirl.define do
       name 'account_property'
       key 'account_property_key'
       value 'account_property_value'
+
+      factory :account_property_value_change do
+        value 'account_property_value_x'
+      end
 
       factory :account_property_invalid_data,                traits: [:invalid_name]
       factory :account_property_extra_data,                  traits: [:invalid_field]

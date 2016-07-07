@@ -6211,79 +6211,6 @@ http_interactions:
     http_version: 
   recorded_at: Wed, 01 Jun 2016 14:44:53 GMT
 - request:
-    method: get
-    uri: https://master.dev.nativ-systems.com/api/accountProperties
-    body:
-      encoding: UTF-8
-      string: '"application/json"'
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Authorization:
-      - Basic bWFzdGVydXNlcjptYXN0ZXJ1c2Vy
-      Content-Type:
-      - application/vnd.nativ.mio.v1+json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: 
-    headers:
-      date:
-      - Wed, 01 Jun 2016 16:05:03 GMT
-      server:
-      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - POST, GET, OPTIONS, DELETE, PUT
-      access-control-max-age:
-      - '1000'
-      access-control-allow-headers:
-      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
-      pragma:
-      - No-cache
-      cache-control:
-      - no-cache
-      expires:
-      - Thu, 01 Jan 1970 00:00:00 UTC
-      set-cookie:
-      - JSESSIONID=PLRWZL98ZEWx7G1OYpbHnN+4.-201388908; Path=/api; Secure
-      content-type:
-      - application/json
-      access-control-allow-credentials:
-      - 'true'
-      keep-alive:
-      - timeout=5, max=100
-      connection:
-      - Keep-Alive
-      transfer-encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"accountProperties":[{"id":101000,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101000","key":"PROJECT_TEMP_NAME","value":"TempName","account":{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4}},{"id":101101,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101101","key":"xx","value":"xx","account":{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4}},{"id":101202,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101202","key":"XXXX","value":"YYYY","account":{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4}},{"id":101203,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101203","key":"XXXXX","value":"YYYYY","account":{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4}},{"id":101204,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101204","key":"XXXXXXX","value":"YYYYYYYY","account":{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4}},{"id":101205,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101205","key":"XXXXXXXXX","value":"YYYYYYYYYY","account":{"id":4,"name":"Master
-        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
-        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
-        masteruser","accountId":4}}],"totalCount":6,"offset":0,"limit":100}'
-    http_version: 
-  recorded_at: Wed, 01 Jun 2016 16:04:51 GMT
-- request:
     method: post
     uri: https://master.dev.nativ-systems.com/api/accountProperties
     body:
@@ -10245,4 +10172,241 @@ http_interactions:
         Time Period","description":"Polling Time Period in seconds( >= 10s ).","type":"long","multiplicity":"1","searchable":false,"editable":true,"required":true,"formType":"text","format":"#","formatDescription":"#","validation":null,"maxLength":-1,"expressionEnabled":false,"validationDescription":null,"validationHandler":null,"valueGeneratorType":null,"unitString":"duration","commentable":false,"isVisible":true,"preProcessors":[],"defaultValue":60000000}]}'
     http_version: 
   recorded_at: Fri, 17 Jun 2016 09:55:32 GMT
+- request:
+    method: post
+    uri: https://master.dev.nativ-systems.com/api/accountProperties
+    body:
+      encoding: UTF-8
+      string: '{"key":"account_property_key","value":"account_property_value_x"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message:
+    headers:
+      date:
+      - Tue, 05 Jul 2016 09:59:36 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      content-type:
+      - application/json
+      content-length:
+      - '203'
+      access-control-allow-credentials:
+      - 'true'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"href":"https://master.dev.nativ-systems.com/api/accountProperties/101206"}'
+    http_version:
+  recorded_at: Tue, 05 Jul 2016 09:58:28 GMT
+- request:
+    method: get
+    uri: https://master.dev.nativ-systems.com/api/accountProperties
+    body:
+      encoding: UTF-8
+      string: '"application/json"'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 06 Jul 2016 15:24:46 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=Vq2vzbmcUzb0OzW4SRzQ+3rU.-201388908; Path=/api; Secure
+      content-type:
+      - application/json
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=100
+      connection:
+      - Keep-Alive
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"accountProperties":[{"id":101000,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101000","key":"PROJECT_TEMP_NAME","value":"TempName","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101101,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101101","key":"xx","value":"xx","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101202,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101202","key":"XXXX","value":"YYYY","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101203,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101203","key":"XXXXX","value":"YYYYY","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101204,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101204","key":"XXXXXXX","value":"YYYYYYYY","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101205,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101205","key":"XXXXXXXXX","value":"YYYYYYYYYY","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101207,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101207","key":"HTTPS_BASE_URL","value":"https://master.dev.nativ-systems.com","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101208,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101208","key":"AWS_PROXY_PIPELINE_ID","value":"1465982897316-gk8xl2","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101303,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101303","key":"AWS_KEY","value":"AKIAIGKD2BNJO4O5CQLA","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101304,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101304","key":"AWS_SECRET","value":"XmhgiXO7IQweWMMkli/FwGbXhrTEyTdYUhY6CHt8","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101305,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101305","key":"AWS_REGION","value":"eu_west_1","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101306,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101306","key":"AWS_PROXY_PIPELINE_PRESET","value":"1465901830535-4e7maf","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101404,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101404","key":"AWS_PROXY_PIPELINE_FINAL_EDIT","value":"1466500654414-glihje","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101405,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101405","key":"BRIGHTCOVE_TOKEN_URL","value":"https://oauth.brightcove.com/v3/access_token","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101406,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101406","key":"BRIGHTCOVE_OAUTH_KEY","value":"c14ad44d-43d4-45e6-a81c-cc7378ca3f55","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101407,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101407","key":"BRIGHTCOVE_OAUTH_SECRET","value":"9BTPw1H0sWfRpOfBTPTildMQyE5RJprIWEFZ67yroNnVHrqrmvKHch68WgcLAp-svH43nWndgUcDlg8MJHQ3AQ","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101408,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101408","key":"BRIGHTCOVE_CREATE_URL","value":"https://cms.api.brightcove.com/v1/accounts/2221711291001/videos","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101409,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101409","key":"BRIGHTCOVE_PROFILE","value":"videocloud-default-v1","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101410,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101410","key":"BRIGHTCOVE_INGEST_URL","value":"https://ingest.api.brightcove.com/v1/accounts/2221711291001/videos/{{videoId}}/ingest-requests","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101411,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101411","key":"BRIGHTCOVE_CALLBACK_URL","value":"https://7ew6vgbaba.execute-api.eu-west-1.amazonaws.com/test/brightcovecallback","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101412,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101412","key":"BRIGHTCOVE-CALLBACK-HOST","value":"7ew6vgbaba.execute-api.eu-west-1.amazonaws.com","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101413,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101413","key":"BRIGHTCOVE-CALLBACK-PATH","value":"/test/brightcovecallback","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101606,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101606","key":"INGEST_BUCKET","value":"video-raw","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101607,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101607","key":"INGEST_PROXY_BUCKET","value":"video-raw-proxy","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101608,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101608","key":"PUBLISH_BUCKET","value":"video-final-edit","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101609,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101609","key":"PUBLISH_PROXY_BUCKET","value":"video-final-edit-proxy","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101612,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101612","key":"testing","value":"testingx","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}},{"id":101613,"href":"https://master.dev.nativ-systems.com/api/accountProperties/101613","key":"account_property_key","value":"account_property_value","account":{"id":4,"name":"Master
+        Account","objectType":{"id":24,"name":"master-account","href":"https://master.dev.nativ-systems.com/api/objectTypes/24","displayName":"Master
+        Account","pluralName":"Master Accounts","userDefined":false},"owner":"masteruser
+        masteruser","accountId":4}}],"totalCount":28,"offset":0,"limit":100}'
+    http_version: 
+  recorded_at: Wed, 06 Jul 2016 15:23:37 GMT
+- request:
+    method: delete
+    uri: https://master.dev.nativ-systems.com/api/accountProperties/101613
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic bWFzdGVydXNlcjptNHN0M3J1czNy
+      Content-Type:
+      - application/vnd.nativ.mio.v1+json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      date:
+      - Wed, 06 Jul 2016 15:24:47 GMT
+      server:
+      - Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      access-control-max-age:
+      - '1000'
+      access-control-allow-headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      pragma:
+      - No-cache
+      cache-control:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      set-cookie:
+      - JSESSIONID=1epvxzTKJGYqzOQV+tuu+2tF.-201388908; Path=/api; Secure
+      content-length:
+      - '0'
+      access-control-allow-credentials:
+      - 'true'
+      keep-alive:
+      - timeout=5, max=99
+      connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 06 Jul 2016 15:23:37 GMT
 recorded_with: VCR 3.0.1

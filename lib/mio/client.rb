@@ -61,6 +61,16 @@ class Mio
       make_object response.body
     end
 
+    def remove resource, id, opts={}
+      url = path resource, id
+      response = delete url, opts
+      unless response.success?
+        raise Mio::Client::LoadOfBollocks, "DELETE on #{url} returned #{response.status}"
+      end
+
+      response.status
+    end
+
     def configure resource, id, payload, opts={}
       url = path(resource, id, :configuration)
       response = put url, payload, opts
@@ -120,6 +130,10 @@ class Mio
 
     def put url, payload, opts, content_type='application/vnd.nativ.mio.v1+json', accept='application/json'
       Mio::Requests.make_request :put, @agent, url, opts, payload, content_type, accept
+    end
+
+    def delete url, opts
+      Mio::Requests.make_request :delete, @agent, url, opts
     end
 
     def make_object response
