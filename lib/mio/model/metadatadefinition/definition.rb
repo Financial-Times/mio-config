@@ -11,6 +11,7 @@ class Mio
         field :searchable, Symbol, 'Indexed and searchable', :true
         field :editable, Symbol, 'Editable field', :true
         field :required, Symbol, 'Required mandatory metadata item', :true
+        field :isVisible, Symbol, 'Control visible', :true
         field :formType, String, 'Form control type', 'textarea' , /^(select|textarea|text|checkbox|file)$/
         field :maxLength, Fixnum, 'MaxLength', -1
         field :validationHandler, String, 'Validation handler', ''
@@ -31,7 +32,8 @@ class Mio
            maxLength: @args.maxLength,
            validationHandler: @args.validationHandler,
            options: @args.options,
-           strings: @args.strings
+           strings: @args.strings,
+           isVisible: @args.isVisible
           }
         end
 

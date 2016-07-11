@@ -60,6 +60,7 @@ FactoryGirl.define do
     searchable :true
     editable :true
     required :true
+    isVisible :true
 
     factory :text_metadata_definition, class: OpenStruct do
       name 'project'
