@@ -6,17 +6,18 @@ class Mio
 
         field :name, String, 'Metadata Definition Name'
         field :displayName, String, 'Display name'
-        field :type, String, 'Metdata type tsingle-option|text|url|boolean|image', 'text', /^(single-option|text|url|boolean|image|string)$/
+        field :type, String, 'Metdata type single-option|text|url|boolean|image', 'text', /^(single-option|text|url|boolean|image|string|complex)$/
         field :description, String, 'Metadata Definition Description'
         field :searchable, Symbol, 'Indexed and searchable', :true
         field :editable, Symbol, 'Editable field', :true
         field :required, Symbol, 'Required mandatory metadata item', :true
         field :isVisible, Symbol, 'Control visible', :true
-        field :formType, String, 'Form control type', 'textarea' , /^(select|textarea|text|checkbox|file)$/
+        field :formType, String, 'Form control type', 'textarea' , /^(select|textarea|text|checkbox|file|)$/
         field :maxLength, Fixnum, 'MaxLength', -1
         field :validationHandler, String, 'Validation handler', ''
         field :options, Array, 'Array of options', []
-        field :strings, Array, 'Array of strings for use in componenets such as image', []
+        field :children, Array, 'Array of child definitions', []
+        field :multiplicity, String, 'Multiplicity', '1', /^(0\.\.\*|1\.\.\*|1)$/
 
         nested true
 
@@ -32,7 +33,8 @@ class Mio
            maxLength: @args.maxLength,
            validationHandler: @args.validationHandler,
            options: @args.options,
-           strings: @args.strings,
+           children: @args.children,
+           multiplicity: @args.multiplicity,
            isVisible: @args.isVisible
           }
         end
@@ -47,8 +49,6 @@ class Mio
               'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
             when 'url'
               'tv.nativ.mio.metadata.resource.def.MioURLVariable$URLValidationHandler'
-            when 'string'
-              'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
             else
               ''
           end
@@ -59,12 +59,15 @@ class Mio
             type = @args.type
           end
           children.send(type+'_', name: @args.name, display_name: @args.displayName) do |child|
+            unless @args.multiplicity.nil?
+              child.parent['multiplicity'] = @args.multiplicity
+            end
             child.searchable @args.searchable.to_s
             child.editable @args.editable.to_s
             child.required @args.required
             child.isVisible @args.isVisible
             unless @args.maxLength.equal?(-1)
-                child.send("max-length", @args.maxLength )
+              child.send("max-length", @args.maxLength )
             end
             if @args.validation_handler.nil? || @args.validation_handler == ''
               child.validation handler: validation_handler_by_type(type)
@@ -80,11 +83,11 @@ class Mio
                 end
               end
             end
-            if !@args.strings.nil? && @args.strings.length > 0
+            if !@args.children.nil? && @args.children.length > 0
               child.children do |children|
-                @args.strings.each do |string|
-                  definition = Mio::Model::MetadataDefinition::Definition.new @client, OpenStruct.new(string)
-                  definition.build_xml children, 'string'
+                @args.children.each do |childDef|
+                  definition = Mio::Model::MetadataDefinition::Definition.new @client, OpenStruct.new(childDef)
+                  definition.build_xml children, childDef[:type]
                 end
               end
             end

@@ -76,3 +76,14 @@ describe 'Mio::Model::MetadataDefinition::Definition' do
   end
 
 end
+
+describe 'Mio::Model::MetadataDefinition::Definition' do
+  subject{ Mio::Model::MetadataDefinition::Definition }
+  let(:model_args){build(:complex_definition)}
+  let(:invalid_model_args){build(:complex_definition_invalid_data)}
+  let(:extra_model_args){build(:complex_definition_extra_data)}
+
+  it_behaves_like 'generic_model'
+  it_behaves_like 'nested_model'
+
+end

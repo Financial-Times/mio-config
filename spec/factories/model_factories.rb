@@ -61,6 +61,24 @@ FactoryGirl.define do
     editable :true
     required :true
     isVisible :true
+    multiplicity '1'
+
+    factory :complex_definition do
+      name 'complex-test'
+      displayName 'complex-test'
+      description 'complex-test'
+      type 'complex'
+      formType ''
+      multiplicity '0..*'
+      maxLength -1
+      validationHandler ''
+      options []
+      children [{name: 'brightcove-tag', displayName: 'Brightcove Tag', description: 'Brightcove Tag', type: 'text', searchable: true, editable: true, required: false, formType: 'textarea', maxLength: -1, options: [], children: [], isVisible: true, multiplicity: '1' }]
+
+      factory :complex_definition_invalid_data, traits: [:invalid_name]
+      factory :complex_definition_extra_data,   traits: [:invalid_field]
+
+    end
 
     factory :text_metadata_definition, class: OpenStruct do
       name 'project'
@@ -71,10 +89,13 @@ FactoryGirl.define do
       maxLength 100
       validationHandler 'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
       options []
-      strings []
+      children []
+
 
       factory :text_metadata_definition_invalid_data, traits: [:invalid_name]
       factory :text_metadata_definition_extra_data,   traits: [:invalid_field]
+
+
 
       factory :definition_multiple_same_name_options do
         options [{name: 'test', displayName: 'True', default: true, value: 'true'},
@@ -308,6 +329,18 @@ FactoryGirl.define do
                          formType: 'text',
                          maxLength: -1}]
 
+
+      complexTest = [{name: 'tag',
+                      displayName: 'tag',
+                      description: 'describe what the project is about',
+                      type: 'text',
+                      searchable: true,
+                      editable: true,
+                      required: true,
+                      formType: 'textarea',
+                      maxLength: 100
+                     }]
+
       definitions [{name: 'section',
                       displayName: 'Section',
                       description: 'ft site section',
@@ -359,8 +392,20 @@ FactoryGirl.define do
                       required: true,
                       formType: 'file',
                       maxLength: -1,
-                      strings: urlStringsTest
-                     }]
+                      children: urlStringsTest
+                     },
+                    {name: 'complex',
+                     displayName: 'complex',
+                     description: 'complex',
+                     type: 'complex',
+                     searchable: true,
+                     editable: true,
+                     required: true,
+                     formType: '',
+                     maxLength: -1,
+                     children: complexTest,
+                     multiplicity: '0..*'
+                    }]
 
       trait :empty_definitions do
         definitions []
