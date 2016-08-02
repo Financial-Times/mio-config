@@ -66,6 +66,7 @@ class Mio
             child.editable @args.editable.to_s
             child.required @args.required
             child.isVisible @args.isVisible
+            child.description @args.description
             unless @args.maxLength.equal?(-1)
               child.send("max-length", @args.maxLength )
             end
