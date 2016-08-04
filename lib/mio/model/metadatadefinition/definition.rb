@@ -12,7 +12,7 @@ class Mio
         field :editable, Symbol, 'Editable field', :true
         field :required, Symbol, 'Required mandatory metadata item', :true
         field :isVisible, Symbol, 'Control visible', :true
-        field :formType, String, 'Form control type', 'textarea' , /^(select|textarea|text|checkbox|file|)$/
+        field :formType, String, 'Form control type', 'textarea' , /^(select|textarea|text|checkbox|file|radio|)$/
         field :maxLength, Fixnum, 'MaxLength', -1
         field :validationHandler, String, 'Validation handler', ''
         field :options, Array, 'Array of options', []
