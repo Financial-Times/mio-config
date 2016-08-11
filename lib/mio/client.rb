@@ -10,9 +10,9 @@ require 'pp'
 class Mio
   class Client
 
-    def initialize base_uri, username, password
+    def initialize base_uri, username, password, verify_ssl=true
       @base_uri = base_uri
-      @agent = Faraday.new(url: base_uri) do |f|
+      @agent = Faraday.new(url: base_uri, ssl: {verify: verify_ssl }) do |f|
         f.adapter :net_http_persistent
         f.response :detailed_logger if ENV.fetch('VERBOSE', 'false').to_s.downcase == 'true'
       end
