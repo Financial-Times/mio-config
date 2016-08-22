@@ -1,6 +1,6 @@
 class Mio
   class Model
-    class GroovyScriptWait < Model
+    class GroovyScriptDecision < Model
       set_resource :actions
 
       field :name, String, 'Script name'
@@ -9,14 +9,12 @@ class Mio
       field :script, String, 'The groovy script (inline) ', '"File.read(/path/to/script.groovy)"'
       field :jars, Array, 'JARs to load on remote, empty for none', []
       field :imports, Array, 'Imports to reference within groovy script, empty for none', []
-      field :timeout, Fixnum, 'Time to give up waiting', 0
-      field :polling_time, Fixnum, 'Time to wait between script invocation', 100000
 
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
 
       def create_hash
-        plugin = 'tv.nativ.mio.plugins.actions.wait.ScriptedWaitCommand'
+        plugin = 'tv.nativ.mio.plugins.actions.decision.ScriptedDecisionCommand'
         {name: @args.name,
          pluginClass: plugin,
          visibilityIds: @args.visibility,
@@ -26,17 +24,16 @@ class Mio
       end
 
       def config_hash
-        {"script_type": {
-         "script": @args.script
+        {'script_type': {
+            script: @args.script
         },
-        "imports": {
-          'jar-url': @args.jars.map{|j| {value: j, isExpression: false}},
-          import: @args.imports.map{|i| {value: i, isExpression: false}}
-        },
-        "timeout": @args.timeout,
-        "polling-time-period": @args.polling_time
+         imports: {
+             'jar-url': @args.jars.map{|jar| {value: jar, isExpression: false}},
+             import: @args.imports.map{|import| {value: import, isExpression: false}}
+         }
         }
       end
     end
   end
 end
+

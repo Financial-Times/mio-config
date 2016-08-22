@@ -8,9 +8,9 @@ group :development do
   gem 'vcr'
 end
 
-gem 'builder'
 gem 'colorize'
 gem 'faraday'
 gem 'faraday-detailed_logger'
 gem 'net-http-persistent'
+gem 'nokogiri'
 gem 'rake'

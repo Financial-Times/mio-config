@@ -4,11 +4,12 @@ require 'mio/config'
 
 class Mio
   class Migrations
-    def initialize base_uri, username, password, base_dir='./migrations'
+    def initialize base_uri, username, password, verify_ssl, base_dir='./migrations'
       @mio = Mio.new do |m|
         m.base_uri = base_uri
         m.username = username
         m.password = password
+        m.verify_ssl = verify_ssl
       end
       @base = File.expand_path(base_dir)
       @migrations = Dir.glob( File.join(@base, '*.rb') ).sort

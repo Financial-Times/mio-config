@@ -10,4 +10,15 @@ describe 'Mio::Model::ImportAction' do
   it_behaves_like 'model_with_config_hash'
   it_behaves_like 'non_nested_model'
 
+  context 'when instantiated' do
+    let(:client){build(:valid_client)}
+    let(:import_action){subject.new(client, build(:import_action_unknown_metadata_definition))}
+
+    context "with unknown metadataDefinition" do
+      it 'should raise a Mio::Model::NoSuchResource error' do
+        expect{import_action.config_hash}.to raise_error(Mio::Model::NoSuchResource)
+      end
+    end
+  end
+
 end

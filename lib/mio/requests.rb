@@ -1,7 +1,7 @@
 class Mio
   module Requests
 
-    def self.make_request type, agent, url, opts, body=nil, content_type='application/vnd.nativ.mio.v1+json'
+    def self.make_request type, agent, url, opts, body=nil, content_type='application/vnd.nativ.mio.v1+json', accept='application/json'
       if content_type.nil?
         content_type = 'application/vnd.nativ.mio.v1+json'
       end
@@ -15,6 +15,7 @@ class Mio
           end
         end
         r.headers[:content_type] = content_type
+        r.headers[:accept]= accept
       end
     end
 

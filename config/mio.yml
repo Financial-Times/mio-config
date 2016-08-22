@@ -1,4 +1,5 @@
 ---
-base_url: <%= ENV.fetch('MIO_URI', 'https://master.dev.nativ-systems.com/api') %>
+base_url: <%= ENV.fetch('MIO_URI', 'https://master.flex-jspc0.ft.com/api') %>
 username: <%= ENV.fetch('MIO_USERNAME', 'masteruser') %>
 password: <%= ENV.fetch('MIO_PASSWORD', 'masteruser') %>
+verify_ssl: <%= ENV.fetch('VERIFY_SSL', 'false') %>

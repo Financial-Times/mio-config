@@ -6,7 +6,7 @@ describe 'Mio::Model::MetadataDefinition' do
   let(:invalid_model_args){build(:metadata_definition_invalid_data)}
   let(:extra_model_args){build(:metadata_definition_extra_data)}
 
-  let(:empty_definitions){build(:metadata_definition_empty_transitions)}
+  let(:empty_definitions){build(:metadata_definition_empty_definitions)}
 
   let(:client){build(:valid_client)}
 
@@ -27,7 +27,8 @@ describe 'Mio::Model::MetadataDefinition' do
 
   context 'when instantiated with valid options' do
     let(:metadata_definition){subject.new(client, model_args)}
-    [:definition_xml, :trim_xml_from_element].each do |m|
+    [:build_xml].each do |m|
+
       it "should respond to ##{m.to_s}" do
         expect(metadata_definition).to respond_to(m)
       end

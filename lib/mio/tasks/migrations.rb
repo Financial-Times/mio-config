@@ -10,7 +10,8 @@ namespace :mio do
       config = Mio::Config.read File.expand_path './config/mio.yml'
       migrater = Mio::Migrations.new(config.base_url,
                                      config.username,
-                                     config.password )
+                                     config.password,
+                                     config.verify_ssl )
       migrater.run_migrations
     end
   end

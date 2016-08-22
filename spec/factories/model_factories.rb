@@ -7,29 +7,37 @@ FactoryGirl.define do
     foo 'bar'
   end
 
+  trait :start_enable do
+    start :true
+    enable :true
+  end
+
   factory :node, class: OpenStruct do
     name 'start 1'
     action ''
-    type 'start'
+    type 'START'
+    assetContext ''
 
     factory :node_invalid_data, traits: [:invalid_name]
     factory :node_extra_data,   traits: [:invalid_field]
 
     factory :end_node do
       name 'end 1'
-      type 'end'
+      type 'END'
     end
 
     factory :action_node do
       name 'lauch 1'
       action 'Groovy Script Factory'
       type 'ACTION'
+      assetContext '.'
     end
   end
 
   factory :transition, class: OpenStruct do
     from 'start 1'
     to 'end 1'
+    name 'start to end'
 
     factory :transition_invalid_data do
       from 123
@@ -38,62 +46,226 @@ FactoryGirl.define do
     factory :transition_extra_data,   traits: [:invalid_field]
   end
 
-  factory :model, class: OpenStruct do
-    visibility [4]
-    enable :true
+  factory :option, class: OpenStruct do
+    name 'name'
+    displayName 'displayName'
+    default  :true
+    value 'value'
 
-    factory :s3 do
+    factory :option_invalid_data, traits: [:invalid_name]
+    factory :option_extra_data,   traits: [:invalid_field]
+  end
+
+  factory :definition, class: OpenStruct do
+    searchable :true
+    editable :true
+    required :true
+    isVisible :true
+    multiplicity '1'
+
+    factory :complex_definition do
+      name 'complex-test'
+      displayName 'complex-test'
+      description 'complex-test'
+      type 'complex'
+      formType ''
+      multiplicity '0..*'
+      maxLength -1
+      validationHandler ''
+      options []
+      children [{name: 'brightcove-tag', displayName: 'Brightcove Tag', description: 'Brightcove Tag', type: 'text', searchable: true, editable: true, required: false, formType: 'textarea', maxLength: -1, options: [], children: [], isVisible: true, multiplicity: '1' }]
+
+      factory :complex_definition_invalid_data, traits: [:invalid_name]
+      factory :complex_definition_extra_data,   traits: [:invalid_field]
+
+    end
+
+    factory :text_metadata_definition, class: OpenStruct do
+      name 'project'
+      displayName 'Project'
+      description 'describe what the project is about'
+      type 'text'
+      formType 'textarea'
+      maxLength 100
+      validationHandler 'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
+      options []
+      children []
+
+
+      factory :text_metadata_definition_invalid_data, traits: [:invalid_name]
+      factory :text_metadata_definition_extra_data,   traits: [:invalid_field]
+
+
+
+      factory :definition_multiple_same_name_options do
+        options [{name: 'test', displayName: 'True', default: true, value: 'true'},
+                 {name: 'test', displayName: 'True', default: true, value: 'true'}]
+      end
+
+      factory :boolean_defintion do
+        type 'boolean'
+
+        factory :boolean_bad_name do
+          options [{name: 'test', displayName: 'True', default: true, value: 'true'},
+                   {name: 'false', displayName: 'True', default: true, value: 'false'}]
+        end
+
+        factory :boolean_name_value_dont_match do
+          options [{name: 'true', displayName: 'True', default: true, value: 'false'},
+                   {name: 'false', displayName: 'True', default: true, value: 'true'}]
+        end
+
+        factory :boolean_value_not_boolean do
+          options [{name: 'true', displayName: 'True', default: true, value: 'true'},
+                   {name: 'false', displayName: 'True', default: true, value: 'xxxx'}]
+        end
+
+        factory :boolean_name_false_value_not_false do
+          options [{name: 'false', displayName: 'True', default: true, value: 'true'},
+                   {name: 'true', displayName: 'True', default: true, value: 'true'}
+                   ]
+        end
+
+        factory :boolean_single_option do
+          options [{name: 'false', displayName: 'True', default: true, value: 'true'}
+                  ]
+        end
+
+      end
+
+    end
+
+  end
+
+  trait :invalid_type do
+    type 123456
+  end
+
+  factory :workflowvariable, class: OpenStruct do
+    type 'string'
+    key 'teststringkey'
+    value 'teststringvalue'
+
+    factory :workflowvariable_invalid_data, traits: [:invalid_type]
+    factory :workflowvariable_extra_data,   traits: [:invalid_field]
+
+    factory :workflowvariable_object_variable do
+      type 'object'
+      key 'testobjectkey'
+      value '13553'
+
+      factory :workflowvariable_not_number_object_variable do
+        value 'asdlkjasd'
+      end
+
+      factory :workflowvariable_not_known_object_variable do
+        value '9999999999'
+      end
+    end
+
+    factory :workflowvariable_date_variable do
+      type 'date'
+      key 'testdatekey'
+      value '01-01-2016 11:00:00'
+
+      factory :workflowvariable_bad_date_variable do
+        value 'xxxxx'
+      end
+    end
+
+    factory :workflowvariable_bad_type do
+      type 'objectRR'
+    end
+
+    factory :workflowvariable_bad_date do
+      type 'date'
+      value 'notADate'
+    end
+  end
+
+  factory :launchworkflow, class: OpenStruct do
+    name "workflow-create-project"
+    inheritVariables :true
+    workFlowStringVariables [{key: 'teststringkey', type: 'string', value: 'teststring'}]
+    workFlowObjectVariables [{key: 'testobjectkey', type: 'object', value: '13553'}]
+    workflowDateVariables [{key: '', type: 'date', value: '01-01-2016 11:00:00'}]
+
+    factory :launchworkflow_invalid_data, traits: [:invalid_name]
+    factory :launchworkflow_extra_data, traits: [:invalid_field]
+
+    factory :launchworkflow_unknown_metadata_definition do
+      name "xxx?xxx"
+    end
+  end
+
+  factory :model, class: OpenStruct do
+
+    factory :s3, traits: [:start_enable] do
       name 'S3 Bucket Factory'
       key 'some_s3_key'
       secret 'some_s3_secret'
       bucket 'some_faked_s3_bucket'
-      start :true
+      visibility [4]
+
 
       factory :s3_invalid_data, traits: [:invalid_name]
       factory :s3_extra_data,   traits: [:invalid_field]
     end
 
-    factory :hotfolder do
+    factory :hotfolder, traits: [:start_enable] do
       name 'Hotfolder Factory'
       storage_name 'S3 Bucket Factory'
       workflow_name 'Workflow'
       owner 'masteruser masteruser'
-      start :true
+      visibility [4]
 
       factory :hotfolder_invalid_data, traits: [:invalid_name]
       factory :hotfolder_extra_data,   traits: [:invalid_field]
     end
 
-    factory :import_action do
+    factory :import_action, traits: [:start_enable] do
       name 'Import Action Factory'
       key 'some_s3_key'
       secret 'some_s3_secret'
       bucket 'some_faked_s3_bucket'
-      start :true
+      variant "project-variant"
+      metadataDefinition "project-metadata"
+      sourceJsonVariable "testJsonVariable"
+      s3PathVariable '${variables.assetS3Path}'
+      assetTitleVariable '${variables.assetTitle}'
+      creationContext 'INGEST'
+      parentAssetId '${variables.test}'
+      parentRelationName ''
+      runRuleExpression ''
+      visibility [4]
 
       factory :import_action_invalid_data, traits: [:invalid_name]
       factory :import_action_extra_data,   traits: [:invalid_field]
+
+      factory :import_action_unknown_metadata_definition do
+        metadataDefinition "xxxYYYUnknown9999"
+      end
     end
 
-    factory :groovy_script do
+    factory :groovy_script, traits: [:start_enable] do
       name 'Groovy Script Factory'
       displayName 'A Test Groovy Script'
-      key 'some_s3_key'
-      secret 'some_s3_secret'
       script 'test script'
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
-      start :true
+      visibility [4]
 
       factory :groovy_script_invalid_data, traits: [:invalid_name]
       factory :groovy_script_extra_data,   traits: [:invalid_field]
     end
 
     factory :workflow do
-      name 'Workflow'
-      transitions [{from: 'Start 1', to: 'End 1'}]
-      nodes [{name: 'End 1', path: '/e', type: 'END'},
-             {name: 'Start 1', path: '/s', type: 'START'}]
+      name 'WorkflowTest'
+      transitions [{from: 'Start 1', to: 'End 1', name: 'start to end'}]
+      nodes [{name: 'End 1', path: '/e', type: 'END', assetContext: ''},
+             {name: 'Start 1', path: '/s', type: 'START', assetContext: ''}]
+      enable :true
+      visibility [4]
 
       trait :empty_nodes do
         nodes []
@@ -109,22 +281,19 @@ FactoryGirl.define do
       factory :workflow_empty_transitions, traits: [:empty_transitions]
     end
 
-    factory :groovy_script_wait do
+    factory :groovy_script_wait, traits: [:start_enable] do
       name 'A Test Groovy Wait Script'
       displayName 'A Test Groovy Wait Script'
-      key 'some_s3_key'
-      secret 'some_s3_secret'
       script 'test script'
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
       timeout 0
       polling_time 10
-      start :true
+      visibility [4]
 
       factory :groovy_script_wait_invalid_data, traits: [:invalid_name]
       factory :groovy_script_wait_extra_data,   traits: [:invalid_field]
     end
-
 
     factory :metadata_definition do
       name 'metadata-definition'
@@ -133,60 +302,110 @@ FactoryGirl.define do
       editable :true
       required :true
       start :false
+      enable :true
+      visibility [4]
 
-      sectionOptions = [{name: 'Markets &amp; Investing', displayName: 'Markets &amp; Investing', default: false, value: 'Markets &amp; Investing'},
-                        {name: 'Companies &amp; Management', displayName: 'Companies &amp; Management', default: false, value: 'Companies &amp; Management'},
-                        {name: 'World &amp; Economy', displayName: 'World &amp; Economy', default: false, value: 'World &amp; Economy'},
-                        {name: 'Life &amp; Arts', displayName: 'Life &amp; Arts', default: false, value: 'Life &amp; Arts'}]
+      testOptions = [{name: 'test', displayName: 'test', default: false, value: 'http://api.ft.com/things/test'}]
 
-      brandOptions = [{name: 'SV', displayName: 'Markets - Short View (SV)', default: false, value: 'SV'},
-                      {name: 'AUTH', displayName: "Markets - John Authers' Note (AUTH)", default: false, value: 'AUTH'},
-                      {name: 'MKTS', displayName: 'Markets - FT Markets (MKTS)', default: false, value: 'MKTS'},
-                      {name: 'FTFM', displayName: 'Markets - FTFM (FTFM)', default: false, value: 'FTFM'},
-                      {name: 'FTTR', displayName: 'Markets - Trading Room (FTTR)', default: false, value: 'FTTR'},
-                      {name: 'EMKT', displayName: 'Markets - FT Emerging Markets (EMKT)', default: false, value: 'EMKT'},
-                      {name: 'BUS', displayName: 'Companies - FT Business (BUS)', default: false, value: 'BUS'},
-                      {name: 'LEX', displayName: 'Companies - Lex (LEX)', default: false, value: 'LEX'},
-                      {name: 'VFTT', displayName: 'Companies - View from the Top (VFTT)', default: false, value: 'VFTT'},
-                      {name: 'BSCL', displayName: 'Companies - Business School (BSCL)', default: false, value: 'BSCL'},
-                      {name: 'WRLD', displayName: 'World - FT World (WRLD)', default: false, value: 'WRLD'},
-                      {name: 'LUCE', displayName: 'World - Luce Talk (LUCE)', default: false, value: 'LUCE'},
-                      {name: 'ANRV', displayName: 'World - Analysis Review (ANRV)', default: false, value: 'ANRV'},
-                      {name: 'CMNT', displayName: 'World - FT Comment (CMNT)', default: false, value: 'CMNT'},
-                      {name: 'ALST', displayName: 'World - A list (ALST)', default: false, value: 'ALST'},
-                      {name: 'FFT', displayName: 'World - FirstFT (FFT)', default: false, value: 'FFT'},
-                      {name: 'ARTS', displayName: 'Life - FT Arts (ARTS)', default: false, value: 'FFT'},
-                      {name: 'LIFE', displayName: 'Life - FT Life (LIFE)', default: false, value: 'LIFE'},
-                      {name: 'WLTH', displayName: 'Life - FT Wealth (WLTH)', default: false, value: 'WLTH'},
-                      {name: 'SP', displayName: 'Life - Special Projects (SP)', default: false, value: 'SP'},
-                      {name: 'LAA', displayName: 'Life - FT Life &amp; Arts (LAA)', default: false, value: 'LAA'}]
+      checkBoxOptions = [{name: 'true', displayName: 'True', default: true, value: 'true'},
+                         {name: 'false', displayName: 'False', default: false, value: 'false'}]
 
-      definitions [{name: 'project',
+      urlStringsTest = [{name: 'file-name',
+                         displayName: 'Poster File Name',
+                         description: 'Poster File Name',
+                         type: 'string',
+                         searchable: true,
+                         editable: true,
+                         required: true,
+                         formType: 'text',
+                         maxLength: -1},
+                        {name: 'file-path',
+                         displayName: 'Poster File Path',
+                         description: 'Poster File Path',
+                         type: 'string',
+                         searchable: true,
+                         editable: true,
+                         required: true,
+                         formType: 'text',
+                         maxLength: -1}]
+
+
+      complexTest = [{name: 'tag',
+                      displayName: 'tag',
                       description: 'describe what the project is about',
                       type: 'text',
                       searchable: true,
                       editable: true,
                       required: true,
                       formType: 'textarea',
-                      validationHandler: 'tv.nativ.mio.metadata.variable.def.validation.MaxLengthValidationHandler'
-                     },
-                     {name: 'section',
-                      description: 'section',
-                      type: 'string',
+                      maxLength: 100
+                     }]
+
+      definitions [{name: 'section',
+                      displayName: 'Section',
+                      description: 'ft site section',
+                      type: 'single-option',
                       searchable: true,
                       editable: true,
                       required: true,
                       formType: 'select',
-                      options: sectionOptions
+                      maxLength: -1,
+                      options: testOptions
                      },
-                     {name: 'brand',
-                      description: 'brand',
-                      type: 'string',
+                     {name: 'headline',
+                      displayName: 'Headline',
+                      description: 'describe what the project is about',
+                      type: 'text',
                       searchable: true,
                       editable: true,
                       required: true,
-                      formType: 'select',
-                      options: brandOptions}]
+                      formType: 'textarea',
+                      maxLength: 100
+                     },
+                     {name: 'link-1',
+                      displayName: 'Link 1',
+                      description: 'Link 1',
+                      type: 'url',
+                      searchable: true,
+                      editable: true,
+                      required: true,
+                      formType: 'text',
+                      maxLength: -1
+                     },
+                     {name: 'restrictions',
+                      displayName: 'Restrictions',
+                      description: 'Restrictions',
+                      type: 'boolean',
+                      searchable: true,
+                      editable: true,
+                      required: true,
+                      formType: 'checkbox',
+                      maxLength: -1,
+                      options: checkBoxOptions
+                     },
+                     {name: 'poster-image',
+                      displayName: 'Poster Image',
+                      description: 'Poster Image',
+                      type: 'image',
+                      searchable: true,
+                      editable: true,
+                      required: true,
+                      formType: 'file',
+                      maxLength: -1,
+                      children: urlStringsTest
+                     },
+                    {name: 'complex',
+                     displayName: 'complex',
+                     description: 'complex',
+                     type: 'complex',
+                     searchable: true,
+                     editable: true,
+                     required: true,
+                     formType: '',
+                     maxLength: -1,
+                     children: complexTest,
+                     multiplicity: '0..*'
+                    }]
 
       trait :empty_definitions do
         definitions []
@@ -195,7 +414,184 @@ FactoryGirl.define do
       factory :metadata_definition_invalid_data,      traits: [:invalid_name]
       factory :metadata_definition_extra_data,        traits: [:invalid_field]
       factory :metadata_definition_empty_definitions, traits: [:empty_definitions]
+    end
 
+    factory :variant do
+      name 'project-variant' 				                      # Name of the Object Variant
+      objectType 'project' 				                        # The Object which this varies
+      defaultVariant :false 				                      # AWS API Key with access to bucket
+      metadataDefinitions ['project-metadata']            # Array of metadata definitions
+      defaultMetadataDefinition 'project-metadata' 				# Default metadata definition name
+
+      trait :empty_metadata_definitions do
+        metadataDefinitions []
+      end
+
+      factory :variant_invalid_data,                traits: [:invalid_name]
+      factory :variant_extra_data,                  traits: [:invalid_field]
+      factory :variant_empty_metadataDefinitions,   traits: [:empty_metadata_definitions]
+
+      factory :variant_unknown_object_type do
+        objectType 'xxx??xx'
+      end
+
+      factory :variant_unknown_metadata_definition do
+        metadataDefinitions ['xxx??xx']
+      end
+
+    end
+
+    factory :place_holder_group_asset_action, traits: [:start_enable] do
+      name 'test-project-group-placeholder' 		      # Name of the place holder asset
+      visibility [4] 				                          # IDs of accounts that may see this
+      creationContext "NEW" 				                  # Creation context
+      variantName "project-variant" 				          # Object Variant to create
+      metadataDefinition "project-metadata" 		      # The metadata definition to associate to this place holder asset
+
+      factory :place_holder_group_asset_action_invalid_data,                traits: [:invalid_name]
+      factory :place_holder_group_asset_action_extra_data,                  traits: [:invalid_field]
+
+      factory :place_holder_group_asset_action_unknown_metadata_definition do
+        metadataDefinition "xxx?xxx"
+      end
+    end
+
+    factory :message_template, traits: [:start_enable] do
+      name 'create-project-email-template-100'
+      visibility [4]
+      subject 'NEW PROJECT: #{asset.mioObject.name}'
+      priority "Normal"
+      template '<p>Url: @[HTTPS_BASE_URL]/#mio=assets%2Casset%2Cindex.jsp%3Fid%3D#{asset.id}</p> <p>Project&nbsp;Owner: #{asset.owner.firstName}</p> <p>Project&nbsp;Created: #{asset.created}</p>'
+
+      factory :message_template_invalid_data,                traits: [:invalid_name]
+      factory :message_template_extra_data,                  traits: [:invalid_field]
+
+    end
+
+    factory :email_message_action do
+      name 'project-create-email-action-testing' 		      # Name of the email message action
+      visibility [4] 				                              # IDs of accounts that may see this
+      template 'create-project-email-template-999'        # Id of email template
+      recipientExpression '${job.mioObject.owner.email}'  # Evaluated Expression value which generates an email address
+      start :true
+      enable :false 				                              # :true or :false
+
+      factory :email_message_action_invalid_data,                traits: [:invalid_name]
+      factory :email_message_action_extra_data,                  traits: [:invalid_field]
+
+      factory :email_message_action_unknown_message_template do
+        template 'xxx?xxx'
+      end
+    end
+
+    factory :account_property do
+      name 'account_property'
+      key 'account_property_key'
+      value 'account_property_value'
+
+      factory :account_property_value_change do
+        value 'account_property_value_x'
+      end
+
+      factory :account_property_invalid_data,                traits: [:invalid_name]
+      factory :account_property_extra_data,                  traits: [:invalid_field]
+    end
+
+    factory :groovy_script_decision, traits: [:start_enable] do
+      name 'Groovy Script Decision'
+      displayName 'A Test Groovy Decision Script'
+      script 'test script'
+      jars ['file:///test/test/jar','file:///test/test/test.jar']
+      imports ['com.test.test.test','com.testing.testing.test']
+      visibility [4]
+
+      factory :groovy_script_decision_invalid_data, traits: [:invalid_name]
+      factory :groovy_script_decision_extra_data,   traits: [:invalid_field]
+    end
+
+    factory :add_to_group_action_empty_config, traits: [:start_enable] do
+      name 'Testing Add to group action'
+      visibility [4]
+      targetAssetId ''
+      groupName ''
+      referenceNamePrefix ''
+
+      factory :add_to_group_action_targetAssetId do
+        targetAssetId 'test'
+      end
+
+      factory :add_to_group_action_groupName do
+        groupName 'test'
+      end
+
+      factory :add_to_group_action_referenceNamePrefix do
+        referenceNamePrefix 'test'
+      end
+
+      factory :add_to_group_action_empty_config_invalid_data, traits: [:invalid_name]
+      factory :add_to_group_action_empty_config_extra_data, traits: [:invalid_field]
+
+    end
+
+    factory :launch_workflow_action, traits: [:start_enable] do
+
+      name 'test-ingest-workflow-launcher'
+      visibility [4]
+      workflows [{"Workflow":{"id":13707},"inherit-variables":"true",
+                  "workflow-string-variable": [{"string-variable-key":{"value":"test-key","isExpression":false},"string-variable-value":{"value":"test-value","isExpression":false}}],
+                  "workflow-object-variable":[{"object-variable-key":{"value":"test-key","isExpression":false},"object-variable-value":{"value":"222","isExpression":false}}],
+                  "workflow-date-variable":[{"date-variable-key":{"value":"test-key","isExpression":false},"date-variable-value":{"value":"01-01-2016 15:00:00","isExpression":false}}]
+                 }]
+
+      trait :empty_workflows do
+        workflows []
+      end
+
+      factory :launch_workflow_action_invalid_data,      traits: [:invalid_name]
+      factory :launch_workflow_action_extra_data,        traits: [:invalid_field]
+      factory :launch_workflow_action_empty_workflows,   traits: [:empty_workflows]
+    end
+
+    factory :extractresouce, traits: [:start_enable] do
+      name 'extraction'
+      visibility [4]
+
+      factory :extractresouce_invalid_data,      traits: [:invalid_name]
+      factory :extractresouce_extra_data,        traits: [:invalid_field]
+    end
+
+    factory :extract, traits: [:start_enable] do
+      name 'test-key-frames-extractor'
+      visibility [4]
+      autoApproveFrames :true
+      masterFrame 10
+      setFramesOfParentAsset :true
+      numberOfKeyFramesToExtract 10
+
+      factory :extract_invalid_data,      traits: [:invalid_name]
+      factory :extract_extra_data,        traits: [:invalid_field]
+    end
+
+    factory :wait_groovy_script, traits: [:start_enable] do
+      name 'GroovyScriptFactory'
+      displayName 'A Test Groovy Script'
+      script 'test script'
+      jars ['file:///test/test/jar','file:///test/test/test.jar']
+      imports ['com.test.test.test','com.testing.testing.test']
+      timeout 1000 * 60 * 60
+      pollingTimePeriodMs 1000 * 10
+      visibility [4]
+
+      factory :wait_groovy_script_invalid_data, traits: [:invalid_name]
+      factory :wait_groovy_script_extra_data,   traits: [:invalid_field]
+
+      factory :wait_groovy_script_bad_timeout do
+        timeout 1
+      end
+
+      factory :wait_groovy_script_bad_pollingTimePeriod do
+        pollingTimePeriodMs 1
+      end
     end
 
   end

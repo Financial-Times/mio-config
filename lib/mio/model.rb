@@ -1,5 +1,6 @@
 class Mio
   class Model
+    attr_reader :args, :search, :client
     class << self
       attr_accessor :fields, :resource_name
       def set_resource r
@@ -96,7 +97,7 @@ class Mio
     alias_method :start!, :set_start
 
     def validate
-      testable = @args.dup.to_h
+      testable = self.args.dup.to_h
 
       self.class.fields.each do |f|
         unless testable.key? f[:name]
@@ -108,7 +109,8 @@ class Mio
           raise Mio::Model::DataTypeError, "#{f[:name]} should be of type #{f[:type]} for #{self}"
         end
 
-        unless f['matcher'].nil? or extracted_field.to_s.match(f[:matcher])
+        #unless f[:matcher].nil? or extracted_field.to_s.match(f[:matcher])
+        if !f[:matcher].nil? && extracted_field.to_s.match(f[:matcher]).nil?
           raise Mio::Model::DataValueError, "#{self} #{f[:name]} value '#{extracted_field}' does not match #{f[:matcher]}"
         end
       end
@@ -123,7 +125,7 @@ class Mio
     private
     def look_up
       r = self.class.resource_name
-      all_resources = @client.find_all(r)
+      all_resources = @client.find_all r
       return nil if all_resources['totalCount'] == 0
 
       all_resources[r].find{|o| o['name'] == @args.name}
