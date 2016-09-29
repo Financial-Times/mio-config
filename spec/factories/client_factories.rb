@@ -2,10 +2,10 @@ FactoryGirl.define do
   factory :client, class: Mio::Client do
     base_uri 'https://example.com'
     username 'masteruser'
-    password 'm4st3rus3r'
+    password 'masteruser'
 
     trait :dev_uri do
-      base_uri 'https://master.dev.nativ-systems.com/api'
+      base_uri 'https://master-flex-jemdev.ft.com/api'
     end
 
     trait :invalid_creds do
