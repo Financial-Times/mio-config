@@ -1,3 +1,5 @@
+require 'erb'
+
 class Mio
   class Model
     class AccountProperty < Model
@@ -9,7 +11,7 @@ class Mio
 
       def create_hash
         {key: @args.key,
-         value: @args.value}
+         value: ERB.new(@args.value).result}
       end
 
       def look_up

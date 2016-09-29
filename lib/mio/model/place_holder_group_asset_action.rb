@@ -13,7 +13,7 @@ class Mio
       field :start, Symbol, ':true or :false', :true
 
       def create_hash
-        plugin = 'tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreatePlaceholderAsset'
+        plugin = 'tv.nativ.mio.enterprise.execution.action.file.process.impl.createobject.CreateVFSPlaceholderAsset'
         {name: @args.name,
          pluginClass: plugin,
          visibilityIds: @args.visibility,
@@ -30,7 +30,7 @@ class Mio
 
         {"name": @args.name,
          "asset-type": 'group-asset',
-         "creation-context": @args.creationContext,
+         "asset-origin": @args.creationContext,
          "variant-and-metadata": {"variant-name": @args.variantName,
                                   "metadata-details": {"metadata-definition": {"id": metadata_definition['id']}}
                                  }

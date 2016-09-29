@@ -27,8 +27,8 @@ FactoryGirl.define do
     end
 
     factory :action_node do
-      name 'lauch 1'
-      action 'Groovy Script Factory'
+      name 'xxxxx'
+      action 'xxxxx'
       type 'ACTION'
       assetContext '.'
     end
@@ -152,7 +152,7 @@ FactoryGirl.define do
     factory :workflowvariable_object_variable do
       type 'object'
       key 'testobjectkey'
-      value '13553'
+      value '10607'
 
       factory :workflowvariable_not_number_object_variable do
         value 'asdlkjasd'
@@ -184,10 +184,10 @@ FactoryGirl.define do
   end
 
   factory :launchworkflow, class: OpenStruct do
-    name "workflow-create-project"
+    name "create-project"
     inheritVariables :true
     workFlowStringVariables [{key: 'teststringkey', type: 'string', value: 'teststring'}]
-    workFlowObjectVariables [{key: 'testobjectkey', type: 'object', value: '13553'}]
+    workFlowObjectVariables [{key: 'testobjectkey', type: 'object', value: '10607'}]
     workflowDateVariables [{key: '', type: 'date', value: '01-01-2016 11:00:00'}]
 
     factory :launchworkflow_invalid_data, traits: [:invalid_name]
@@ -457,7 +457,7 @@ FactoryGirl.define do
     end
 
     factory :message_template, traits: [:start_enable] do
-      name 'create-project-email-template-100'
+      name 'xxx-template'
       visibility [4]
       subject 'NEW PROJECT: #{asset.mioObject.name}'
       priority "Normal"
@@ -471,7 +471,7 @@ FactoryGirl.define do
     factory :email_message_action do
       name 'project-create-email-action-testing' 		      # Name of the email message action
       visibility [4] 				                              # IDs of accounts that may see this
-      template 'create-project-email-template-999'        # Id of email template
+      template 'xxx-template'        # Id of email template
       recipientExpression '${job.mioObject.owner.email}'  # Evaluated Expression value which generates an email address
       start :true
       enable :false 				                              # :true or :false

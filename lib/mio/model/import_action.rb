@@ -71,7 +71,7 @@ class Mio
               "isExpression": false
 
             },
-            "creation-context": {
+            "asset-origin": {
               "value": @args.creationContext,
               "isExpression": false
             }
