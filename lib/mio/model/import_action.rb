@@ -16,6 +16,8 @@ class Mio
       field :visibility, Array, 'Ids of the accounts which may see the import action', [4]
       field :sourceJsonVariable, String, 'Json Variable to grab metadata from'
       field :runRuleExpression, String, 'Job run rule expression', ''
+      field :memberAssetId, String, 'Variable or id of group to which this asset should belong', ''
+      field :memberAssetRelationName, String, 'Name of group relationship', ''
 
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
@@ -31,11 +33,6 @@ class Mio
       end
 
       def config_hash
-        metadata_definition = @search.find_metadataDefinitions_by_name(@args.metadataDefinition).first
-        if metadata_definition.nil?
-          raise Mio::Model::NoSuchResource, 'No such metadata definition [' + @args.metadataDefinition + ']'
-        end
-
         h = {
           "source-file": {
             "source": {
@@ -75,23 +72,23 @@ class Mio
               "value": @args.creationContext,
               "isExpression": false
             }
-          },
-          "variant-and-metadata-definition": {
-            "variant": {
-              "value": @args.variant,
-              "isExpression": false
-            },
-            "metadata": {
-              "metadata-definition": {
-                "id": metadata_definition['id']
-              },
-              "source-json-variable": {
-                "value": @args.sourceJsonVariable,
-                "isExpression": false
-              }
-            }
           }
         }
+
+        unless @args.variant.to_s == ''
+          h[:"variant-and-metadata-definition"] = { "variant": { "value": @args.variant, "isExpression": false } }
+
+          unless @args.metadataDefinition.to_s == ''
+            metadata_definition = @search.find_metadataDefinitions_by_name(@args.metadataDefinition).first
+            if metadata_definition.nil?
+              raise Mio::Model::NoSuchResource, 'No such metadata definition [' + @args.metadataDefinition + ']'
+            end
+            h[:"variant-and-metadata-definition"]["metadata"] = { "metadata-definition": { "id": metadata_definition['id']},
+                                                            "source-json-variable": {"value": @args.sourceJsonVariable,  "isExpression": false}
+                                                           }
+          end
+        end
+
         unless @args.parentAssetId.to_s == ''
           h["asset-relationships"] = {
               "child": {
@@ -106,6 +103,13 @@ class Mio
                     "isExpression": false
                 }
               }
+          }
+        end
+
+        unless @args.memberAssetId.to_s == ''
+          h["asset-relationships"] = {
+              "member": { "group": { "group-asset-id": { "value": @args.memberAssetId, "isExpression": false } },
+                        "membership-name": {"value": @args.memberAssetRelationName, "isExpression": false} }
           }
         end
 

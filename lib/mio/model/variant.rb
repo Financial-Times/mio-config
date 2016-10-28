@@ -4,7 +4,7 @@ class Mio
       set_resource :variants
 
       field :name, String, 'Name of the Object Variant'
-      field :objectType, String,'The Object which this varies'
+      field :objectType, String,'The Object which this varies', /^(group-asset|media-asset|text-asset)$/
       field :defaultVariant, Symbol, 'AWS API Key with access to bucket', :false
       field :metadataDefinitions, Array, 'Array of metadata definition names'
       field :defaultMetadataDefinition, String, 'Default metadata definition name'
@@ -50,15 +50,20 @@ class Mio
           raise Mio::Model::NoSuchResource, 'No such object type [' + @args.objectType + ']'
         end
 
-        {name: @args.name,
+        h = {name: @args.name,
          objectTypeId: object_type['id'],
-         defaultVariant: @args.defaultVariant,
-         metadataDefinitionIds: metadata_definition_ids(metadata_definitions, @args.metadataDefinitions),
-         defaultMetadataDefinition: metadata_definition_id(metadata_definitions, @args.defaultMetadataDefinition)}
+         defaultVariant: @args.defaultVariant}
+
+        unless @args.metadataDefinitions.empty?
+          h[:metadataDefinitionIds] = metadata_definition_ids(metadata_definitions, @args.metadataDefinitions)
+          h[:defaultMetadataDefinition] = metadata_definition_id(metadata_definitions, @args.defaultMetadataDefinition)
+        end
+
+        h
       end
 
       def go
-        if @args.metadataDefinitions.empty?
+        if (@args.metadataDefinitions.empty? && (@args.objectType != 'text-asset'))
           raise Mio::Model::EmptyField, 'Field metadataDefinitions to Mio::Model::Variant contain at least one metadata definition name'
         end
 
