@@ -255,6 +255,7 @@ FactoryGirl.define do
       script 'test script'
       jars ['file:///test/test/jar','file:///test/test/test.jar']
       imports ['com.test.test.test','com.testing.testing.test']
+      requiresLock 'NONE'
       visibility [4]
 
       factory :groovy_script_invalid_data, traits: [:invalid_name]
@@ -291,6 +292,7 @@ FactoryGirl.define do
       imports ['com.test.test.test','com.testing.testing.test']
       timeout 0
       polling_time 10
+      requiresLock 'NONE'
       visibility [4]
 
       factory :groovy_script_wait_invalid_data, traits: [:invalid_name]
@@ -597,6 +599,7 @@ FactoryGirl.define do
       imports ['com.test.test.test','com.testing.testing.test']
       timeout 1000 * 60 * 60
       pollingTimePeriodMs 1000 * 10
+      requiresLock 'NONE'
       visibility [4]
 
       factory :wait_groovy_script_invalid_data, traits: [:invalid_name]
