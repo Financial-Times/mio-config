@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "mio-config"
-  s.version = "2.31.0"
+  s.version = "2.32.0"
   s.license = 'MIT'
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=

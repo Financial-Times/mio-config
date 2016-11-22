@@ -14,6 +14,7 @@ class Mio
       field :imports, Array, 'Imports to reference within groovy script, empty for none', []
       field :timeout, Fixnum, 'Wait time out', 1000 * 60 * 60
       field :pollingTimePeriodMs, Fixnum, 'Time between script runs (polling time)', 1000 * 60
+      field :requiresLock, String, 'Requires asset Lock', 'EXCLUSIVE', /^(NONE|EXCLUSIVE|SHARED)$/
 
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
@@ -37,7 +38,8 @@ class Mio
           import: @args.imports.map{|import| {value: import, isExpression: false}}
         },
         'timeout': @args.timeout,
-        'polling-time-period': @args.pollingTimePeriodMs
+        'polling-time-period': @args.pollingTimePeriodMs,
+        "requires-lock": @args.requiresLock
         } 
       end
 

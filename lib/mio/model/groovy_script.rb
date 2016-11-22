@@ -9,6 +9,7 @@ class Mio
       field :script, String, 'The groovy script (inline) ', '"File.read(/path/to/script.groovy)"'
       field :jars, Array, 'JARs to load on remote, empty for none', [] 
       field :imports, Array, 'Imports to reference within groovy script, empty for none', []
+      field :requiresLock, String, 'Requires asset Lock', 'EXCLUSIVE', /^(NONE|EXCLUSIVE|SHARED)$/
 
       field :enable, Symbol, ':true or :false', :true
       field :start, Symbol, ':true or :false', :true
@@ -30,7 +31,8 @@ class Mio
         imports: {
           'jar-url': @args.jars.map{|jar| {value: jar, isExpression: false}},
           import: @args.imports.map{|import| {value: import, isExpression: false}}
-        }
+        },
+        'requires-lock': @args.requiresLock
         } 
       end
     end
