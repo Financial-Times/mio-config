@@ -13,17 +13,6 @@ describe 'Mio::Model::Variant' do
   it_behaves_like 'generic_model'
   it_behaves_like 'non_nested_model'
 
-  context 'when instantiated with invalid options' do
-    %w{metadataDefinition}.each do |field|
-      let(:variant){subject.new(client, build( "variant_empty_#{field}s".to_sym ))}
-
-      context "when given an empty list of #{field}" do
-        it 'should raise a Mio::Model::EmptyField error' do
-          expect{variant.go}.to raise_error(Mio::Model::EmptyField)
-        end
-      end
-    end
-  end
 
   context 'when instantiated with valid options' do
     let(:variant){subject.new(client, model_args)}
