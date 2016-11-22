@@ -236,6 +236,8 @@ FactoryGirl.define do
       creationContext 'INGEST'
       parentAssetId '${variables.test}'
       parentRelationName ''
+      memberAssetId ''
+      memberAssetRelationName ''
       runRuleExpression ''
       visibility [4]
 
@@ -483,6 +485,21 @@ FactoryGirl.define do
         template 'xxx?xxx'
       end
     end
+
+    factory :rename, traits: [:start_enable] do
+      name 'rename-test'
+      visibility [4] 				                              # IDs of accounts that may see this
+
+      runRuleExpression ''
+      preserveFileExtension :false
+      filePath '${variables.test}'
+
+
+      factory :rename_invalid_data,                traits: [:invalid_name]
+      factory :rename_extra_data,                  traits: [:invalid_field]
+    end
+
+
 
     factory :account_property do
       name 'account_property'
